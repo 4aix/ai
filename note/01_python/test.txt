@@ -1,2 +1,4 @@
 아무 파일이나 우선 생성
 c:/ai/note/01_python/test.txt 저장
+
+수정후
