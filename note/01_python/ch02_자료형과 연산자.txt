@@ -22,6 +22,19 @@
 	논리연산자: and, or, &, |, not (&, |는 연산자 앞뒤에 논리값이 올 경우)
 	비교연산자: > >= < <= == !=
 	비트연산자: &, |, ^, ~
+6절. 문자열 다루기
+	인덱싱, 슬라이싱, len(문자변수)
+	dir(str) : 문자 함수 리스트
+		replace(), find(), split(), strip(), join()
+		upper(), lower(), startswith(), endswidth() ...
+7절. 시간날짜, 시간, 날짜 다루기
+	datetime(년, 월, 일, 시, 분, 초), date(년, 월, 일), time(시, 분)
+	datetime.now() : 현재시점의 날짜와 시간
+
+
+
+
+
 
 
 
