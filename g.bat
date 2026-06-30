@@ -1,3 +1,3 @@
 git add .
-git commit -m 제어문
+git commit -m 함수
 git push origin main
