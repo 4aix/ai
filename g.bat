@@ -1,3 +1,3 @@
 git add .
-git commit -m 제어문연습문제
+git commit -m 함수
 git push origin main
