@@ -16,6 +16,13 @@
    - 함수정의시 매개변수 순
 	* 순서인수 > 튜플인수 > 키워드인수(기본값) > 딕셔너리인수
 4절. 람다식
+   - lambda 매개변수 : 리턴값
+   - 용도 (1)함수의 매개변수 (2)함수를 return할 때
+	ex1. map(func, 가공할vector)    # vector : list, tuple, 배열, 시리즈
+	ex2. filter(func, 추출할vector)
+	ex3. sort(key=정렬기준이될데이터를return하는 함수, reverse=T/F)
+5절. 파이썬 내장함수
+   - import없이 사용가능
 
 
 
