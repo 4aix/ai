@@ -11,6 +11,7 @@ def add_return(n):
     for i in range(1, n+1):
         tot += i # tot = tot+i
     return tot
+PI = 3.141592
 '''
     터미널에서 python add_operation.py 5
     인터프리터 선택 : ctrl+shift+p => select interpreter => (base)선택
@@ -27,6 +28,7 @@ if __name__=="__main__":
     print('1. add_print', end='')
     add_print(var)
     print('2. add_return :', add_return(var))
+    print(PI)
 
 
 
