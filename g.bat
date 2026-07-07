@@ -1,3 +1,3 @@
 git add .
-git commit -m 모듈과패키지
+git commit -m "static과 상속"
 git push origin main
