@@ -1,0 +1,10 @@
+Python is easy.
+Python is smart.
+Python is easy.
+Python is smart.
+Python is easy.
+Python is smart.
+print함수는 파일출력, 화면출력
+
+print함수는 파일출력, 화면출력
+
