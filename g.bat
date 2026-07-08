@@ -1,3 +1,3 @@
 git add .
-git commit -m "예외처리"
+git commit -m 파일입출력
 git push origin main
