@@ -1,3 +1,3 @@
 git add .
-git commit -m 넘파이배열
+git commit -m 파일입출력(i/o)
 git push origin main
