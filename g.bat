@@ -1,3 +1,3 @@
 git add .
-git commit -m 파일입출력(i/o)
+git commit -m numpy배열
 git push origin main
