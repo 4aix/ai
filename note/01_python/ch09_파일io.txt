@@ -1,0 +1,22 @@
+9장 파일 I/O
+1절. txt파일 io
+	with open(파일상대경로|파일절대경로,  'r|w|a|rt|wt|at', encoding) as f:
+		list변수 = f.readlines() / 문자변수 = f.read()
+		f.write(저장할 문자열) / f.writelines(문자list)
+2절. 피클(pkl, pickle, data) 파일 io
+	with open(파일경로, 'rb|wb') as f:
+		변수 = pickle.load(f)
+		pickle.dump(변수, f)
+3절. CSV파일 io
+	
+
+
+
+
+
+
+
+
+
+
+
