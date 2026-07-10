@@ -8,3 +8,18 @@ Numpy 패키지의 함수와 속성
 - 배열 생성 함수
 	np.array(obj, dtype, copy=T/F)
 	np.array(obj, dtype, copy=T/F).reshape(행수,열수)
+	np.zeros(tup, dtype)
+	np.ones(tup, dtype)
+	np.full(tup, 초기값, dtype)
+	np.empty( tup, dtype )
+
+
+
+
+
+
+
+
+
+
+
