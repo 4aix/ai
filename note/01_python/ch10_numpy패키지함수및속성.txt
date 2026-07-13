@@ -18,6 +18,9 @@ Numpy 패키지의 함수와 속성
 	np.random.normal(loc=0.0, scale=1.0, size=tup) : 평균loc, 표준편차scale을 갖는 정규분포 n차원 배열
 	np.random.rand(n) : 균등분포의 1차원 0~1미만 난수 1차원 배열(난수n개)
 	np.random.randn(n) : 표준정규분포(평균0, 표준편차가1인 정규분포)의 1차원 배열(난수 n개)
+	
+	np.arange(from, to, by, dtype) : from~to앞까지 by씩 증감하는 1차원 배열
+	np.linspace(from, to, num) : from~to까지 같은 간격의 num개 수를 1차원 배열
 
 
 
