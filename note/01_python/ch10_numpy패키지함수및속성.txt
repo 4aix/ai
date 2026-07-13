@@ -51,6 +51,11 @@ Numpy 패키지의 함수와 속성
 		reshape(-1,1) / np.expand_dims(a, axis=1)
 
 - 배열 분할하기
+	vsplit(ary, indices_or_sections) : 첫번째 축(2차원의 경우 가로축)을 따라 분할
+	hsplit(ary, indices_or_sections) : 두번째 축(2차원의 경우 세로축)을 따라 분할
+	split(ary, indices_or_sections, axis) : axis가 0이면 vsplit, axis가 1이면 hsplit과 동일
+
+	array_split(ary, indices_or_sections, axis) : 나눠지지 않는 정수로도 split 가능
 
 
 
