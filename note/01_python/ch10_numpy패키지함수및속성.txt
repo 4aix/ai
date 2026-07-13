@@ -33,6 +33,25 @@ Numpy 패키지의 함수와 속성
 	요소별연산, 행렬곱(@, 단위행렬), 집계함수(sum, min, max, mean, var, std)
 	범용함수(np.add, np.sqrt,...), 브로드케스팅
 
+- 배열 합치기
+	np.vstack( tup )
+	np.hstack( tup )
+	np.dstack( tup ) : 마지막 축(열)들끼리 합침
+	np.concatenate( tup, axis) axis축으로 합침
+
+	np.column_stack(tup) : 1차원배열을 열단위로 배열하여 2차원 배열로 합침
+	np.row_stack(tup) :행단위로 합침
+	
+	np.stack(tup, axis)
+	
+	np.r_[a, b, c] row단위로 쌓음(한행으로 합치기)
+	np.c_[a, b, c] 컬럼으로 쌓아서 합치기(1차원을 2차원으로)
+
+	1차원배열[:, np.newaxis] : 1차원 배열을 2차원으로 쌓아줌(축 증가)
+		reshape(-1,1) / np.expand_dims(a, axis=1)
+
+- 배열 분할하기
+
 
 
 
