@@ -1,8 +1,6 @@
 # 1. sepal_length 열만 출력
 
-
 # 2. 0~10행까지 마지막 열을 제외한 데이터 (loc, iloc)
-
 
 # 3. 3~10 행중에 'sepal_length'와 'petal_length' 열만 (loc, iloc)
 
