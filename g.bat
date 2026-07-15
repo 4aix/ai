@@ -1,3 +1,3 @@
 git add .
-git commit -m numpy¹è¿­
+git commit -m Pandas
 git push origin main
