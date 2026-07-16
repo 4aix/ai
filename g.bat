@@ -1,3 +1,3 @@
 git add .
-git commit -m ë°ì´í„°ê·¸ë£¹í™”ë°ì§‘ê³„
+git commit -m µ¥ÀÌÅÍ±×·ìÈ­¹×Áı°è
 git push origin main
