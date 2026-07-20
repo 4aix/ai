@@ -1,3 +1,3 @@
 git add .
-git commit -m 데이터프레임전처리
+git commit -m 시각화
 git push origin main
