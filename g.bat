@@ -1,3 +1,3 @@
 git add .
-git commit -m 시각화
+git commit -m 시각화(matplotlib)
 git push origin main
