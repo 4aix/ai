@@ -4,4 +4,9 @@
 				palette='Dark2'...,
 				rc={})
 3) 그래프 함수
-  ⓐ 관계형 그래프 : scatterplot, lineplot => relplot(서브플롯)
+ ⓐ 관계형 그래프 : scatterplot, lineplot => relplot(서브플롯)
+ ⓑ 범주형 그래프 : stripplot, swarmplot (산점도),
+			barplot, pointplot,
+			countplot,
+			boxplot, violinplot, boxenplot => catplot(서브플롯)
+ ⓒ 쌍관계 그래프 pairplot
