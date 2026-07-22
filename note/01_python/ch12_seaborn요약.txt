@@ -13,7 +13,7 @@
  ⓓ 밀도그래프 : histplot, displot(rug)
  ⓔ 회귀 그래프 : regplot => lmplot(서브플롯)
 
-
+4) 다중 그래프를 위한 FacetGrid
 
 
 
