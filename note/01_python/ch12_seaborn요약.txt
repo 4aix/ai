@@ -11,3 +11,12 @@
 			boxplot, violinplot, boxenplot => catplot(서브플롯)
  ⓒ 쌍관계 그래프 pairplot
  ⓓ 밀도그래프 : histplot, displot(rug)
+ ⓔ 회귀 그래프 : regplot => lmplot(서브플롯)
+
+
+
+
+
+
+
+
