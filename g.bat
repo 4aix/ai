@@ -1,3 +1,3 @@
 git add .
-git commit -m 상가정보분석
+git commit -m 웹교안
 git push origin main
