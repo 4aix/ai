@@ -1,3 +1,3 @@
 git add .
-git commit -m 상권정보분석
+git commit -m 웹표준HTML-I
 git push origin main
