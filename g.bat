@@ -1,3 +1,3 @@
 git add .
-git commit -m "form,공간분할"
+git commit -m "회원가입페이지quiz"
 git push origin main
