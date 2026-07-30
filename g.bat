@@ -1,3 +1,3 @@
 git add .
-git commit -m CSS선택자
+git commit -m CSS속성
 git push origin main
