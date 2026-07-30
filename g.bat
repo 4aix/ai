@@ -1,3 +1,3 @@
 git add .
-git commit -m "회원가입페이지quiz"
+git commit -m CSS선택자
 git push origin main
