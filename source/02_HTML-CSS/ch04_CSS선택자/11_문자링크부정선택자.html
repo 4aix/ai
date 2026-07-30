@@ -3,6 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <title></title>
+  <style>
+    #wrap{width:750px; margin:0 auto;}
+    #header{
+      border: 1px solid gray;
+      text-align:center;
+    }
+    #content{
+      padding:0 10px;
+      text-align:justify; /* 양쪽 맞춤 정렬 */
+    }
+    #content p:nth-child(2)::first-line,
+    #content p:nth-child(3)::first-line{
+      color:blue;
+      font-weight:bold; /* 진하게 */
+      font-size:20px;
+    }
+  </style>
 </head>
 <body>
   <div id="wrap">
