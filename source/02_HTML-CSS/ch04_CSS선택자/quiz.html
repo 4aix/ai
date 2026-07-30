@@ -5,25 +5,35 @@
   <title></title>
   <style>
     /*** 전체적인 레이아웃 ***/
-    #header, #content, #footer{
-      width:1000px; margin:0 auto;
-      overflow:hidden;
-    }
+    #header, #content, #footer{ width:1000px; margin:0 auto;overflow:hidden;}
     #header>div, #content>div, #footer>div{
-      float:left;
-      border:1px solid gray;
-      background-color:lightgray;
+      float:left; border:1px solid gray;background-color:lightgray;
     }
     .left, .right{width:150px; height:150px;}
     .center {width:692px; height:150px; }
     #content>div{height:300px;}
     /*** border 뒹굴리기 ****/
     #header .left, #footer .right {border-radius:30px 0; }
-
+    #header .center {border-radius:0 0 30px 30px; }
+    #header .right, #footer .left {border-radius:0 30px; }
+    #content .left {border-radius: 0 30px 30px 0;}
+    #content .center {border-radius:30px;}
+    #content .right{border-radius: 30px 0 0 30px;}
+    #footer .center {border-radius: 30px 30px 0 0;}
     /*** #content .center (nav, academy)***/
-
+    #content .center ul{
+      overflow:hidden; padding:0; margin: 30px 0; 
+    }
+    #content .center ul li{ 
+      float:left; list-style:none; width:33%; text-align:center;
+      font-size:1.5em; font-weight:bold;
+    }
+    #content .center a {color:black; text-decoration:none;}
+    #content .center h2 {text-align:center;}
+    #content .center p{padding:30px;}
     /*** #content .right(하위 3목록만 다른색으로) ***/
-
+    #content .right ol{margin-top:5px;}
+    #content .right li:nth-child(9)~li{color:brown;}
   </style>
 </head>
 <body>
