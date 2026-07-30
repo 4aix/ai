@@ -14,7 +14,7 @@
       text-align:justify; /* 양쪽 맞춤 정렬 */
     }
     #content p:nth-child(2)::first-line,
-    #content p:nth-child(3)::first-line{
+    #content p:nth-child(3)::first-line{ /*문자선택자*/
       color:blue;
       font-weight:bold; /* 진하게 */
       font-size:20px;
@@ -22,6 +22,22 @@
     #content p:nth-child(2)::first-letter{font-size:2em; /*원래 크기의 2배*/}
     #content p:nth-child(3) span {font-size:2em;}
     #content a {text-decoration:none; color:blue; font-size:1.5em;}
+    #content a:after{ /*링크선택자*/
+      content : ' - ' attr(href);
+    }
+    #content li:not(.web) a{ /*부정선택자*/
+      background-color:yellow;
+    }
+    #footer ul{
+      border-top:1px solid gray;
+      overflow:hidden;
+    }
+    #footer ul li{
+      float:left;
+      list-style:none;
+      padding:15px;
+    }
+    #footer ul li:first-child{padding-top:30px;}
   </style>
 </head>
 <body>
