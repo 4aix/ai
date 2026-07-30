@@ -9,6 +9,22 @@
        padding:0; /*안여백(위,우,하,좌)*/
        color:saddlebrown;
     }
+    header, nav, section, footer{
+      border:1px solid, gray;
+      width: 500px; /*가로사이즈(블록형태그는 width를 지정하지 않으면 부모의 width)*/
+      margin:5px auto; /* 좌우 여백을 나눔 */
+      padding:5px;
+    }
+    nav ul {overflow:hidden; } /* 수평으로 하고픈 태그 부모단 */
+    nav ul li{ /* 블록형태그를 수평으로 */
+      float:left;
+      list-style:none;
+      width:25%; /*125px;*/
+      text-align:center;
+    }
+    section{
+      clear:both; /* float 속성을 지우고 싶을 때 */
+    }
   </style>
 </head>
 <body>
