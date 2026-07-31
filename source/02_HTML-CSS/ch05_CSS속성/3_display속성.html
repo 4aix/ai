@@ -5,11 +5,21 @@
   <title></title>
   <style>
     div{width:100px; height:100px; border:1px solid black; }
+    div:nth-child(1){background-color:red; margin:10px; }
+    div:nth-child(2){background-color:green; display:block;}
+    div:nth-child(3){background-color:blue; display:inline; margin:20px; /*상우하좌*/}
+    div:nth-child(4){display:none;} /*안보이게(공간도 없어짐)*/
+    div:nth-child(5){background-color:red; display:inline-block;}
+    div:nth-child(6){background-color:green; display:inline-block;}
   </style>
 </head>
 <body>
-  <div>content1</div><div>content2</div><div>content3</div>
-  <div>content4</div><div>content5</div><div>content6</div>
+  <div>content1</div>
+  <div>content2</div>
+  <div>content3</div>
+  <div>content4</div>
+  <div>content5</div>
+  <div>content6</div>
   <div>content7</div>
 </body>
 </html>
