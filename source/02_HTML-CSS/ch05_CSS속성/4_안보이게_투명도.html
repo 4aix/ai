@@ -10,6 +10,9 @@
     /* 안보이게 */
     #visibility div:nth-child(2){visibility:hidden;}/*안보이게(공간확보)*/
     #display    div:nth-child(2){display:none;} /*안보이게(공간도 안 보이게*/
+    /* 0(완전투명) <= 투명도(opacity) <= 1(완전불투명. 기본값) */
+    #visibility div:last-child { opacity:.2; }
+    #display    div:first-child{opacity:.7;}
   </style>
 </head>
 <body>
