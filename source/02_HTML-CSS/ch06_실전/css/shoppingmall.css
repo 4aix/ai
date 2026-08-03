@@ -8,9 +8,43 @@
   font-family: 'Merriweather-Regular';
   src: url(../font/Merriweather-Regular.ttf);
 }
+*{
+  margin: 0; padding: 0;
+  font-family: 'Merriweather-Regular';
+}
+a{
+  text-decoration: none;
+  color:black;
+  display: block;
+}
+li{list-style-type: none;}
 /***** header *****/
 /***** header .gnb *****/
+header .gnb{
+  background-color: black;
+}
+header .gnb a{color:white;}
+header .gnb ul{
+  width: 1000px; margin: 0 auto;
+  overflow: hidden;
+  height: 30px; line-height: 30px; /* 수평 가운데 정렬 */
+}
+header .gnb ul li{
+  float: left;
+  width: 9%;
+  margin: 0 0.5%;
+  text-align: center;
+  /* border: 1px solid red;
+  box-sizing: border-box; 확인용 */
+}
 /***** header .logo *****/
+header .logo{
+  width:200px; margin: 30px auto; /* 상우하좌 30 auto 30 auto 30*/
+  font-size: 2em;
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+}
 /***** header .hitmenu *****/
 /***** header .lnb *****/
 
