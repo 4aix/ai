@@ -1,6 +1,13 @@
 ﻿/***** css/shoppingmall.css *****/
 /***** 페이지 초기화(규칙, margin,padding0, a, li..) *****/
-
+@font-face {
+  font-family: 'Merriweather-Light';
+  src: url(../font/Merriweather-Light.ttf);/*css파일 기준경로설정*/
+}
+@font-face {
+  font-family: 'Merriweather-Regular';
+  src: url(../font/Merriweather-Regular.ttf);
+}
 /***** header *****/
 /***** header .gnb *****/
 /***** header .logo *****/
