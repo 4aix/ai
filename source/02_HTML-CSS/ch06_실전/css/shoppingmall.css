@@ -80,7 +80,56 @@ header .lnb ul li{
   text-align: center;
 }
 /***** #content *****/
+#content{
+  width: 1000px; margin: 0 auto;
+}
 /***** #content .section1 *****/
+#content .section1{
+  overflow: hidden;
+}
+#content .section1 > div{
+  float: left;
+  /* height: 400px;  */
+  line-height: 400px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+#content .section1 .slide_banner{width:700px;}
+#content .section1 .side_banner{width:300px;}
 /***** #content .section2 *****/
-
+#content .section2 div{
+  margin: 5px 0;
+  border: 1px solid gray;
+}
+#content .section2 ul{
+  overflow: hidden;
+}
+#content .section2 ul li{
+  float: left;
+  border: 1px solid gray; box-sizing: border-box;
+  width: 24%; margin-left: 0.8%;
+  line-height: 400px;
+  text-align: center;
+}
 /****** footer *****/
+footer{
+  width: 1000px; margin: 0 auto;
+  overflow: hidden;
+}
+/* footer div:nth-child(1),
+footer div:nth-child(2),
+footer div:nth-child(3) */
+footer div:nth-child(-n+3){
+  float: left;
+  width: 33.3%;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  height: 100px;
+}
+footer div:last-child{
+  clear: both; /*앞태그에서 전달받은 float속성을 clear*/
+  background-color: black;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+}
