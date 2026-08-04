@@ -133,3 +133,12 @@ header #search input[type='submit']{
   color:navy;
 }
 /*** footer ***/
+footer{
+  background-color:#ea8f00;
+  text-align: center;
+}
+footer p:last-child{
+  font-size: .8em;
+  color: #333333;
+  padding-bottom: 5px;
+}
