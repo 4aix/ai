@@ -96,6 +96,19 @@ header #search input[type='submit']{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/*** #section3 ***/
+/*** #section3 (방법1) ***/
+#section3{margin: 5px;}
+#section3 li{
+  position: relative;
+  border: 1px solid gray;
+  padding: 10px;
+}
+#section3 li p.img{
+
+}
+#section3 li p.txt{
+  padding-left: 120px;
+}
+/*** #section3 (방법2) ***/
 
 /*** footer ***/
