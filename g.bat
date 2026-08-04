@@ -1,3 +1,3 @@
 git add .
-git commit -m 스마트폰레이아웃
+git commit -m 자바스크립트img
 git push origin main
