@@ -98,17 +98,38 @@ header #search input[type='submit']{
 }
 /*** #section3 (방법1) ***/
 #section3{margin: 5px;}
-#section3 li{
+/* #section3 li{
   position: relative;
   border: 1px solid gray;
   padding: 10px;
+  height: 100px;
 }
 #section3 li p.img{
-
+  position: absolute;
+  left:10px; top:10px;
 }
 #section3 li p.txt{
   padding-left: 120px;
-}
+} */
 /*** #section3 (방법2) ***/
+#section3 li{
+  border: 1px solid gray;
+  padding: 10px;
+  height: 100px;
+}
+#section3 li p.img{
+  float: left;
+  padding-right: 10px;
+}
 
+#section3 li p.txt span:first-child{
+  display: block;
+  /*말줄임(ellipsis) - block형태그만 가능*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2em;
+  font-weight: bold;
+  color:navy;
+}
 /*** footer ***/
