@@ -1,0 +1,6 @@
+#wrap .content{
+  background-color: darkgreen;
+  color:white;
+  padding: 20px;
+  text-align: justify;
+}
