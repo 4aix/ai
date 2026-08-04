@@ -1,3 +1,3 @@
 git add .
-git commit -m 자바스크립트img
+git commit -m 반응형웹
 git push origin main
