@@ -8,7 +8,9 @@
     var arr = [273, 32, '홍길동'];// 배열 arr[0], arr[1], arr[2]
     // 1. 일반 for문
     document.write('<h3>1. 일반 for문 이용</h3>');
-    
+    for(let idx=0 ; idx<arr.length ; idx++){ // arr.length:배열 방의 갯수
+      document.write(idx + '번째 :' + arr[idx] + '<br>');
+    }
   </script>
 </head>
 <body>
