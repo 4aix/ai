@@ -1,3 +1,3 @@
 git add .
-git commit -m JS제어문
+git commit -m JS반복문
 git push origin main
