@@ -1,3 +1,3 @@
 git add .
-git commit -m JS함수
+git commit -m JS제어문
 git push origin main
