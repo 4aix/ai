@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    
+  </style>
+  <script>
+    // 자료형 : undefined, string, number, boolean, function, object(array)
+    // undefined는 변수초기화가 안 되었을 때, null은 개발자가 인위적으로 null을 할당
+    var variable;
+    document.write('1.variable 타입 :', typeof(variable), '-값:', variable);
+    // variable = '이름은 \'홍길동\'입니다';
+    let name = '홍길동';
+    variable = `이름은 '${name}'입니다`;
+    document.write('2.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = -3.2323;
+    document.write('3.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = true;
+    document.write('4.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = function(){
+      alert('Hello');
+    };
+    variable(); // 함수 호출
+    document.write('5.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = null; // null 은 타입이 object
+    document.write('6.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = {'name':'홍길동', 'age':20}; // 객체
+    document.write('7.variable 타입 :', typeof(variable), '-값:', variable);
+    variable = ['홍길동', 20, function(){}, true, [1,2], {'name':'홍길동'}]; // 배열
+    document.write('8.variable 타입 :', typeof(variable), '-값:', variable);  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
