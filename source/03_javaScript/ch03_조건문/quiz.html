@@ -9,7 +9,7 @@
   </style>
   <script>
     function chk(){
-      // 첫번째 수(frm.su1.value)와 두번째 수를 가져와서 몇번째 수가 얼마 더큰지 alert
+      // 첫번째 수(frm.su1.value)와 두번째 수를 가져와서 몇번째 수가 얼마 더큰지 alert      
       if(!frm.su1.value){
         alert('첫번째 수를 입력하세요');
         frm.su1.focus();
@@ -20,8 +20,8 @@
         return false;
       }
       // 몇번째 수가 얼마나 더 큰지
-      let su1 = Number(frm.su1.value);
-      let su2 = Number(frm.su2.value);
+      let su1 = parseInt(frm.su1.value);
+      let su2 = parseInt(frm.su2.value);
       let msg = (su1>su2)? `첫번째 수가 ${su1-su2}만큼 더 크다` : 
               (su2>su1)? `두번째 수가 ${su2-su1}만큼 더 크다` : '두 수는 같다';
       alert(msg);
