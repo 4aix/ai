@@ -35,8 +35,12 @@
       document.write(data + '<br>');
     });
     document.write('<h3>6. forEach함수 이용1(화살표함수)</h3>');
-    arr.array.forEach((data, idx) => {
+    arr.forEach((data, idx) => {
       document.write(idx + '번째 : ' + data + '<br>');
+    });
+    document.write('<h3>7. forEach함수 이용2(화살표함수)</h3>');
+    arr.forEach((data) => {
+      document.write(data + '<br>');
     });
   </script>
 </head>
