@@ -1,3 +1,3 @@
 git add .
-git commit -m JS반복문
+git commit -m JS반복문quiz
 git push origin main
