@@ -1,6 +1,6 @@
 console.log(pow(5,3));
 console.log(pow(5));
-console.log(pow(y=2, x=3)); // 첫번째 매개변수는 x(2), 두번째 매개변수는 y(3)
+console.log(pow(y=2, x=3)); // 첫번째 매개변수는 x(2), 두cl번째 매개변수는 y(3)
 console.log(pow());
 
 function pow(x=5, y=2){
