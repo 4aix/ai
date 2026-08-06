@@ -6,8 +6,13 @@ funVar = () => {
   console.log('2. 매개변수가 없거나 2개이상인 화살표함수 호출');
 };
 funVar();
-funvar = i => {
+funVar = i => {
   console.log('3. 매개변수가 하나 있는 화살표 함수 호출');
   console.log('매개변수 i =', i);
 };
-funvar();
+funVar(10);
+funVar = i => console.log('4. 매개변수가 하나고, 구현부가 한줄짜리 화살표 함수 호출', i);
+funVar(10);
+//funVar = function(i){return i*i;};
+funVar = i => i*i;
+console.log('5. 매개변수 하나짜리 return문 있는 화살표 함수 호출 :', funVar(5));
