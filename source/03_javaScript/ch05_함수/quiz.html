@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    body{      
+      background-size: 100%;
+      font-size: 2.5em;
+      background-image: url(ch05_img/img01.png);
+      color: yellow;
+    }
+  </style>
+  <script>
+    // img01.png(노란색), img02.png(파란색), img03.png(하얀색)
+    let sec = 0; // 몇초가 지났는지 저장 변수
+    const color = ['yellow', 'blue', 'white'];
+    const img = ['url(ch05_img/img01.png)',
+                'url(ch05_img/img02.png)',
+                'url(ch05_img/img03.png)'];
+    document.write(`${new Date().toLocaleString()} - ${sec}초 지남`);
+    // document.body.style = `background-image: ${img[sec%3]}`;
+    // document.body.style.backgroundImage = img[sec%3]; 씀
+    // document.body.style.color = color[sec%3]; 씀
+    // 1초마다 타이머 구동(sec증가, 시간출력, 백그라운드이미지 변경, 글씨색상 변경)
+
+    // 10초 후 setInterval 중지
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -14,9 +14,11 @@
       cnt++;
     }
     document.write('2초동안 ' + cnt + '번 while문 수행<br>');
+    // setTimeout을 중지
+    clearTimeout(id);
+    document.write('<h3>타이머 중지됨</h3>');
   </script>
 </head>
 <body>
-  
 </body>
 </html>
