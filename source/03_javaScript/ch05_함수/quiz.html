@@ -19,14 +19,20 @@
     const img = ['url(ch05_img/img01.png)',
                 'url(ch05_img/img02.png)',
                 'url(ch05_img/img03.png)'];
-    document.write(`${new Date().toLocaleString()} - ${sec}초 지남`);
-    // document.body.style = `background-image: ${img[sec%3]}`;
-    // document.body.style.backgroundImage = img[sec%3]; 씀
-    // document.body.style.color = color[sec%3]; 씀
+    document.write(`${new Date().toLocaleString()}`);    
     // 1초마다 타이머 구동(sec증가, 시간출력, 백그라운드이미지 변경, 글씨색상 변경)
-
+    var id = setInterval(() => {
+      sec++;
+      document.body.innerHTML = `${new Date().toLocaleString()} <br> ${sec}초 지남`;
+      // document.body.style = `background-image: ${img[sec%3]}`;
+      // document.body.style = `color:${color[sec%3]}`;
+      document.body.style.backgroundImage = img[sec%3];
+      document.body.style.color = color[sec%3];
+    }, 1000);
     // 10초 후 setInterval 중지
-    
+    setTimeout(() => {
+      clearInterval(id);
+    }, 10000);    
   </script>
 </head>
 <body>
