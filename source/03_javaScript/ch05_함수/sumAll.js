@@ -17,5 +17,5 @@ function sumAll(){
   }
   return result;
 }//sumAll
-console.log(sumAll());
-console.log(sumAll(1, 2, 3, 4));
+// console.log(sumAll());
+// console.log(sumAll(1, 2, 3, 4));

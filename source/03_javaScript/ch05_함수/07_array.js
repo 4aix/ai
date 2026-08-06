@@ -12,9 +12,12 @@ function array(){ // arguments : 매개변수 내용이 들어옴/arguments.leng
     }
   }else if(arguments.length>=2){
     // result를 arguments의 내용으로 만들기
-    for(let idx=0 ; idx<arguments.length ; idx++){
-      result.push(arguments[idx]);
-    } // for
+    for(var data of arguments){
+      result.push(data);
+    }
+    // for(let idx=0 ; idx<arguments.length ; idx++){
+    //   result.push(arguments[idx]);
+    // } // for
   } // if
   return result;
 } // array
