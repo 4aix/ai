@@ -16,4 +16,4 @@ funVar(10);
 //funVar = function(i){return i*i;};
 funVar = i => i*i;
 console.log('5. 매개변수 하나짜리 return문 있는 화살표 함수 호출 :', funVar(5));
-funVar = function(i, j){return i+j;};
+// funVar = function(i, j){return i+j;};
