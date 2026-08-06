@@ -12,10 +12,15 @@ function array(){ // arguments : 매개변수 내용이 들어옴/arguments.leng
     }
   }else if(arguments.length>=2){
     // result를 arguments의 내용으로 만들기
-
-  }
+    for(let idx=0 ; idx<arguments.length ; idx++){
+      result.push(arguments[idx]);
+    } // for
+  } // if
   return result;
-}
-array();
-array(3);
-array(1, 2, '삼');
+} // array
+var arr2 = array(1, 2, '삼'); // 매개변수가 2개 이상
+var arr4 = array(3);  // 매개변수가 1개
+var arr6 = array(); // 매개변수가 0개
+console.log(arr2);
+console.log(arr4[0], arr4[1], arr4[2]);
+console.log(arr6);
