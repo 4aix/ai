@@ -6,8 +6,11 @@ function sumAll(){
     // for(let idx=0 ; idx<arguments.length ; idx++){
     //   result += arguments[idx];
     // }//for
-    for(let idx in arguments){
-      result += arguments[idx];
+    // for(let idx in arguments){
+    //   result += arguments[idx];
+    // }
+    for(let data of arguments){
+      result += data;
     }
   }else{
     result = -999;
