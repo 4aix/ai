@@ -3,9 +3,12 @@
 function sumAll(){
   let result = 0;
   if(arguments.length>0){
-    for(let idx=0 ; idx<arguments.length ; idx++){
+    // for(let idx=0 ; idx<arguments.length ; idx++){
+    //   result += arguments[idx];
+    // }//for
+    for(let idx in arguments){
       result += arguments[idx];
-    }//for
+    }
   }else{
     result = -999;
   }
