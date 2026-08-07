@@ -15,7 +15,7 @@
         return this.kor + this.mat + this.eng;
       };
       students[idx].getAvg = function(){
-        return this.getSum() / 3;
+        return Math.round(this.getSum() / 3 * 10)/10; // 소수점에서 첫번째자리에서 반올림
       };
       students[idx].toString = function(){
         let output = '';
@@ -33,6 +33,18 @@
     for(let idx=0 ; idx<students.length ; idx++){
       document.write(`${idx}번째 ${students[idx]} <br>`);
     }
+    document.write('<h4>2. for - in문</h4>');
+    for(let idx in students){
+      document.write(`${idx}번째 ${students[idx]} <br>`);
+    }
+    document.write('<h4>3. for - of문</h4>');
+    for(let student of students){
+      document.write(`${student} <br>`);
+    }
+    document.write('<h4>4. forEach 함수</h4>');
+    students.forEach((element, idx) => {
+      document.write(`${idx}번째 ${element}<br>`);
+    });
   </script>
 </head>
 <body>
