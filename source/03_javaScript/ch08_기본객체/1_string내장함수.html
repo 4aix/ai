@@ -10,7 +10,11 @@
     document.write('글자 연결 : ' + str.concat('뒤에 연결') + '<br>');
     // str.substring(a) : a번째부터 끝까지 추출 str[a:]와 동일
     // str.substring(a, b): a번째부터 b번째 앞까지 추출 str[a:b]와 동일
-    // str.substr()
+    // str.substr(a, b) : a번째부터 b글자 추출
+    document.write('3~5번째 문자 : ' + str.substring(3, 6) + '<br>');
+    document.write('3번째~끝까지 문자 : ' + str.substring(3) + '<br>');
+    document.write('3번째부터 5글자 :' + str.substr(3, 5) + '<br>');
+
   </script>
 </head>
 <body>
