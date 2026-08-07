@@ -23,7 +23,12 @@
   <script>
     const joinCheck = () => {
       // 패턴들(숫자, 알파벳, 특수문자), 이메일정규표현식패턴, [이름정규표현식패턴]
-
+      let patternNum = /[0-9]/; // 숫자 패턴
+      let patternEng = /[a-zA-Z]/; // 알파벳 문자 패턴
+      let patternSpe = /[~`!@#$%^&*()_\-+=\|\\\[\]{}'":;?\/<>,\.]/; // 특수문자 패턴
+      let patternEmail = /^\w+@\w+(\.\w+){1,2}$/;
+      //let patternName = /^[가-힣a-zA-Z]{2,}$/; // 이름 패턴
+      
       // 입력상자에서 입력받은 내용을 변수
       name = frm.name.value.trim(); // html 3장 4_pw유효성검사.html
       
