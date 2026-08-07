@@ -42,9 +42,9 @@
       document.write(`${student} <br>`);
     }
     document.write('<h4>4. forEach 함수</h4>');
-    students.forEach((element, idx) => {
-      document.write(`${idx}번째 ${element}<br>`);
-    });
+    students.forEach((element, idx) => document.write(`${idx}번째 ${element}<br>`));
+    document.write('<h4>5. forEach 함수</h4>');
+    students.forEach(element => document.write(`${element}<br>`));
   </script>
 </head>
 <body>
