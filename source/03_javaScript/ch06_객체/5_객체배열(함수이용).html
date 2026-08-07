@@ -31,10 +31,13 @@
       };//resultObj 객체
       return resultObj;
     }// makeStudent함수
-
-
-    let students = [makeStudent('홍',99,98,97),
-                    makeStudent('이',90,91,92),];
+    let students = [];
+    students.push(makeStudent('홍길동', 99, 98, 90));
+    students.push(makeStudent('마길동', 95, 90, 90));
+    students.push(makeStudent('김길동', 91, 98, 90));
+    students.push(makeStudent('이길동', 91, 60, 78));
+    students.push(makeStudent('홍낄동', 94, 98, 90));
+    students.forEach(element => document.write(element + '<hr>'));
   </script>
 </head>
 <body>
