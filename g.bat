@@ -1,3 +1,3 @@
 git add .
-git commit -m JSÇÔ¼ö
+git commit -m JS°´Ã¼
 git push origin main
