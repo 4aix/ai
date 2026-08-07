@@ -11,12 +11,26 @@
         'kor':kor,
         'mat':mat,
         'eng':eng,
-        'getSum':function(){},
-        'getAvg':function(){},
-        'toString':function(){},
-      };
+        'getSum':function(){
+          return this.kor + this.mat + this.eng;
+        },
+        'getAvg':function(){
+          return Math.round(this.getSum() / 3 * 10)/10; // 소수점에서 첫번째자리에서 반올림
+        },
+        'toString':function(){
+          let output = '';
+          for(let key in this){
+            if(key!='getSum' && key!='getAvg' && key!='toString'){
+              output += key + ':' + this[key] + ' &nbsp; ';
+            }else if(key=='getSum' || key=='getAvg'){
+              output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
+            }//if
+          }//for
+          return output;
+        },// toString 메소드
+      };//resultObj 객체
       return resultObj;
-    }
+    }// makeStudent함수
 
 
     let students = [makeStudent('홍',99,98,97),
