@@ -10,6 +10,26 @@
                   {'name':'박', 'kor':95, 'mat':58, 'eng':55},
                   {'name':'정', 'kor':78, 'mat':88, 'eng':66},
                   {'name':'윤', 'kor':91, 'mat':78, 'eng':77},];
+    for (let idx in students){
+      students[idx].getSum = function(){
+        return this.kor + this.mat + this.eng;
+      };
+      students[idx].getAvg = function(){
+        return this.getSum() / 3;
+      };
+      students[idx].toString = function(){
+        let output = '';
+        for(let key in this){
+          if(key!='getSum' && key!='getAvg' && key!='toString'){
+            output += key + ':' + this[key] + ' &nbsp; ';
+          }else if(key=='getSum' || key=='getAvg'){
+            output += key.substring(3).toUpperCase() + ':' + this[key]() + ' &nbsp; ';
+          }//if
+        }//for
+        return output;
+      }; //toString
+    } // for
+    
   </script>
 </head>
 <body>
