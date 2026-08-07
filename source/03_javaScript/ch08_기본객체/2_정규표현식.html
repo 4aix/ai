@@ -73,7 +73,9 @@
     }else{
       document.write('str2은 이메일형식이 아닙니다<br>');
     }
-    //document.write(patternEmail.test(str2));
+    document.write(patternEmail.test(str2));
+    document.write(patternNum.test(str2));
+    document.write(str1.match(patternEmail));//[hong@hong.com,.com]
   </script>
 </head>
 
