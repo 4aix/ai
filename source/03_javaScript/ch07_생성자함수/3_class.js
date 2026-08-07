@@ -23,6 +23,6 @@ class Student{
   } // toString
 }//class
 let hong = new Student('홍길동', 99, 100, 86);
-// document.write(hong) // toString()자동 호출
+document.write(hong) // toString()자동 호출
 console.log(hong);
 console.log(`${hong}`); // 템플릿 리터럴에서는 toString() 자동 호출
