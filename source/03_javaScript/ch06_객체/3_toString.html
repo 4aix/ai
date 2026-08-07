@@ -8,10 +8,22 @@
     let person = {
       'name':'홍길동', // 속성변수
       'age':20,
-      'eat': function(food){
-        let msg = `${this.age}살 ${this.name}님은 ${food}를 먹습니다`
+      'eat': function(food){ // 메소드
+        let msg = `${this.age}살 ${this.name}님은 ${food}를 먹습니다`;
+        document.write(msg + '<br>');
+      },
+      'toString':function(){
+        let output = ''; // return될 문자열
+        for(let key in this){ // this:내객체자신(self)
+          if(key!='eat' && key!='toString'){
+            output += key + ' : ' + this[key] + '<br>';
+          }
+        }//for
+        return output;
       },
     };
+    person.nickname = '서해번쩍이';
+    document.write(person);
   </script>
 </head>
 <body>
