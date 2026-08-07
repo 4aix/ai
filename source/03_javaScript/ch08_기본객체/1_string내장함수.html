@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <script>
     let str = "   abc @ ABC @  ";
-    document.write('원본 : ' + str + '<br>');
+    document.write('원본 : ' + str.replaceAll(' ', '&nbsp;') + '<br>');
     document.write('글자수 : ' + str.length + '<br>');
     document.write('글자 연결 : ' + str.concat('뒤에 연결') + '<br>');
     // str.substring(a) : a번째부터 끝까지 추출 str[a:]와 동일
@@ -14,7 +14,15 @@
     document.write('3~5번째 문자 : ' + str.substring(3, 6) + '<br>');
     document.write('3번째~끝까지 문자 : ' + str.substring(3) + '<br>');
     document.write('3번째부터 5글자 :' + str.substr(3, 5) + '<br>');
-
+    document.write('처음부터 @가 있는 위치:' + str.indexOf('@') +'<br>');
+    document.write('처음부터 !가 있는 위치:' + str.indexOf('!') +'<br>');//-1
+    document.write('뒤부터 @가 있는 위치 :' + str.lastIndexOf('@') + '<br>');
+    document.write('앞뒤 space제거 :' + str.trim() + '<br>');
+    document.write('대문자로 :' + str.toUpperCase() + '<br>');
+    document.write('소문자로 :' + str.toLowerCase() + '<br>');
+    document.write('첫번째 @를 #으로 수정 :' + str.replace('@', '#') + '<br>');
+    document.write('@를 #으로 수정 :' + str.replaceAll('@', '#') + '<br>');
+    document.write('모든 space제거 :' + str.replaceAll(' ', '') + '<br>');
   </script>
 </head>
 <body>
