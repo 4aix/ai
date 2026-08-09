@@ -1,3 +1,3 @@
 git add .
-git commit -m JS브라우저모델
+git commit -m JS문서객체모델
 git push origin main
