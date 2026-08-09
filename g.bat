@@ -1,3 +1,3 @@
 git add .
-git commit -m JS정규표현식
+git commit -m JS브라우저모델
 git push origin main
