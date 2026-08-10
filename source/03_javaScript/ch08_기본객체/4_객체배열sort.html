@@ -30,8 +30,21 @@
       }//for
       return output;
     };
-    s = new Student('홍길동', 90, 90, 91);
-    document.write(s);
+    let students = [new Student('홍길동', 90, 90, 91)];
+    students.push(new Student('김길동', 99,99,99));
+    students.push(new Student('박길동', 69,90,79));
+    students.push(new Student('윤길동', 59,94,89));
+    students.push(new Student('마길동', 89,90,66));
+    students.forEach(data => document.write(data + '<br>'));
+    students.sort();// toString()결과를 ascii코드로 오름차순 정렬
+    document.write('<h3>이름 순 정렬</h3>');
+    students.forEach(data => document.write(data + '<br>'));
+    // 총점 기준으로 내림차순 정렬
+    students.sort((left, right)=>{
+      
+    });
+    // 정렬된 데이터 출력
+    // top3만 추출해서 출력
   </script>
 </head>
 <body>
