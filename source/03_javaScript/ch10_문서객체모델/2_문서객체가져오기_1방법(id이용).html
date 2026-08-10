@@ -22,12 +22,24 @@
         timerToggle = 0;
         btn.innerHTML = '타이머 멈춤';
         // 타이머 멈춤
-        
+        clearInterval(timerId);
+        // document.body.style = 'background-color:yellow;color:red';
+        // document.body.style.backgroundColor = 'yellow';
+        // document.body.style.cssText = 'background-color:yellow;color:red';
+        // clock.style = 'background-color:yellow;color:red';
+        //clock.style.cssText = 'background-color:yellow;color:red';
+        clock.style.backgroundColor = 'yellow';
+        clock.style.color = 'red';
       }else{
         timerToggle = 1;
         btn.innerHTML = '타이머 가동중';
         // 타이머 재가동
-
+        clock.style.backgroundColor = 'white';
+        clock.style.color = 'black';
+        clock.innerHTML = new Date().toLocaleString();
+        timerId = setInterval(()=>{
+            clock.innerHTML = new Date().toLocaleString();
+        }, 1000)
       }
     };
   </script>
