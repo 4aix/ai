@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    table {width:280px; height: 100px; margin: 10px auto;} h3{text-align:center;}
+  </style>
+  <script>
+    // 0번째 td부터 6번째 td까지 background-color를 빨주노초파남보 입힌다(window.onload)
+        // tag로 가져오기 => 배열(일반for, for-in, forEach이용불가)
+        // 선택자로 가져오기 => 배열(일반for, for-in, forEach이용)
+    const color = ['red','orange','yellow','green','blue','navy', 'violet'];
+    window.onload = ()=>{
+      //var tds = document.getElementsByTagName('td'); - 일반for문이나 for-in문
+      var tds = document.querySelectorAll('td');
+      tds.forEach((element, idx) => {
+        element.style.backgroundColor = color[idx]; // td의 바탕색변경
+        // td들의 이벤트
+        element.onmouseover = ()=> document.body.style.backgroundColor = color[idx];
+        element.onmouseout = ()=> document.body.style.backgroundColor = 'white';
+      });
+    };
+  </script>
+</head>
+<body>
+  <h3>quiz : 마우스를 올리면 바탕화면도 해당 색상으로. 마우스를 빼면 다시 흰색바탕으로</h3>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>

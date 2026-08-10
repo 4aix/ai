@@ -11,12 +11,20 @@
     // 0번째 td부터 6번째 td까지 background-color를 빨주노초파남보 입힌다(window.onload)
         // tag로 가져오기 => 배열(일반for, for-in, forEach이용불가)
         // 선택자로 가져오기 => 배열(일반for, for-in, forEach이용)
-    const bgColorChange = n => {};
+    const color = ['red','orange','yellow','green','blue','navy', 'violet', 'white'];
+    window.onload = ()=>{
+      //var tds = document.getElementsByTagName('td');
+      var tds = document.querySelectorAll('td');
+      tds.forEach((element, idx) => element.style.backgroundColor = color[idx]);
+    };
+    const bgColorChange = n => {
+      document.body.style.backgroundColor = color[n];
+    };
   </script>
 </head>
 <body>
   <h3>quiz : 마우스를 올리면 바탕화면도 해당 색상으로. 마우스를 빼면 다시 흰색바탕으로</h3>
-  <table>
+  <table><!--인라인 이벤트 -->
     <tr onmouseout="bgColorChange(7)">
       <td onmouseover="bgColorChange(0)"></td>
       <td onmouseover="bgColorChange(1)"></td>
