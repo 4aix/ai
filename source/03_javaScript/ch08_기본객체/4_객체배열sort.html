@@ -40,11 +40,17 @@
     document.write('<h3>이름 순 정렬</h3>');
     students.forEach(data => document.write(data + '<br>'));
     // 총점 기준으로 내림차순 정렬
+    new Student('홍길동', 90, 90, 91) - 
     students.sort((left, right)=>{
-      
+      return right.getSum() - left.getSum();
     });
     // 정렬된 데이터 출력
+    document.write('<h3>총점 순 내림정렬</h3>');
+    students.forEach(data => document.write(data + '<br>'));
     // top3만 추출해서 출력
+    let top3 = students.slice(0, 3);
+    document.write('<h3> TOP3 </h3>');
+    top3.forEach(data => document.write(data + '<br>'));
   </script>
 </head>
 <body>
