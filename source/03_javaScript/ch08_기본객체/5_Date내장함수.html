@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <script>
-    let now = new Date();
+    let now = new Date(); // 현재 날짜와 시간
     document.write(now + '<br>');
     document.write('날짜와 시간 : ' + now.toLocaleString() + '<br>');
     document.write('날짜 : ' + now.toLocaleDateString() + '<br>');
     document.write('시간 : ' + now.toLocaleTimeString() + '<br>');
     document.write('월 : ' + (now.getMonth()+1) + '월<br>');
-
+    let openday = new Date(2026, 5, 22, 9, 30, 0); // 개강일의 날짜와 시간(2026.6.22오전 9시반)
+    document.write('개강시점 : ' + openday.toLocaleString() + '<br>');
+    let day = now.getNumberOfDays(openday); // now와 openday사이의 날짜수를 return
+    day = openday.getNumberOfDays(now); // openday와 now사이의 날짜수를 return
+    document.write(day + '일 지남');
   </script>
 </head>
 <body>
