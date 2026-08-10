@@ -4,7 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <script>
-    
+    const loginChk = ()=>{
+      var id = document.getElementsByName('id')[0]; // 배열
+      var pw = document.getElementsByName('pw')[0];
+      var gender = document.getElementsByName('gender');
+      if(!id.value){
+        alert('아이디를 입력하세요');
+        id.focus();
+      }else if(!pw.value){
+        alert('비밀번호를 입력하세요');
+        pw.focus();
+      }else if(!gender[0].checked && !gender[1].checked){
+        alert('성별을 선택하세요');
+      }
+      //alert(gender[0].checked + ',' + gender[1].checked);
+      return false;
+    };
   </script>
 </head>
 <body>
