@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    window.onload = ()=>{
+      var header1 = document.querySelector('h1.header'); // 5방법 : 해당 선택자 태그 하나
+      header1.innerHTML = '첫번째만';
+      var head = document.querySelectorAll('.header'); // 6방법 : 해당 선택자 태그들을 배열
+      let col = ['red', 'orange'];
+      for(let idx in head){
+        head[idx].style.backgroundColor = col[idx];
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1 class="header">HEADER1</h1>
+  <h1 class="header">HEADER2</h1>
+  <input type="text" name="param">
+</body>
+</html>

@@ -9,12 +9,15 @@
       //for (var idx=0 ; idx<header.length ; idx++){
       //  header[idx].innerHTML = '바꿔 #' + idx;
       //}
-      // for(var idx in header){
-      //   header[idx].innerHTML = '바꿔 #'+idx;
-      // }
-      for (var element of header){
-        element.innerHTML = '바꿔';
+      for(var idx in header){
+        header[idx].innerHTML = '바꿔 #'+idx;
       }
+      // for (var element of header){
+      //   element.innerHTML = '바꿔';
+      // }
+      // header.forEach((element, idx)=>{ // forEach()이용 불가
+      //   element.innerHTML = '바꿔#' + idx;
+      // });
     };
   </script>
 </head>
