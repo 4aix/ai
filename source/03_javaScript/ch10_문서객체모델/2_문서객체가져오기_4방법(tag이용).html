@@ -6,8 +6,14 @@
   <script>
     window.onload = ()=>{
       var header = document.getElementsByTagName('h1'); // 배열로
-      for (var idx=0 ; idx<header.length ; idx++){
-        header[idx].innerHTML = '바꿔 #' + idx;
+      //for (var idx=0 ; idx<header.length ; idx++){
+      //  header[idx].innerHTML = '바꿔 #' + idx;
+      //}
+      // for(var idx in header){
+      //   header[idx].innerHTML = '바꿔 #'+idx;
+      // }
+      for (var element of header){
+        element.innerHTML = '바꿔';
       }
     };
   </script>
