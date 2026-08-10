@@ -5,9 +5,12 @@
   <script>
     window.onload = ()=>{
       // id로 가져오기 getElementById('') - 엘리먼트 하나 return
-      clock1 = document.getElementsByClassName('clock1'); // 배열로 return
+      var clock1 = document.getElementsByClassName('clock1'); // 배열로 return
       clock1[0].innerHTML = new Date().toLocaleDateString();
       clock1[1].innerHTML = '<b>' + new Date().toLocaleTimeString() + '</b>';
+      var clock2 = document.getElementsByClassName('clock2')[0];
+      clock2.value = new Date().toLocaleString();
+      clock2.style.cssText = 'color:red; font-size:32px';
     };    
   </script>
 </head>
