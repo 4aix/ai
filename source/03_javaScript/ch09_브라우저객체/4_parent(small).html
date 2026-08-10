@@ -11,15 +11,15 @@
         alert('팝업 차단 해제');
       }
     };
-    const closeLarge = ()=>{
-      // 열려진 새창 닫기
-      child.close();
-    };
+    // const closeLarge = ()=>{
+    //   // 열려진 새창 닫기
+    //   child.close();
+    // };
   </script>
 </head>
 <body>
   <h2>작은 그림의 parent창</h2>
   <img src="ch09_img/small.jpg" alt="작은 그림" 
-        onmouseover="openLarge()" onmouseout="closeLarge()">
+        onmouseover="openLarge()" onmouseout="child.close()">
 </body>
 </html>
