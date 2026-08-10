@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <script>
+    let child;
     const openLarge = ()=>{
       // 새창 열기
+      child = open('5_child(large).html', '', 'width=500, height=610');
+      if(!child){
+        alert('팝업 차단 해제');
+      }
     };
     const closeLarge = ()=>{
       // 열려진 새창 닫기
+      child.close();
     };
   </script>
 </head>
