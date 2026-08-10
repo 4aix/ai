@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <script>
     var arr1 = ['zoo', 'hong', 'kim'];
+    var arr2 = [52, 100, 12, 98, 32];
+    document.write('arr1 연결 :' + arr1.join(' - ') + '<br>');
+    // 배열변수.slice(a, b) : 배열변수 a번째~b번째 앞까지 복제한 배열을 return
+    // 배열변수.slice(a) : 배열변수 a번째~끝까지 복제한 배열을 return
+    // 배열변수.slice() : 배열변수를 복제한 배열을 return
+    let originalArr1 = arr1.slice(); // 깊은 복사
+    originalArr1 = [...arr1];        // 깊은 복사
+    originalArr1 = Array.from(arr1); // 깊은 복사
+    arr1.sort(); // arr1을 오름차순 정렬(ascii코드 순으로)
+    document.write('원본(정렬전)'+originalArr1 + '<br>');
+    document.write('정렬 후 :' + arr1 + '<br>');
   </script>
 </head>
 <body>
