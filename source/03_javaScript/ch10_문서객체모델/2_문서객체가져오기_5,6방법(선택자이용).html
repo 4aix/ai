@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <script>
     window.onload = ()=>{
-      var header1 = document.querySelector('h1.header'); // 5방법 : 해당 선택자 태그 하나
+      var header1 = document.querySelector('h1'); // 5방법 : 해당 선택자 태그 하나
       header1.innerHTML = '첫번째만';
       var head = document.querySelectorAll('.header'); // 6방법 : 해당 선택자 태그들을 배열
       let col = ['red', 'orange'];
       for(let idx in head){
-        head[idx].style.backgroundColor = col[idx];
+        head[idx].style = 'background-color: ' + col[idx];
       }
+      var param = document.querySelectorAll('input[type=text]')[0];
+      param.value = '이상 문서객체 가져오기 끝';
     };
   </script>
 </head>
