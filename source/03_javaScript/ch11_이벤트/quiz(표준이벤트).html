@@ -7,14 +7,18 @@
     window.onload = function(){
       var img = document.getElementsByTagName('img')[0];
       img = document.querySelector('img');
-      img.onmousedown = function(){
+      img.addEventListener('mousedown', function(){
         this.setAttribute('src', 'ch11_img/but2.gif');
         this.setAttribute('alt', 'mouse down');
-      };
-      img.onmouseup = ()=>{
+      });
+      img.addEventListener('mouseup', ()=>{
         img.setAttribute('src', 'ch11_img/but1.gif');
         img.setAttribute('alt', 'mouse up');
-      };
+      });
+      // img.onmouseup = ()=>{
+      //   img.setAttribute('src', 'ch11_img/but1.gif');
+      //   img.setAttribute('alt', 'mouse up');
+      // };
     };
   </script>
 </head>
