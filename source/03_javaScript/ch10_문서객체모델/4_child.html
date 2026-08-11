@@ -14,6 +14,7 @@
     }
   </style>
   <script>
+    var modifyName;
     window.onload = ()=>{
       // parent와 child간의 데이터통신
       // opener : 이 화면을 호출한 창(parent창)
@@ -21,7 +22,7 @@
       var openerDate = opener.document.getElementById('date').value;
       // 문서객체 가져오기
       var showName = document.querySelector('h2#showName');
-      var modifyName = document.querySelector('input[type=text]');
+      modifyName = document.querySelector('input[type=text]');
       // opener에서 받은 데이터 내 화면에 출력하기
       showName.innerHTML = '넘어온 이름:' + openerName;
       if(openerDate){
@@ -29,7 +30,12 @@
       }else{
         showName.innerHTML += ' 날짜 안 넘어옴'
       }
+      modifyName.value = openerName;
     };
+    const sendData = part => {
+      // part는 opener의 #part에 보내고, modifyName.value는 opener의 #name에 보내기
+      opener.document.getElementById('part').innerHTML = part;
+    }
   </script>
 </head>
 <body>
