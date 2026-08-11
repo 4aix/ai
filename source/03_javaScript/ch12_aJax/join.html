@@ -12,17 +12,27 @@
 			//----------------------------------------------------------------------
 			// 1. 아이디 중복 체크(keyup이벤트 + fetch함수) : 2_fetch(keyup).html 참조
 			//----------------------------------------------------------------------
-
+			var idInput = document.querySelector('input[name="id"]');
+			var idConfirmResult = document.getElementById('idConfirmResult');
+			idInput.addEventListener('keyup', function(){ });
 			//----------------------------------------------------------------------
 			// 2. 두 비밀번호 일치 확인 (keyup이벤트) : 7_이벤트제한(표준이벤트).html 참조
 			//----------------------------------------------------------------------
+			var pwInput = document.getElementById('pw');
+			var pwChkInput = document.getElementById('pwChk');
+			var pwChkResult = document.getElementById('pwChkResult');
+			function checkPasswordMatch(){
 
-			//----------------------------------------------------------------------
+			}
+			pwInput.addEventListener('keyup', checkPasswordMatch);
+			pwChkResult.addEventListener('keyup', checkPasswordMatch);
+			//----------------------------------------------------------------------------
 			// 3. 유효성 검사 (form의 submit 이벤트 제한) : 7_이벤트제한(표준이벤트).html 참조
 			//   #idConfirmResult('사용 가능한 ID입니다')와 #pwChkResult 내용으로 유효성 검사
-			//----------------------------------------------------------------------
-
-		});
+			//----------------------------------------------------------------------------
+			var joinForm = document.querySelector('form');
+				joinForm.addEventListener('submit', function(event){});
+			});
   </script>
 </head>
 <body>
