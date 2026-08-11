@@ -35,6 +35,8 @@
     const sendData = part => {
       // part는 opener의 #part에 보내고, modifyName.value는 opener의 #name에 보내기
       opener.document.getElementById('part').innerHTML = part;
+      opener.document.getElementById('name').value = modifyName.value;
+      this.close(); // 화살표 함수내에서의 this는 window
     }
   </script>
 </head>
