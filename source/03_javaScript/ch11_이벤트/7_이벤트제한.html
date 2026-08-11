@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <script>
+    window.onload = ()=>{
+      document.querySelector('form').onsubmit = function(){ // 디폴트 이벤트 제한
+        let pw = document.querySelector('input[name=pw]').value;
+        let pw1 = document.querySelector('input[name=pw1]').value;
+        if(!pw){
+          
+        }
+      };
+    };
+  </script>
+</head>
+<body>
+  <form>
+    PW <input type="password" name="pw"><br>
+    PW <input type="password" name="pw1"><br>
+    <input type="submit">
+  </form>
+</body>
+</html>
