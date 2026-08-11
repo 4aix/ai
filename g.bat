@@ -1,3 +1,3 @@
 git add .
-git commit -m 문서객체모델
+git commit -m 이벤트
 git push origin main
