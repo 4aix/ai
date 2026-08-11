@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <title></title>
+  <style>
+    p{text-align: center; }
+  </style>
+  <script>
+    var id, openerId; // 엘리먼트가 저장될 변수
+    window.onload = ()=>{
+      openerId = opener.document.getElementById('id');
+      id       = document.querySelector('input[name="id"]');
+      id.value = openerId.value;
+    };
+    const confirmOK = ()=>{
+      openerId.value = id.value;
+      close();
+    };
+  </script>
+</head>
+<body>
+  <p>
+    ID <input type="text" name="id">
+    <button>체크</button>
+  </p>
+  <p>
+    <button onclick="confirmOK()">아이디 사용</button>
+  </p>
+</body>
+</html>
