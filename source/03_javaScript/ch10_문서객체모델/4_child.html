@@ -5,10 +5,31 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
   <title></title>
   <style>
-    
+    #wrap {width:450px; margin: 0 auto;}
+    #wrap h1{color:red; margin-top:50px; text-align:center;}
+    #wrap h3{
+      padding:20px; margin:10px; border:1px solid red;
+      text-align:center; border-radius: 10px;
+      font-size: .9em;
+    }
   </style>
   <script>
-    
+    window.onload = ()=>{
+      // parent와 child간의 데이터통신
+      // opener : 이 화면을 호출한 창(parent창)
+      var openerName = opener.document.getElementById('name').value;
+      var openerDate = opener.document.getElementById('date').value;
+      // 문서객체 가져오기
+      var showName = document.querySelector('h2#showName');
+      var modifyName = document.querySelector('input[type=text]');
+      // opener에서 받은 데이터 내 화면에 출력하기
+      showName.innerHTML = '넘어온 이름:' + openerName;
+      if(openerDate){
+        showName.innerHTML += ' 날짜:' + openerDate;
+      }else{
+        showName.innerHTML += ' 날짜 안 넘어옴'
+      }
+    };
   </script>
 </head>
 <body>
