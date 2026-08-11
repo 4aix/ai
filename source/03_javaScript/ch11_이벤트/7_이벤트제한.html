@@ -6,11 +6,18 @@
   <script>
     window.onload = ()=>{
       document.querySelector('form').onsubmit = function(){ // 디폴트 이벤트 제한
-        let pw = document.querySelector('input[name=pw]').value;
-        let pw1 = document.querySelector('input[name=pw1]').value;
-        if(!pw){
-          
+        let pw = document.querySelector('input[name=pw]');
+        let pw1 = document.querySelector('input[name=pw1]');
+        if(!pw.value){
+          alert('비밀번호를 입력하세요');
+          pw.focus();
+          return false; // 디폴트 이벤트 제한
+        }else if(pw.value != pw1.value){
+          alert('비밀번호가 다릅니다');
+          pw.focus();
+          return false; // 이벤트 제한
         }
+        return true; // 디폴트 이벤트 발생
       };
     };
   </script>
