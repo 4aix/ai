@@ -11,6 +11,7 @@
       btnA.addEventListener('click', ()=>{
         countA.innerHTML = Number(countA.innerHTML) + 1;
         // 강제 이벤트 발생
+        btnB.click();
       });
       btnB.addEventListener('click', ()=> countB.innerHTML = Number(countB.innerHTML) + 1 );
     };
