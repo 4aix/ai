@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelector('input[name=id]').addEventListener('keyup', function(){
+        let id = this.value;
+        if(id.length<3){
+          document.querySelector('#idConfirmResult').innerHTML = 'id는 3글자 이상입니다';
+        }else{
+          let params = new URLSearchParams({id:id}); // id=hong
+          // 비동기 작업 함수
+          fetch(`midConfirmNonExists.html?${params}`, {method:'get'})
+          .then(response => {
+            if(!response.ok){
+              throw new Error('서버 응답 오류 : ' + response.status );
+            }
+            return response.text(); // 응답 결과의 text(html문서)만 전달
+          })
+          .then(data => {
+            document.querySelector('#idConfirmResult').innerHTML = data.trim();
+          })
+          .catch(error => {
+            alert(error.message);
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  아이디 <input type="text" name="id" autocomplete="off" autofocus="autofocus">
+  <br>
+  <span id="idConfirmResult"></span>
+</body>
+</html>
