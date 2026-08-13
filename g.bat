@@ -1,3 +1,3 @@
 git add .
-git commit -m 정적웹크롤링
+git commit -m "open API 사용"
 git push origin main
