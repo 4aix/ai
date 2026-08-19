@@ -69,6 +69,7 @@ SELECT DISTINCT JOB FROM EMP;
 SELECT DISTINCT DEPTNO FROM EMP;
 
     -- ※ ☆ ★ 연습문제 꼭 풀기 ★ ☆ ※
+    
     --1. emp 테이블의 구조 출력
     DESC EMP;
     --2. emp 테이블의 모든 내용을 출력 
