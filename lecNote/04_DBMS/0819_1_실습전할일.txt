@@ -1,1 +1,24 @@
 1. Oracle셋팅 후, cmd창을 띄워 다음을 실행
+2. 관리자계정으로 접속
+ c:\~>sqlplus system/설치시비번
+ c:\~>sqlplus / as sysdba
+         sqlplus "/as sysdba
+3. scott 계정생성 및 권한부여(dba)
+ SQL> create user scott identified by tiger;
+ User created.
+ SQL> grant dba to scott;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
