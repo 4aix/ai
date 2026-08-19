@@ -158,8 +158,8 @@ SELECT ENAME, SAL, HIREDATE FROM EMP ORDER BY SAL, HIREDATE DESC, ENAME;
 문자형 -> 날짜형 : TO_DATE('2026-08-19', 'YYYY-MM-DD')
 */
 SELECT TO_CHAR(SAL, '9,999') 급여, TO_CHAR(HIREDATE, 'YYYY-MM-DD DY HH12:MI:SS') 입사일 FROM EMP;
--- QUIZ
 
+-- ★ ★ ★ <총 QUIZ> ★ ★ ★
 --1. EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
  
 --2. EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
