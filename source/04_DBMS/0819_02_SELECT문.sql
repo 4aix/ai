@@ -114,6 +114,13 @@ SELECT DISTINCT DEPTNO FROM EMP;
     SELECT * FROM EMP WHERE SAL NOT BETWEEN 1500 AND 3000;
     
  -- (2) 필드명 IN (값1, 값2, ... 값N) : 필드명이 값1이거나 값2이거나, ... 값N인 경우
+    -- EX. 부서코드가 10번이거나 30인 사람의 사번, 이름, 부서코드 출력
+    SELECT EMPNO, ENAME, DEPTNO FROM EMP WHERE DEPTNO IN (10,30);
+    -- EX. 부서코드가 10,20,40번을 제외한 직원의 모든 필드 출력
+    SELECT * FROM EMP WHERE NOT (DEPTNO=10 OR DEPTNO=20 OR DEPTNO=40);
+    SELECT * FROM EMP WHERE DEPTNO NOT IN (10,20,40);
+    -- EX. 사번이 7902, 7788, 7566인 사원의 이름, 사번, 직책을 출력
+    SELECT ENAME, EMPNO, JOB FROM EMP WHERE EMPNO IN (7902, 7788, 7566);
 
 
 
