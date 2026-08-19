@@ -44,11 +44,13 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL>3000;
 
 -- 5. 산술연산자(SELECT절, WHERE절, ORDER BY절)
     -- EX. 연봉이 2400이상인 직원의 ENAME, SAL, 연봉(SAL*12)
-    SELECT ENAME, SAL, SAL*12 연봉 
-        FROM EMP
-        ;
-
-
+    SELECT ENAME, SAL, SAL*12 연봉 -- (3)
+        FROM EMP                   -- (1)번째
+        WHERE SAL*12>=2400           -- (2)번째
+        ORDER BY 연봉; -- 연봉 순 오름차순(ASC) 정렬 (4)번째
+    -- EX. 연봉이 10000이상인 직원의 ENAME, SAL, 연봉(SAL*12+COMM)
+    SELECT ENAME, SAL, SAL*12+COMM "연봉"
+        FROM EMP;
 
 
 
