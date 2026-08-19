@@ -21,8 +21,26 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL>3000;
     -- 비교연산자는 숫자, 문자, 날짜 모두 가능
     --EX1. 사원이름(ENAME)이 'A','B','C'로 시작하는 사원의 모든 필드  'A'<'AA'<'AAA'<'B'<'C'<'CA'<'CAA'..
     SELECT * FROM EMP WHERE ENAME < 'D';
+    --EX2. 81년도 이전에 입사(HIREDATE)한 사원의 모든 필드
+    SELECT * FROM EMP WHERE HIREDATE < '81/01/01';
+    
+    -- 날짜 표기법 셋팅(현재:RR/MM/DD)
+    ALTER SESSION SET NLS_DATE_FORMAT = 'MM-DD-YYYY';
+    SELECT * FROM EMP 
+        WHERE TO_CHAR(HIREDATE, 'RR/MM/DD') < '81/01/01';
+    SELECT * FROM EMP
+        WHERE HIREDATE < TO_DATE('81/01/01', 'RR/MM/DD');
+    ALTER SESSION SET NLS_DATE_FORMAT = 'RR/MM/DD';
 
-
+-- 4. 특정 행만 출력 : WHERE절(조건절)에서 논리연산자 : OR, AND, NOT
+    -- EX1. 급여(SAL)가 2000부터 3000인 직원의 모든 필드
+    SELECT * FROM EMP WHERE 2000<=SAL AND SAL<=3000;
+    -- EX2. 82년도에 입사한 사원의 모든 필드
+    SELECT * FROM EMP WHERE HIREDATE>='82/01/01' AND HIREDATE<='82/12/31';
+    SELECT * FROM EMP 
+        WHERE HIREDATE>=TO_DATE('82/01/01', 'RR/MM/DD') AND HIREDATE<=TO_DATE('82/12/31','RR/MM/DD');
+    -- EX3. 10번 부서(DEPTNO)이거나 JOB이 MANAGER인 직원의 모든 필드
+    SELECT * FROM EMP WHERE DEPTNO=10 OR JOB='MANAGER';
 
 
 
