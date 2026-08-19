@@ -55,7 +55,17 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL>3000;
         FROM EMP
         WHERE SAL*12+NVL(COMM,0)>10000;
     -- EX. 모든 사원의 ENAME, MGR(상사사번)을 출력(MGR이 NULL이면 'CEO'로 바꿔 출력)
+    SELECT ENAME, NVL(TO_CHAR(MGR), 'CEO') MGR FROM EMP;
+    DESC EMP;
 
+-- 6. 연결연산자(||) : 필드나 문자를 연결
+SELECT ENAME || '은 ' || JOB FROM EMP;
+    -- EX. 모든 사원에 대해서 "SMITH의 연봉은 XXXX$입니다"라고 출력하고 TITLE에는 MESSAGE.
+    SELECT ENAME || '의 연봉은 ' || (SAL*12+NVL(COMM, 0)) || '$입니다' MESSAGE
+        FROM EMP;
+
+-- 7. 중복제거
+SELECT JOB FROM EMP;
 
 
 
