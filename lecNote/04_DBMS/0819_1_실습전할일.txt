@@ -10,9 +10,17 @@
  Grant succeeded.
 4. 관리자 계정 접속 해제
  SQL> exit;
-5. scott계정으로 접속후, 수업시간에 쓸 데이터 넣기
+5. scott계정으로 접속후, 수업시간에 쓸 데이터(demo.sql) 넣기
  c:\~>sqlplus scott/tiger
- SQL>
+ SQL> @c:/ai/lecNote/04_DBMS/demo.sql;
+ c:\~>
+6. scott계정으로 접속후, 데이터 확인
+ c:\~>sqlplus scott/tiger
+ SQL> SELECT * FROM TAB; -- 테이블들
+ SQL> SELECT * FROM EMP; -- DEPT테이블 정보(여기선 안 되겠네)
+ SQL> EXIT
+7. SQL developer 프로그램을 다운로드 받아 압축을 푼 후 사용
+  https://www.oracle.com/database/sqldeveloper/technologies/download/
 
 
 
