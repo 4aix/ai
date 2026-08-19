@@ -122,7 +122,7 @@ SELECT DISTINCT DEPTNO FROM EMP;
     -- EX. 사번이 7902, 7788, 7566인 사원의 이름, 사번, 직책을 출력
     SELECT ENAME, EMPNO, JOB FROM EMP WHERE EMPNO IN (7902, 7788, 7566);
 
-
+ -- (3) 필드명 LIKE 패턴 : %(0글자이상), _(한글자)가 포함된 패턴
 
 
 
