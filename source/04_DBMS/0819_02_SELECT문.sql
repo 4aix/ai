@@ -123,7 +123,18 @@ SELECT DISTINCT DEPTNO FROM EMP;
     SELECT ENAME, EMPNO, JOB FROM EMP WHERE EMPNO IN (7902, 7788, 7566);
 
  -- (3) 필드명 LIKE 패턴 : %(0글자이상), _(한글자)가 포함된 패턴
-
+    -- EX. 이름이 M으로 시작하는 사원의 모든 필드
+    SELECT * FROM EMP WHERE ENAME LIKE 'M%';
+    -- EX. 이름에 N이 들어가는 사원의 모든 필드
+    SELECT * FROM EMP WHERE ENAME LIKE '%N%';
+    -- EX. 이름이 'S'로 끝나는 사원의 모든 필드
+    SELECT * FROM EMP WHERE ENAME LIKE '%S';
+    -- EX. SAL이 5로 끝나는 사원의 모든 필드
+    SELECT * FROM EMP WHERE SAL LIKE '%5';
+    -- EX. 82년도에 입사한 사원의 이름,입사일을 출력
+    SELECT ENAME, HIREDATE FROM EMP WHERE TO_CHAR(HIREDATE, 'RR/MM/DD') LIKE '82%';
+    -- EX. 1월에 입사한 사원의 모든 필드
+    SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') LIKE '__/01/__';
 
 
 
