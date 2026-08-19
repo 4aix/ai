@@ -42,6 +42,14 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL>3000;
     -- EX3. 10번 부서(DEPTNO)이거나 JOB이 MANAGER인 직원의 모든 필드
     SELECT * FROM EMP WHERE DEPTNO=10 OR JOB='MANAGER';
 
+-- 5. 산술연산자(SELECT절, WHERE절, ORDER BY절)
+    -- EX. 연봉이 2400이상인 직원의 ENAME, SAL, 연봉(SAL*12)
+    SELECT ENAME, SAL, SAL*12 연봉 
+        FROM EMP
+        ;
+
+
+
 
 
 
