@@ -136,7 +136,11 @@ SELECT DISTINCT DEPTNO FROM EMP;
     -- EX. 1월에 입사한 사원의 모든 필드
     SELECT * FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') LIKE '__/01/__';
 
-
+ -- (4) IS NULL(NULL인지를 검색할 때)
+    -- EX. 상여금이 NULL인 사원의 모든 필드
+    SELECT * FROM EMP WHERE COMM IS NULL;
+    -- EX. 상여금이 없는 사원의 모든 필드(COMM이 NULL이거나 0)
+    SELECT * FROM EMP ;
 
 
 
