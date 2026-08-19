@@ -80,19 +80,44 @@ SELECT DISTINCT DEPTNO FROM EMP;
     SELECT EMPNO, ENAME, SAL, JOB, HIREDATE FROM EMP;
     --5. emp 테이블에서 급여가 2000미만인 사람의 사번, 이름, 급여 출력
     SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL<2000;
+    
     --6. 입사일이 81/02이후에 입사한 사람의 사번, 이름, 업무, 입사일 출력
-    SELECT EMPNO, ENAME, JOB, HIREDATE FROM EMP WHERE HIREDATE > TO_DATE('81/02/01');
-    SELECT EMPNO, ENAME, JOB, HIREDATE FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') > '81/02/01';
+    SELECT EMPNO, ENAME, JOB, HIREDATE FROM EMP WHERE HIREDATE >= '81/03/01';
+    SELECT EMPNO, ENAME, JOB, HIREDATE FROM EMP WHERE HIREDATE >= TO_DATE('81/03/01');
+    SELECT EMPNO, ENAME, JOB, HIREDATE FROM EMP WHERE TO_CHAR(HIREDATE,'RR/MM/DD') >= '81/03/01';
+    
     --7. 업무가 SALESMAN인 사람들 모든 자료 출력
     SELECT * FROM EMP WHERE JOB='SALESMAN';
+    
     --8. 급여가 1500이상이고 3000이하인 사람의 사번, 이름, 급여 출력
     SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL>=1500 AND SAL<=3000;
+    
     --9. 부서코드가 10번이거나 30인 사람의 사번, 이름, 업무, 부서코드 출력
     SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10 OR DEPTNO=30;
+    
     --10. 업무가 SALESMAN이거나 급여가 3000이상인 사람의 사번, 이름, 업무, 부서코드 출력
     SELECT EMPNO, ENAME, SAL, DEPTNO FROM EMP WHERE JOB='SALESMAN' OR SAL>=3000;
+    
     --11.“ename은 XXX 업무이고 연봉은 XX다” 스타일로 모두 출력(연봉은 SAL*12+COMM)
     SELECT ENAME || '은 ' || JOB || '업무이고 연봉은 ' || (SAL*12+NVL(COMM, 0)) || '다' FROM EMP;
+
+-- 8. SQL 연산자(BETWEEN, IN, LIKE, IS NULL)
+ -- (1) 필드명 BETWEEN A AND B : 필드명이 A부터 B까지(A, B포함) A<B
+    --  필드명 NOT BETWEEN A AND B : 필드명이 A미만 B초과(A, B미포함) A<B
+    -- EX. 급여가 1500이상이고 3000이하인 사람의 모든 필드 출력
+    SELECT * FROM EMP WHERE SAL BETWEEN 1500 AND 3000;
+    SELECT * FROM EMP WHERE SAL BETWEEN 3000 AND 1500; -- 불가
+    -- EX. 82년도 봄에 입사한 사람의 모든 필드 출력
+    SELECT * FROM EMP
+        WHERE HIREDATE BETWEEN TO_DATE('82/03/01', 'RR/MM/DD') AND TO_DATE('82/05/31', 'RR/MM/DD');
+    -- EX. 급여가 1500미만, 3000초과인 사람의 모든 필드 출력
+    SELECT * FROM EMP WHERE SAL NOT BETWEEN 1500 AND 3000;
+    
+ -- (2) 필드명 IN (값1, 값2, ... 값N) : 필드명이 값1이거나 값2이거나, ... 값N인 경우
+
+
+
+
 
 
 
