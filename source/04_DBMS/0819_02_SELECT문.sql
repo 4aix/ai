@@ -151,15 +151,18 @@ SELECT DISTINCT DEPTNO FROM EMP;
 SELECT ENAME, SAL, HIREDATE FROM EMP ORDER BY SAL, HIREDATE DESC, ENAME;
             -- 급여 오름차순, 급여가 같으면 입사일 내림차순, 급여와 입사일이 같으면 이름 오름차순 정렬
 /* ※ 형변환함수
-    날짜형 -> 문자형 : TO_CHAT(날짜형, '패턴')
-                        YYYY(년도4자리) RR(년도2자리) YY(년도2자리) MM(월2자리), DD(일2자리) 
+날짜형 -> 문자형 : TO_CHAR(날짜형, '패턴')
+              YYYY(년도4자리) RR(년도2자리) YY(년도2자리) MM(월2자리), DD(일2자리) DY(수) DAY(수요일)
+              HH24, HH12, AM이나PM, MI(분), SS(초)
+숫자형 -> 문자형 : TO_CHAR(숫자형, '패턴') (ex)'9,999'
+문자형 -> 날짜형 : TO_DATE('2026-08-19', 'YYYY-MM-DD')
 */
-
+SELECT TO_CHAR(SAL, '9,999') 급여, TO_CHAR(HIREDATE, 'YYYY-MM-DD DY HH12:MI:SS') 입사일 FROM EMP;
 -- QUIZ
 
---1.	EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
+--1. EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
  
---2.	EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
+--2. EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
 
 --3.	연봉(SAL*12+COMM)이 24000이상인 사번, 이름, 급여 출력 (급여순정렬)
 
