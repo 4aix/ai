@@ -7,6 +7,12 @@
  SQL> create user scott identified by tiger;
  User created.
  SQL> grant dba to scott;
+ Grant succeeded.
+4. 관리자 계정 접속 해제
+ SQL> exit;
+5. scott계정으로 접속후, 수업시간에 쓸 데이터 넣기
+ c:\~>sqlplus scott/tiger
+ SQL>
 
 
 
