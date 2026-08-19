@@ -160,9 +160,9 @@ SELECT ENAME, SAL, HIREDATE FROM EMP ORDER BY SAL, HIREDATE DESC, ENAME;
 SELECT TO_CHAR(SAL, '9,999') 급여, TO_CHAR(HIREDATE, 'YYYY-MM-DD DY HH12:MI:SS') 입사일 FROM EMP;
 
 -- ★ ★ ★ <총 QUIZ> ★ ★ ★
---1. EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
+--1.	EMP 테이블에서 sal이 3000이상인 사원의 empno, ename, job, sal을 출력
  
---2. EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
+--2.	EMP 테이블에서 empno가 7788인 사원의 ename과 deptno를 출력
 
 --3.	연봉(SAL*12+COMM)이 24000이상인 사번, 이름, 급여 출력 (급여순정렬)
 
@@ -186,11 +186,4 @@ SELECT TO_CHAR(SAL, '9,999') 급여, TO_CHAR(HIREDATE, 'YYYY-MM-DD DY HH12:MI:SS
 --11.	사원명에 'A'가 들어간 사원의 사번, 사원명을 출력
 
 --12.	연봉(SAL*12)이 35000 이상인 사번, 사원명, 연봉을 검색 하시오.
-
-
-
-
-
-
-
 
