@@ -233,6 +233,4 @@ SELECT TO_CHAR(SAL, '9,999') 급여, TO_CHAR(HIREDATE, 'YYYY-MM-DD DY HH12:MI:SS
     --12. 연봉(SAL*12)이 35000 이상인 사번, 사원명, 연봉을 검색 하시오.
     SELECT EMPNO, ENAME, SAL*12 연봉 
         FROM EMP 
-        WHERE SAL*12 > 35000;
-        
-        
+        WHERE SAL*12 > 35000;      
