@@ -48,9 +48,13 @@ SELECT EMPNO NO, ENAME NAME, SAL FROM EMP WHERE SAL>3000;
         FROM EMP                   -- (1)번째
         WHERE SAL*12>=2400           -- (2)번째
         ORDER BY 연봉; -- 연봉 순 오름차순(ASC) 정렬 (4)번째
-    -- EX. 연봉이 10000이상인 직원의 ENAME, SAL, 연봉(SAL*12+COMM)
-    SELECT ENAME, SAL, SAL*12+COMM "연봉"
-        FROM EMP;
+    -- EX. 연봉이 10000이상인 직원의 ENAME, SAL, comm, 연봉(SAL*12+COMM)
+        -- 산술연산의 결과는 null을 포함하면 결과도 null
+        -- NVL(NULL일수도있는필드명, 대체값) - 필드명과 대체값의 타입이 일치
+    SELECT ENAME, SAL, COMM, SAL*12+NVL(COMM,0) "연봉"
+        FROM EMP
+        WHERE SAL*12+NVL(COMM,0)>10000;
+    -- EX. 모든 사원의 ENAME, MGR(상사사번)을 출력(MGR이 NULL이면 'CEO'로 바꿔 출력)
 
 
 
