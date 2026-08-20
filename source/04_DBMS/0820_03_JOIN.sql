@@ -13,8 +13,11 @@ SELECT E.*, DNAME, LOC
   SELECT EMPNO, ENAME, JOB, MGR, E.DEPTNO, DNAME
     FROM EMP E, DEPT D
     WHERE E.DEPTNO=D.DEPTNO;
-  -- EX. 급여가 2000이상인 직원의 이름, 직책, 급여, 부서명, 근무지출력
-  SELECT 
+  -- EX. 급여가 2000이상인 직원의 이름, 직책, 급여, 부서명
+  SELECT ENAME, JOB, SAL, DNAME, LOC FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND SAL>=2000;
+  -- EX. 근무지(LOC)가 'CHIGAGO'인 직원의 이름, 업무, 급여, 부서번호
+  
+    
 
 
 
