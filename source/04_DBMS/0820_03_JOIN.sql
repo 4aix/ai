@@ -23,18 +23,20 @@ SELECT E.*, DNAME, LOC
   SELECT ENAME, SAL, E.DEPTNO, DNAME, COMM 
     FROM EMP E, DEPT D
     WHERE E.DEPTNO=D.DEPTNO AND COMM IS NOT NULL AND COMM!=0 AND SAL>=1200;
-  -- 탄탄EX. 뉴욕에서 근무하는 사원의 이름과 급여를 출력하시오
+  -- 탄탄EX1. 뉴욕에서 근무하는 사원의 이름과 급여를 출력하시오
   SELECT ENAME, SAL FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND LOC='NEW YORK';
-  -- 탄탄EX. ACCOUNTING 부서 소속 사원의 이름과 입사일을 입사일 최신순으로 출력하시오
+  -- 탄탄EX2. ACCOUNTING 부서 소속 사원의 이름과 입사일을 입사일 최신순으로 출력하시오
   SELECT ENAME, HIREDATE FROM EMP E, DEPT D 
     WHERE E.DEPTNO=D.DEPTNO AND DNAME='ACCOUNTING' 
     ORDER BY HIREDATE DESC;
-  -- 탄탄EX. 직급이 MANAGER인 사원의 이름, 부서명을 출력하시오
-
-  -- 탄탄EX. Comm이 null이 아닌 사원의 이름, 급여, 부서코드, 근무지를 출력하시오.
-
-    
-
+  -- 탄탄EX3. 직급이 MANAGER인 사원의 이름, 부서명을 출력하시오
+  SELECT ENAME, DNAME FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND JOB='MANAGER';
+  -- 탄탄EX4. Comm이 null이 아닌 사원의 이름, 급여, 부서코드, 근무지를 출력하시오.
+  SELECT ENAME, SAL, E.DEPTNO, LOC FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND COMM IS NOT NULL;
+  -- EX. 20번부서외의 사원의 이름, 급여, 부서코드, 근무지를 부서코드순 출력하시오.
+  SELECT ENAME, SAL, E.DEPTNO, LOC FROM EMP E, DEPT D 
+    WHERE E.DEPTNO=D.DEPTNO AND E.DEPTNO!=20
+    ORDER BY D.DEPTNO;
 
 
 
