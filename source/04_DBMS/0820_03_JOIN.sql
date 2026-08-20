@@ -137,8 +137,7 @@ SELECT * FROM EMP E, DEPT D
     --3. 보너스를 받는 사원에 대하여 이름,부서명,위치를 출력
     SELECT ENAME, COMM, DNAME, LOC 
         FROM EMP E, DEPT D
-        WHERE E.DEPTNO=D.DEPTNO AND COMM IS NOT NULL AND COMM!=0;
-                                    ----------------------------
+        WHERE E.DEPTNO=D.DEPTNO AND COMM > 0;
     
     --4. 이름 중 L자가 있는 사원에 대하여 이름,업무,부서명,위치를 출력
     SELECT ENAME, JOB, DNAME, LOC 
@@ -157,6 +156,7 @@ SELECT * FROM EMP E, DEPT D
         FROM EMP E, SALGRADE, DEPT D
         WHERE E.DEPTNO=D.DEPTNO 
             AND SAL BETWEEN LOSAL AND HISAL 
+            AND JOB='MANAGER'
             AND SAL>=2500
         ORDER BY EMPNO DESC;
         
