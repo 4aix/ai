@@ -16,7 +16,23 @@ SELECT E.*, DNAME, LOC
   -- EX. 급여가 2000이상인 직원의 이름, 직책, 급여, 부서명
   SELECT ENAME, JOB, SAL, DNAME, LOC FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND SAL>=2000;
   -- EX. 근무지(LOC)가 'CHIGAGO'인 직원의 이름, 업무, 급여, 부서번호
-  
+  SELECT ENAME, JOB, SAL, E.DEPTNO
+    FROM EMP E, DEPT D
+    WHERE LOC='CHICAGO' AND E.DEPTNO=D.DEPTNO;
+  -- EX. 상여금(COMM)이 있는 사원 중, SAL이 1200이상인 사원의 이름, 급여, 부서번호, 부서명, 상여(부서명순,급여큰순)
+  SELECT ENAME, SAL, E.DEPTNO, DNAME, COMM 
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO=D.DEPTNO AND COMM IS NOT NULL AND COMM!=0 AND SAL>=1200;
+  -- 탄탄EX. 뉴욕에서 근무하는 사원의 이름과 급여를 출력하시오
+  SELECT ENAME, SAL FROM EMP E, DEPT D WHERE E.DEPTNO=D.DEPTNO AND LOC='NEW YORK';
+  -- 탄탄EX. ACCOUNTING 부서 소속 사원의 이름과 입사일을 입사일 최신순으로 출력하시오
+  SELECT ENAME, HIREDATE FROM EMP E, DEPT D 
+    WHERE E.DEPTNO=D.DEPTNO AND DNAME='ACCOUNTING' 
+    ORDER BY HIREDATE DESC;
+  -- 탄탄EX. 직급이 MANAGER인 사원의 이름, 부서명을 출력하시오
+
+  -- 탄탄EX. Comm이 null이 아닌 사원의 이름, 급여, 부서코드, 근무지를 출력하시오.
+
     
 
 
