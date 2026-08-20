@@ -1,3 +1,3 @@
 git add .
-git commit -m "Oracle select¹®"
+git commit -m "JOINÁ¶È¸"
 git push origin main
