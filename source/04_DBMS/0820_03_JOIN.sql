@@ -38,6 +38,13 @@ SELECT E.*, DNAME, LOC
     WHERE E.DEPTNO=D.DEPTNO AND E.DEPTNO!=20
     ORDER BY D.DEPTNO;
 
+-- ▶ 2. NON-EQUI JOIN : 동일한 컬럼없이 다른 조건으로 조인
+SELECT * FROM EMP WHERE ENAME='SCOTT'; -- 직원정보
+SELECT * FROM SALGRADE; -- 급여등급정보
+
+
+
+
 
 
 
