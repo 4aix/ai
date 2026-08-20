@@ -158,7 +158,7 @@ SELECT * FROM EMP E, DEPT D
             AND SAL BETWEEN LOSAL AND HISAL 
             AND JOB='MANAGER'
             AND SAL>=2500
-        ORDER BY EMPNO DESC;
+        ORDER BY EMPNO;
         
   -- Part2(4가지 JOIN 모두)
     --1. 이름, 급여, 업무, 직속상사명
