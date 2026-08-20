@@ -114,6 +114,19 @@ SELECT W.ENAME, W.MGR, M.EMPNO, M.ENAME
     FROM EMP 부하, EMP 상사
     WHERE 부하.MGR(+)=상사.EMPNO AND 부하.ENAME IS NULL;
     
+-- (2) EQUI-JOIN에서의 OUTTER-JOIN
+SELECT * FROM DEPT; -- 10,20,30,40
+
+
+
+
+
+
+
+
+
+
+
 
 
 
