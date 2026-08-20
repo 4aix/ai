@@ -7,8 +7,14 @@ SELECT * FROM EMP, DEPT WHERE ENAME='SCOTT'; -- EMP의 1행 * DEPT의 4행
 -- ▶ 1. EQUI JOIN : 공통필드 값이 일치되는 조건만 JOIN
 SELECT * FROM EMP, DEPT WHERE EMP.DEPTNO=DEPT.DEPTNO;
 SELECT E.*, DNAME, LOC
-    FROM EMP E, DEPT D 
+    FROM EMP E, DEPT D
     WHERE E.DEPTNO=D.DEPTNO;
+  -- EX. 모든 사원의 사번, 이름, JOB, 상사사번, 부서번호, 부서명
+  SELECT EMPNO, ENAME, JOB, MGR, E.DEPTNO, DNAME
+    FROM EMP E, DEPT D
+    WHERE E.DEPTNO=D.DEPTNO;
+  -- EX. 급여가 2000이상인 직원의 이름, 직책, 급여, 부서명, 근무지출력
+  SELECT 
 
 
 
