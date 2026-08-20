@@ -173,9 +173,9 @@ SELECT * FROM EMP E, DEPT D
         
     --3. 이름, 급여, 부서명, 직속상사명
     SELECT W.ENAME, W.SAL, DNAME, NVL(M.ENAME,'없음') NAMEGER
-        FROM EMP W, EMP M, DEPT E
+        FROM EMP W, EMP M, DEPT D
         WHERE W.MGR=M.EMPNO(+)    -- SELF JOIN 조건
-            AND W.DEPTNO=E.DEPTNO; -- EQUI JOIN 조건
+            AND W.DEPTNO=D.DEPTNO; -- EQUI JOIN 조건
         
     --4. 상사가 없는 직원과 상사가 있는 직원 모두에 대해 이름, 급여, 부서코드, 부서명, 근무지, 직속상사명을 출력하시오(단, 직속상사가 없을 경우 직속상사명에는 ‘없음’으로 대신 출력하시오)
     SELECT W.ENAME, W.SAL, W.DEPTNO, DNAME, LOC, NVL(M.ENAME,'없음') 상사명
@@ -196,8 +196,7 @@ SELECT * FROM EMP E, DEPT D
         FROM EMP W, EMP M, DEPT D, SALGRADE
         WHERE W.MGR=M.EMPNO(+)
             AND W.DEPTNO=D.DEPTNO
-            AND W.SAL BETWEEN LOSAL AND HISAL
-            AND W.SAL>=2000;
+            AND W.SAL BETWEEN LOSAL AND HISAL;
     
     --7. 6번을 부서명 순으로 오름차순 정렬하여 출력(부서가 같으면 급여가 큰 순 정렬)
     SELECT W.ENAME, W.SAL, GRADE, DNAME, (W.SAL+NVL(W.COMM, 0))*12 ANNUAL_SAL, NVL(M.ENAME,'없음') 상사명
@@ -205,8 +204,4 @@ SELECT * FROM EMP E, DEPT D
         WHERE W.MGR=M.EMPNO(+)
             AND W.DEPTNO=D.DEPTNO
             AND W.SAL BETWEEN LOSAL AND HISAL
-            AND W.SAL>=2000
         ORDER BY W.DEPTNO, SAL DESC;
-
-
-
