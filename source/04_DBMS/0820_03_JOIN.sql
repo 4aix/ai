@@ -82,6 +82,39 @@ SELECT WORKER.EMPNO, WORKER.ENAME, WORKER.MGR, MANAGER.EMPNO, MANAGER.ENAME MANA
     FROM EMP WORKER, EMP MANAGER
     WHERE WORKER.ENAME = 'SMITH' AND WORKER.MGR=MANAGER.EMPNO;
 
+SELECT W.EMPNO, W.ENAME, W.MGR, M.EMPNO 상사사번, M.ENAME 상사이름
+    FROM EMP W, EMP M
+    WHERE W.MGR=M.EMPNO;
+  -- EX. 'SMITH의 상사는 FORD다' 포맷으로 모든 직원을 출력
+  SELECT W.ENAME || '의 상사는 ' || M.ENAME || '다' MESSAGE
+    FROM EMP W, EMP M
+    WHERE W.MGR=M.EMPNO;
+  -- 탄탄EX. 매니저가 KING인 사원들의 이름과 직급을 출력하시오
+  SELECT W.ENAME, W.JOB
+    FROM EMP W, EMP M
+    WHERE W.MGR=M.EMPNO AND M.ENAME='KING';
+    
+-- ▶ 4. OUTER JOIN : EQUI-JOIN, NON-EQUI-JOIN, SELF-JOIN시 조건에 만족하지 않는 행까지 나타나게 하는 조인
+-- (1) SELF-JOIN에서의 OUTTER JOIN : 배제된 행을 결과에 포함에 시킬 경우, +기호를 정보가 부족한 컬럼에 붙임
+SELECT W.ENAME, W.MGR, M.EMPNO, M.ENAME
+    FROM EMP W, EMP M
+    WHERE W.MGR = M.EMPNO(+);
+  -- EX. 'SMITH의 상사는 FORD다' 'KING의 상사는 없다'
+  SELECT W.ENAME || '의 상사는 ' || NVL(M.ENAME, '없') || '다'
+    FROM EMP W, EMP M
+    WHERE W.MGR = M.EMPNO(+);
+  -- EX. 사원명, 상사사번, 상사사번, 상사명
+  SELECT 부하.ENAME, 부하.MGR, 상사.EMPNO, 상사.ENAME
+    FROM EMP 부하, EMP 상사
+    WHERE 부하.MGR=상사.EMPNO;
+  -- MGR : 7839, NULL, 7782, 7698, 7902, 7566, 7788
+  -- EMPNO : 7839, 7782, 7698, 7902, 7566, 7788, 7369, 7521, ...
+  -- EX. 말단사원의 사번과 이름
+  SELECT 상사.EMPNO, 상사.ENAME
+    FROM EMP 부하, EMP 상사
+    WHERE 부하.MGR(+)=상사.EMPNO AND 부하.ENAME IS NULL;
+    
+
 
 
 
