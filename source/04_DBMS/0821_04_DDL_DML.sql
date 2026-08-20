@@ -7,3 +7,27 @@
       입력(INSERT), 수정(UPDATE), 삭제(DELETE) - 취소(ROLLBACK) 가능
       검색(SELECT)
 */
+----------------
+--- ★ DDL ★ ---
+----------------
+-- 1. 테이블 생성(CREATE TABLE 테이블명...) : 테이블 구조 정의
+    -- ORACLE 타입 : NUMBER(38이하의자릿수), DATE, VARCHAR2(4000이하의 바이트수), CLOB
+CREATE TABLE BOOK(
+    BOOKID    NUMBER(4),     -- BOOKID필드의 타입은 숫자4자리
+    BOOKNAME  VARCHAR2(30),  -- BOOKNAME필드의 타입은 문자30BYTE(한글1자=3BYTE)
+    PUBLISHER VARCHAR2(30),
+    RDATE     DATE,
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
