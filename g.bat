@@ -1,3 +1,3 @@
 git add .
-git commit -m "JOIN조회"
+git commit -m "ORACLE 조인"
 git push origin main
