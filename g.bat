@@ -1,3 +1,3 @@
 git add .
-git commit -m "ORACLE 조인"
+git commit -m "시퀀스"
 git push origin main
