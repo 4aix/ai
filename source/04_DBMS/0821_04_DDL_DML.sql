@@ -75,8 +75,35 @@ COMMIT; -- 트랜젝션이 쌓여있는 명령어를 오라클 적용
 DROP TABLE DEPT01; -- 참조하는테이블이 있을 경우, 삭제 불가(삭제하려면 참조하는 테이블을 DROP한후 DROP추천)
 DROP TABLE DEPT01 CASCADE CONSTRAINTS; -- 비추(참조하는 테이블이 있어도 삭제 - EMP01테이블의 Fk연결이 끊김 )
 
+----------------
+--- ★ DML ★ ---
+----------------
+-- 1. INSERT INTO 테이블명 VALUES (값1, 값2, .. 값N);
+   -- INSERT INTO 테이블명 (필드명1, 필드명2,..) VALUES (값1, 값2, ..);
+SELECT * FROM DEPT01;
+INSERT INTO DEPT01 VALUES (50, '법무', '서초');
+INSERT INTO DEPT01 (LOC, DNAME, DEPTNO) VALUES ('신림', '인사', 60);
+INSERT INTO DEPT01 (DEPTNO, DNAME, LOC) VALUES (70, '영업', NULL); -- 명시적 NULL입력
+INSERT INTO DEPT01 (DEPTNO, DNAME) VALUES (80, '고객지원'); -- 묵시적 NULL입력
+SELECT * FROM DEPT01;
+   -- 서브쿼리를 이용한 INSERT
+   -- EX. DEPT테이블의 20~40번 부서정보를 DEPT01에 INSERT
+   INSERT INTO DEPT01 SELECT * FROM DEPT WHERE DEPTNO >= 20;
+   SELECT * FROM DEPT01;
 
+/* 연습문제 PDF page1 (DDL, INSERT)
+다음과 같은 구조로 SAM01테이블을 생성하시오. 같은 이름의 테이블이 존재할 수 있으니, DROP
+TABLE로 삭제 후 생성하시오
+– SAM01의 구조 (EMPNO를 주키로)
+• EMPNO(사번) – NUMBER(4)
+• ENAME(이름) – VARCHAR2(10)
+• JOB(직책) – VARCHAR2(9)
+• SAL(급여) – NUMBER(7,2)
+• EMP 에 저장된 사원 중 10번 부서 소속 사원의 정보를 추가한다*/
+DROP TABLE SAM01;
+CREATE TABLE SAM01(
 
+);
 
 
 
