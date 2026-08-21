@@ -72,8 +72,8 @@ INSERT INTO DEPT01 VALUES (10, '재무', '신림');
 INSERT INTO EMP01 VALUES (1000, '홍길동', NULL, NULL, NULL, NULL, NULL, 10);
 SELECT * FROM DEPT01;
 COMMIT; -- 트랜젝션이 쌓여있는 명령어를 오라클 적용
-
-
+DROP TABLE DEPT01; -- 참조하는테이블이 있을 경우, 삭제 불가(삭제하려면 참조하는 테이블을 DROP한후 DROP추천)
+DROP TABLE DEPT01 CASCADE CONSTRAINTS; -- 비추(참조하는 테이블이 있어도 삭제 - EMP01테이블의 Fk연결이 끊김 )
 
 
 
