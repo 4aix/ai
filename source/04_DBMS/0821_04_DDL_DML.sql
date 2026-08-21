@@ -33,6 +33,19 @@ CREATE TABLE BOOK(
 );
 DROP TABLE BOOK;
 -- DEPT와 유사한 DEPT01테이블 / EMP와 유사한 EMP01테이블 생성
+-- DEPT01 : DEPTNO(PK:숫자(2)), DNAME(문14byte), LOC(문13byte)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
