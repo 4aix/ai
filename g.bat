@@ -1,3 +1,3 @@
 git add .
-git commit -m "DDL과 DML"
+git commit -m "TABLE제약조건"
 git push origin main
