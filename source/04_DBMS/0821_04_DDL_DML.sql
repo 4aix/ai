@@ -121,8 +121,19 @@ COMMIT;
 
 -- 2. UPDATE 테이블명 SET 필드명1=값1[, 필드명2=값2, .. 필드명N=값N] [WHERE조건]
 DROP TABLE EMP01;
-
-
+-- 서브쿼리를 이용한 테이블 생성(제약조건이 제외된 데이터만 가져옴)
+CREATE TABLE EMP01 AS SELECT * FROM EMP WHERE DEPTNO IN (20, 30);
+SELECT * FROM EMP01;
+DESC EMP01;
+  -- EX. 부서번호를 99번으로 수정
+  UPDATE EMP01 SET DEPTNO=99;
+  SELECT * FROM EMP01;
+  ROLLBACK; -- 트랜젝션 명령어들 취소
+  SELECT * FROM EMP01;
+  -- EX. 모든 사원의 급여(SAL)를 10%인상
+  UPDATE EMP01 SET SAL = SAL*1.1;
+  SELECT * FROM EMP01;
+  -- EX. 급여(SAL)가 1200미만인 직원의 급여를 100$씩 인상
 
 
 
