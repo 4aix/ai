@@ -99,11 +99,15 @@ TABLE로 삭제 후 생성하시오
 • ENAME(이름) – VARCHAR2(10)
 • JOB(직책) – VARCHAR2(9)
 • SAL(급여) – NUMBER(7,2)
-• EMP 에 저장된 사원 중 10번 부서 소속 사원의 정보를 추가한다*/
+• EMP 에 저장된 사원 중 10번 부서의 정보를 추가*/
 DROP TABLE SAM01;
 CREATE TABLE SAM01(
-
+    EMPNO NUMBER(4) PRIMARY KEY,
+    ENAME VARCHAR2(10),
+    JOB   VARCHAR2(9),
+    SAL   NUMBER(7,2)
 );
+
 
 
 
