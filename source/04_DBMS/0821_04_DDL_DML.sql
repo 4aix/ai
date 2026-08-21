@@ -134,6 +134,7 @@ DESC EMP01;
   UPDATE EMP01 SET SAL = SAL*1.1;
   SELECT * FROM EMP01;
   -- EX. 급여(SAL)가 1200미만인 직원의 급여를 100$씩 인상
+  
 
 
 
