@@ -186,7 +186,7 @@ DESC EMP01;
     INSERT INTO MY_DATA VALUES (5, 'Good',  'ggood',   44450);
     
     -- 3. TO_CHAR 내장 함수를 이용하여 입력한 자료를 위의 도표와 같은 형식으로 출력
-    SELECT ID, NAME, USERID, TO_CHAR(SALARY, '99,999.00') FROM MY_DATA;
+    SELECT ID, NAME, USERID, TO_CHAR(SALARY, '99,999.99') FROM MY_DATA;
     
     -- 4. 자료를 영구적으로 데이터베이스에 등록하는 명령어를 작성하시오.
     COMMIT;
