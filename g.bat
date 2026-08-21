@@ -1,3 +1,3 @@
 git add .
-git commit -m "시퀀스"
+git commit -m "MySQL연동"
 git push origin main
