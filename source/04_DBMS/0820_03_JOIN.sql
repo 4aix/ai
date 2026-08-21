@@ -94,7 +94,7 @@ SELECT W.EMPNO, W.ENAME, W.MGR, M.EMPNO 상사사번, M.ENAME 상사이름
     FROM EMP W, EMP M
     WHERE W.MGR=M.EMPNO AND M.ENAME='KING';
     
--- ▶ 4. OUTER JOIN : EQUI-JOIN, NON-EQUI-JOIN, SELF-JOIN시 조건에 만족하지 않는 행까지 나타나게 하는 조인
+-- ▶ 4. OUTER JOIN : EQUI-JOIN, SELF-JOIN시 조건에 만족하지 않는 행까지 나타나게 하는 조인
 -- (1) SELF-JOIN에서의 OUTTER JOIN : 배제된 행을 결과에 포함에 시킬 경우, +기호를 정보가 부족한 컬럼에 붙임
 SELECT W.ENAME, W.MGR, M.EMPNO, M.ENAME
     FROM EMP W, EMP M
