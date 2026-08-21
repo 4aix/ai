@@ -237,7 +237,7 @@ DESC EMP01;
         SET DEPTNO = 20,
             JOB = 'MANAGER'
         WHERE ENAME='SCOTT';
-    SELECT * FROM E01;    
+    SELECT * FROM EMP01;    
     
     -- 6. 부서명이 RESEARCH인 사원을 모두 삭제하는 SQL작성
     DELETE FROM EMP01 
