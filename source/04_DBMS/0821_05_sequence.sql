@@ -1,0 +1,20 @@
+-- [V] 시퀀스 : 순차번호 생성기. 인위적인 PK 사용용도
+DROP SEQUENCE FRIEND_SEQ;
+CREATE SEQUENCE FRIEND_SEQ
+    START WITH 1   -- 1부터 시작(기본값)
+    INCREMENT BY 1 -- 1씩 증가(기본값)
+    MAXVALUE 9999  -- 최대값
+    MINVALUE 1
+    NOCACHE
+    NOCYCLE;
+SELECT FRIEND_SEQ.NEXTVAL FROM DUAL; -- 다음 순차번호 생성
+SELECT FRIEND_SEQ.CURRVAL FROM DUAL; -- 시퀀스 현재값
+
+
+
+
+
+
+
+
+

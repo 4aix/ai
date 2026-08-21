@@ -1,3 +1,3 @@
 git add .
-git commit -m "TABLE제약조건"
+git commit -m "시퀀스"
 git push origin main
