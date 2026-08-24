@@ -1,3 +1,3 @@
 git add .
-git commit -m "MySQL연동"
+git commit -m "파이썬DB연동"
 git push origin main
