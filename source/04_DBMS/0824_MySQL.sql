@@ -171,13 +171,9 @@ select now(); -- select절만으로도 실행
 select pname, date_format(hiredate, '%Y년%m월%d일 %p %h:%i:%s') from person;
 
 -- format(숫자필드, 소수점자리수)
-select pname, to_char(sal, '9,999.99') from person;
+select pname, format(sal, 0) sal from person;
 
-
-
-
-
-
-
-
+-- 오라클에서의 연결연산자 || 'smith는 manager다'
+select pname || '는 ' || job || '다' from person; -- mySQL에서의 ||는 OR연산자
+select concat(pname, '는 ', job, '다') from person;
 
