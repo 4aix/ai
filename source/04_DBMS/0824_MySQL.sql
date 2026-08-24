@@ -119,17 +119,23 @@ select pno, pname, dname
 select pno, pname, dname
 	from person p join division d
 		on p.dno=d.dno;
-
     
 -- 7. 사번, 이름, 상사이름
 select w.pno, w.pname, m.pname
 	from person w, person m
     where w.manager=m.pno;
     
+select w.pno, w.pname, m.pname
+	from person w join person m
+		on w.manager=m.pno;
+
 -- 8. 사번, 이름, 상사이름(상사가 없는 사람도 출력하되 상사가 없는 경우 ★CEO★로 출력) – oracle과 다른 문법
-
+select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager
+	from person w left join person m
+		on w.manager=m.pno;
+    
 -- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음) – oracle과 다른 문법
-
+select pno, pname, 
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
 select pname 
 	from person 
