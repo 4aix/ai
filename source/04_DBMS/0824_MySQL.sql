@@ -165,7 +165,13 @@ select sysdate(); -- 현재 날짜와 시간
 select current_timestamp();
 select now(); -- select절만으로도 실행
 
+-- date_format(날짜/시간필드, 포맷) => 문자형
+	-- 포맷 : %Y(년도4자리), %y(년도2자리), %m(월2자리), %M(월이름), %d(일2자리)
+           -- %H(24시간), %h(12시간), %p(오전, 오후) %i(분), %s(초)
+select pname, date_format(hiredate, '%Y년%m월%d일 %p %h:%i:%s') from person;
 
+-- format(숫자필드, 소수점자리수)
+select pname, to_char(sal, '9,999.99') from person;
 
 
 
