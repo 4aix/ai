@@ -87,35 +87,58 @@ select * from division;
 select * from person;
 
 -- 1. 사번, 이름, 급여를 출력
-
+select pno, pname, sal 
+	from person;
 
 -- 2. 급여가 2000~5000 사이 모든 직원의 모든 필드
-
+select * from person where sal between 2000 and 5000;
+select * from person where sal>=2000 && sal<=5000;
+select * from person where sal>=2000 and sal<=5000;
 
 -- 3. 부서번호가 10또는 20인 사원의 사번, 이름, 부서번호
-
+select pno, pname, dno from person where dno in (10,20);
+select pno, pname, dno from person where dno=10 || dno=20;
+select pno, pname, dno from person where dno=10 or dno=20;
 
 -- 4. 보너스가 null인 사원의 사번, 이름, 급여, 보너스. 급여 큰 순정렬
-
+select pno, pname, sal, comm 
+	from person 
+    where comm is null 
+    order by sal desc;
     
--- 5. 사번, 이름, 부서번호, 급여. 부서코드 순 정렬 같으면 PAY 큰순
-    
+-- 5. 사번, 이름, 부서번호, 급여. 부서코드 순 정렬 같으면 sal 큰순
+select pno, pname, dno, sal 
+	from person 
+    order by dno, sal desc;    
     
 -- 6. 사번, 이름, 부서명
+select pno, pname, dname 
+	from person p, division d 
+    where p.dno=d.dno;
+    
+select pno, pname, dname
+	from person p join division d
+		on p.dno=d.dno;
 
     
 -- 7. 사번, 이름, 상사이름
-
+select w.pno, w.pname, m.pname
+	from person w, person m
+    where w.manager=m.pno;
     
 -- 8. 사번, 이름, 상사이름(상사가 없는 사람도 출력하되 상사가 없는 경우 ★CEO★로 출력) – oracle과 다른 문법
 
 -- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음) – oracle과 다른 문법
 
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
-
+select pname 
+	from person 
+    where pname like 's%';
     
 -- 10. 사번, 이름, 급여, 부서명, 상사이름
-
+select w.pno, w.pname, w.sal,dname, m.pname
+	from division d, person w, person m
+    where d.dno=w.dno and w.manager=m.pno;
 
 
 
