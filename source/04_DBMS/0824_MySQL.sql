@@ -135,7 +135,13 @@ select w.pno, w.pname, ifnull(m.pname, '★CEO★') manager
 		on w.manager=m.pno;
     
 -- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음) – oracle과 다른 문법
-select pno, pname, 
+select pno, pname, ifnull(manager, 'ceo') manager
+	from person;
+select pno, pname, if(manager is null, 'ceo', manager) manager
+	from person;
+-- 8-2 사번, 이름, 급여, 고액연봉자(4000이상)or일반연봉가
+select pno, pname, sal, if(sal>=4000, '고액연봉자', '일반연봉자') from person;
+
 -- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
 select pname 
 	from person 
