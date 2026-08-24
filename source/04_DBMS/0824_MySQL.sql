@@ -150,7 +150,20 @@ select pname
 -- 10. 사번, 이름, 급여, 부서명, 상사이름
 select w.pno, w.pname, w.sal,dname, m.pname
 	from division d, person w, person m
-    where d.dno=w.dno and w.manager=m.pno;
+    where d.dno=w.dno && w.manager=m.pno;
+select w.pno, w.pname, w.sal, dname, m.pname
+	from division d 
+		join person w on d.dno=w.dno
+		join person m on w.manager=m.pno;
+select w.pno, w.pname, w.sal, dname, m.pname
+	from division d 
+		join person w on d.dno=w.dno
+		left join person m on w.manager=m.pno; -- 상사자 없는 사람도 출력
+        
+-- oracle과 다른 함수들
+select sysdate(); -- 현재 날짜와 시간
+select current_timestamp();
+select now(); -- select절만으로도 실행
 
 
 
