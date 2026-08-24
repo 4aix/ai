@@ -64,6 +64,10 @@ create table person(
     dno     int,
     foreign key(dno) references division(dno) -- FK 제약조건은 반드시 아래에 따로 명시
 );
+
+-- ■■■■■■■■■■■■■
+-- ※ DML ※ ■■■■
+-- ■■■■■■■■■■■■■
 insert into division values (10, 'finance', '02-2088-5679','신림');
 insert into division values (20, 'research', '02-555-4321','강남');
 insert into division values (30, 'sales', '02-717-4321','마포');
@@ -79,6 +83,32 @@ insert into person values (1118,'martin','analyst',1111,'1991-09-09',3450,null,1
 insert into person values (1121,'kim','clerk',1114,'1990-12-08',4000,null,20);
 insert into person values (1123,'lee','salesman',1116,'1991-09-23',1200,0,30);
 insert into person values (1226,'park','analyst',1111,'1990-01-03',2500,null,10);
+select * from division;
+select * from person;
+
+-- 1. 사번, 이름, 급여를 출력
+
+-- 2. 급여가 2000~5000 사이 모든 직원의 모든 필드
+
+-- 3. 부서번호가 10또는 20인 사원의 사번, 이름, 부서번호
+
+-- 4. 보너스가 null인 사원의 사번, 이름, 급여, 보너스. 급여 큰 순정렬
+
+-- 5. 사번, 이름, 부서번호, 급여. 부서코드 순 정렬 같으면 PAY 큰순
+
+-- 6. 사번, 이름, 부서명
+
+-- 7. 사번, 이름, 상사이름
+
+-- 8. 사번, 이름, 상사이름(상사가 없는 사람도 출력하되 상사가 없는 경우 ★CEO★로 출력) – oracle과 다른 문법
+
+-- 8-1 사번, 이름, 상사사번(상사가 없으면 ceo로 출력. ifnull함수의 매개변수의 타입이 상이해도 상관없음) – oracle과 다른 문법
+
+-- 9. 이름이 s로 시작하는 사원 이름 (like 이용)
+
+-- 10. 사번, 이름, 급여, 부서명, 상사이름
+
+
 
 
 
