@@ -14,10 +14,7 @@ python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ip
 
 (가상환경을 jupyter커널 등록확인) jupyter kernelspec list
 
-
-
-
-
+(가상환경을 jupyter 커널 목록에서 삭제하기) jupyter kernelspec remove "ml-dl-nlp(ipykernel)"
 (가상환경 삭제) conda env remove --name ml-dl-nlp
 
 
