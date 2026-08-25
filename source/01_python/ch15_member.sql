@@ -16,7 +16,10 @@ SELECT NAME, PHONE, EMAIL, AGE, GRADE
 -- 3. 이름으로 찾기
 SELECT * FROM MEMBER WHERE NAME = '홍길동';
 -- 4. 메일로 삭제
-DELETE FROM MEMBER WHERE upper(EMAIL)=upper('h@h.com');
+SELECT NAME FROM MEMBER WHERE LOWER(EMAIL)=LOWER('xx@h.com');
+
+DELETE FROM MEMBER WHERE upper(EMAIL)=upper('xx@h.com');
+
 commit;
 
 
