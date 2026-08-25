@@ -10,7 +10,9 @@ pip install tensorflow==2.10
 
 (가상환경을 jupyter에서 선택가능한 커널로 등록)
 conda install ipykernel
-python -m ipykernel install --user --name ml-dl-nlp --displayname "ml-dl-nlp(ipykernel)"
+python -m ipykernel install --user --name ml-dl-nlp --display-name "ml-dl-nlp(ipykernel)"
+
+(가상환경을 jupyter커널 등록확인) jupyter kernelspec list
 
 
 
