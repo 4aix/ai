@@ -1,3 +1,13 @@
 ※ 가상환경 만들기(ml-dl-nlp / llm)
 
 (현재 존재하는 가상환경 목록 확인) conda env list
+                                             conda info --envs
+(가상환경 생성;-n은 --name) conda create -n ml-dl-nlp python=3.10
+(생성한 가상환경으로 전환) conda activate ml-dl-nlp
+
+
+
+
+
+
+(가상환경 삭제) conda env remove --name ml-dl-nlp
