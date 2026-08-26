@@ -1,3 +1,3 @@
 git add .
-git commit -m "딥러닝다중분류"
+git commit -m "군집분석"
 git push origin main
