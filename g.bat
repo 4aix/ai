@@ -1,3 +1,3 @@
 git add .
-git commit -m "독립변수n개scaling"
+git commit -m "피마인디언 발병예측"
 git push origin main
