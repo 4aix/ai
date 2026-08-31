@@ -1,3 +1,3 @@
 git add .
-git commit -m "과적합 줄이기"
+git commit -m "mnist데이터"
 git push origin main
