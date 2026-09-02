@@ -1,3 +1,3 @@
 git add .
-git commit -m "nltk자연어처리"
+git commit -m "한글자연어전처리"
 git push origin main
