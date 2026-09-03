@@ -1,3 +1,3 @@
 git add .
-git commit -m "한글자연어처리"
+git commit -m "워드클라우드"
 git push origin main
