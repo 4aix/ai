@@ -1,3 +1,3 @@
 git add .
-git commit -m "한글자연어처리Quiz"
+git commit -m "연관분석"
 git push origin main
