@@ -1,3 +1,3 @@
 git add .
-git commit -m "seq2seq와 트랜스포머"
+git commit -m "한글자연어처리Quiz"
 git push origin main
