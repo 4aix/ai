@@ -1,3 +1,3 @@
 git add .
-git commit -m "연관분석"
+git commit -m "LLM차례"
 git push origin main
