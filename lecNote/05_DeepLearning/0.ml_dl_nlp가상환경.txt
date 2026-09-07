@@ -32,10 +32,7 @@ pip install gensim # (4.4.0) 워드임베딩(단어간 거리 계산)
 pip install  python-dotenv # .env읽어들이기(강추)
 pip install python-decouple # .env읽어들이기(주피터환경에서 안 될 수도 있음)
 
-
-
-
-
+pip install apyori #(1.1.2)
 
 
 
