@@ -1,3 +1,3 @@
 git add .
-git commit -m "Seq2Seq(스마트번역기)"
+git commit -m "시계열 데이터 분석"
 git push origin main
