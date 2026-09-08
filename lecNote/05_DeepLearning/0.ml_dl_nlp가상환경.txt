@@ -35,7 +35,7 @@ pip install apyori #(1.1.2) 연관분석
 
 pip install statsmodels==0.13.5 # 통계패키지 중 시계열
 pip install prophet # (1.4.0) facebook에서 개발한 시계열 분석,예측
-pip install plotly(선택, prophet에서 경고. 경고 무시해도 됨)
+
 
 
 
