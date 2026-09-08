@@ -6,6 +6,7 @@
 6. OpenAI_Whisper API
 7. OpenAI_Assistants_API
 8. function_calling
+9. fine tuning(코랩 GPU에서)
 9. RAG(Retrieval-Augmented Generation 검색 증강 생성)
 	로컬 VectorDataBase(Chroma) 사용
 	pinecorn VectorDataBase 사용
