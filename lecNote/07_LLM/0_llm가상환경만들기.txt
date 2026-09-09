@@ -1,0 +1,43 @@
+※ 가상환경 만들기(llm)
+
+(현재 존재하는 가상환경 목록 확인) conda env list
+                                             conda info --envs
+(가상환경 생성) conda create -n llm python=3.10
+(생성한 가상환경으로 전환) conda activate llm
+(pip 업그레이드) python -m pip install --upgrade pip
+(llm환경에 jupyter 설치) conda install ipykernel
+(jupyter 설치 확인) conda list jupyter
+
+(llm가상환경을 Jupyter에서 선택가능한 커널로 등록)
+python -m ipykernel install --user --name llm --display-name "llm(ipykernel)"
+
+(가상환경 등록 확인) jupyter kernelspec list
+
+
+-----------------------------------------------------
+(jupyter 커널 목록삭제)
+jupyter kernelspec remove "llm"
+(llm 가상환경 삭제)
+conda env remove --name llm
+-----------------------------------------------------
+
+※ 허깅페이스(다양한 llm모델과 환경을 제공하는 프레임워크)
+# 파이토치(CPU버전)
+pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cpu
+pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu118
+
+pip install sympy==1.13.1 fsspec
+pip install transformers==4.57.3
+pip install sentencepiece # 자연어의 Tokenizer 기능(구글 作)
+pip install hf_xet            # 허깅페이스 hub 대용량 파일을 빠르게 업로드/다운로드 지원 도구
+pip install sacremoses
+
+
+
+
+
+
+
+
+
+

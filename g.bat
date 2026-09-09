@@ -1,3 +1,3 @@
 git add .
-git commit -m "트랜스포머(영화평감성분석)"
+git commit -m "허깅페이스모델사용"
 git push origin main
