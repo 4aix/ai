@@ -28,9 +28,9 @@ pip install torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorc
 
 pip install sympy==1.13.1 fsspec
 pip install transformers==4.57.3
-pip install sentencepiece # 자연어의 Tokenizer 기능(구글 作)
-pip install hf_xet            # 허깅페이스 hub 대용량 파일을 빠르게 업로드/다운로드 지원 도구
-pip install sacremoses
+pip install sentencepiece #(0.2.2) 자연어의 Tokenizer 기능(구글 作)
+pip install hf_xet            #(1.6.0) 허깅페이스 hub 대용량 파일을 빠르게 업로드/다운로드 지원 도구
+pip install sacremoses     #(0.2.0) 영한번역에서 경고 줄이기도하고, 번역품질도 높아져
 
 
 
