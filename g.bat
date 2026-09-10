@@ -1,3 +1,3 @@
 git add .
-git commit -m "허깅페이스모델사용"
+git commit -m "Ollama LLM 렝체인사용"
 git push origin main

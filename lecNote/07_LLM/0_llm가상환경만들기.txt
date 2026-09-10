@@ -36,7 +36,14 @@ pip install python-dotenv  # 1.2.3
 pip install opencv-python==4.10.0.84 
 pip install matplotlib         # 3.10.9
 
-※ langChain
+※ Ollama langChain
+pip install -q langchain-ollama # 1.1.0
+pip install langchain-openai # 1.6.2 gpt유료모델
+pip install langchain-anthropic # 1.7.1 claude 유료모델
+
+※ open ai API(다양한 모델)
+
+
 
 
 
