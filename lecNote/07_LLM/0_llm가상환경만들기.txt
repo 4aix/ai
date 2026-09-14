@@ -42,6 +42,7 @@ pip install langchain-openai # 1.6.2 gpt유료모델
 pip install langchain-anthropic # 1.7.1 claude 유료모델
 
 ※ open ai API(다양한 모델)
+# pip install openai # langchain-openai 에서 설치 3.11.0
 
 
 
