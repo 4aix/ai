@@ -1,7 +1,7 @@
 1. 허깅페이스
 2. LangChain 기본 개념
 3. OpenAI Chat Completions API 기본
-4. OpenAI DALL-E API
+4. OpenAI 이미지생성 및 편집 API
 5. OpenAI_TTS API
 6. OpenAI_Whisper API
 7. OpenAI_Assistants_API
