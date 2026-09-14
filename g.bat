@@ -1,4 +1,3 @@
-git pull origin main
 git add .
-git commit -m "openai API 사용"
+git commit -m "머신러닝"
 git push origin main
