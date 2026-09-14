@@ -1,3 +1,3 @@
 git add .
-git commit -m "머신러닝"
+git commit -m "openai API 사용"
 git push origin main
