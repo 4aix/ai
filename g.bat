@@ -1,3 +1,3 @@
 git add .
-git commit -m "TTS-Whisper구현"
+git commit -m "머신러닝"
 git push origin main
