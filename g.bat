@@ -1,3 +1,3 @@
 git add .
-git commit -m "function calling 구현"
+git commit -m "분류모형 최적화"
 git push origin main
