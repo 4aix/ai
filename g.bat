@@ -1,3 +1,3 @@
 git add .
-git commit -m "군집분석"
+git commit -m "실루엣계수"
 git push origin main
