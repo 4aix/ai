@@ -1,3 +1,3 @@
 git add .
-git commit -m "function calling구현"
+git commit -m "군집분석"
 git push origin main
