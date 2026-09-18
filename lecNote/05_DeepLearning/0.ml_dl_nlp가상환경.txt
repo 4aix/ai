@@ -40,12 +40,13 @@ pip install prophet # (1.4.0) facebook에서 개발한 시계열 분석,예측
 pip install dataprep # (0.4.5)데이터 가속화
 
 ※ 의사결정나무 구조 시각화(ml-dl-nlp환경)
-conda install -c conda-forge graphviz
+conda install -c conda-forge graphviz # 9.0.0 : 의사결정나무 그래프 생성도구
+pip install pydot    # 1.4.2 : 생성한 그래프를 이미지로 변환
 
-
-※ 의사결정나무 구조 시각화(base환경)
-
-
+※ 의사결정나무 구조 시각화(base환경; conda deactivate)
+conda install graphviz
+pip install pydot
+dot -V # 설치확인 version 2.50.0
 
 
 
