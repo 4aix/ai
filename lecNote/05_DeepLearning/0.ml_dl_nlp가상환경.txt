@@ -39,6 +39,12 @@ pip install prophet # (1.4.0) facebook에서 개발한 시계열 분석,예측
 ※ 머신러닝
 pip install dataprep # (0.4.5)데이터 가속화
 
+※ 의사결정나무 구조 시각화(ml-dl-nlp환경)
+conda install -c conda-forge graphviz
+
+
+※ 의사결정나무 구조 시각화(base환경)
+
 
 
 
