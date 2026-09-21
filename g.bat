@@ -1,3 +1,3 @@
 git add .
-git commit -m "분류모형의 성능평가"
+git commit -m "모형최적화를 위한 변수선택"
 git push origin main
