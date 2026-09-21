@@ -19,8 +19,13 @@ f1 score = recall과 precision의 조화평균
 		2 * (precision*recall) / (precision+recall)
 
 트레이드오프 관계
+FP↑ :  고객의 불만 ↑, precision ↓
+FP↓ : FN ↑, recall ↓, 회사의 cost ↑
+
 precision을 높이려면 -> 1일 확률이 높은 것만 1로 예측함
 				회사측에서는 불필요한 비용 지출
+
+
 recall을 높이려면 -> 조금이라도 1일 가능성이 있으면 1로 예측
 				서비스 고객이 불편 
 
