@@ -1,9 +1,9 @@
 - confusion matrix(혼동행렬, 성능평가지표)
 		예측0			예측1
-──────────────────
-실제0		TN			FP
-──────────────────
-실제1		FN			TP
+────────────────────
+실제0		TN			FP(1종오류)
+────────────────────
+실제1		FN(2종오류)		TP
 
 T : 모델이 맞췄을 때
 F : 모델이 틀렸을 때
@@ -17,6 +17,8 @@ recall(재현율=민감도) = TP / 실제가 1인 수(FN+TP)
 		실제값 기준
 f1 score = recall과 precision의 조화평균
 		2 * (precision*recall) / (precision+recall)
+특이도 = TN / ( TN+FP ) : TN/실제가 0인수
+
 
 트레이드오프 관계
 FP↑ :  고객의 불만 ↑, precision ↓
