@@ -1,3 +1,3 @@
 git add .
-git commit -m "모형최적화를 위한 변수선택"
+git commit -m "1차프로젝트준비사항"
 git push origin main
