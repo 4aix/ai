@@ -48,7 +48,15 @@ conda install graphviz
 pip install pydot
 dot -V # 설치확인 version 2.50.0
 
+pip install imbalanced-learn==0.10.1 # smote
 
+※ 앙상블 모형(설치전 의존성 확인에서 문제가 없는지 확인 후 설치)
+pip install --dry-run xgboost 
+pip install xgboost # 3.2.0
+
+pip install lightgbm # 4.7.0
+
+pip install catboost
 
 
 
