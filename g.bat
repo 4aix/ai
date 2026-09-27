@@ -1,3 +1,3 @@
 git add .
-git commit -m "모델저장및flask첫예제"
+git commit -m "flask렌더링및static처리"
 git push origin main
