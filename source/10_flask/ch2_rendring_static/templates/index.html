@@ -8,6 +8,8 @@
         type="text/css">
 </head>
 <body>
-  
+  <h1>Hello, World</h1>
+  <img src="/static/flask.png" alt="플라스크">
+  <img src="{{ url_for('static', filename='flask.png') }}" alt="플라스크">
 </body>
 </html>
