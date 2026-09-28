@@ -1,3 +1,3 @@
 git add .
-git commit -m "flask렌더링및static처리"
+git commit -m "route_render_static"
 git push origin main
