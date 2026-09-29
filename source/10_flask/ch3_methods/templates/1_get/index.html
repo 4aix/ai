@@ -10,8 +10,12 @@
 </head>
 <body>
   <h2>WELCOME(GET)</h2>
-  <form action="/user">
+  <form action="/user" method="get">
     <p><input type="text" name="name" placeholder="이름"></p>
+    <p><input type="submit" value="GET요청"></p>
   </form>
+  <button onclick="location.href='/user?name=hong'">버튼(GET요청)</button>
+  <br>
+  <a href="/user?name=park">앵커 태그(GET요청)</a>
 </body>
 </html>
