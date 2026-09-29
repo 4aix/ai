@@ -14,6 +14,11 @@ from flask import (Flask,         # 앱 객체
                   abort)          # 강제로 예외발생
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return render_template('1_get/index.html') #templates/1_get/index.html
+
 @app.route('/user', methods=['GET']) # /user?name=홍 (쿼리스트링)
 def user():
   print(request.args)
