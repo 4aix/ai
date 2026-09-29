@@ -1,3 +1,3 @@
 git add .
-git commit -m "플라스트rendering"
+git commit -m "부트스트랩,methods"
 git push origin main
