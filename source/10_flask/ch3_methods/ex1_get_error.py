@@ -12,6 +12,7 @@ from flask import (Flask,         # 앱 객체
                   render_template,# html 랜더링
                   request,        # GET/POST방식으로 파라미터 받기
                   abort)          # 강제로 예외발생
+from models import Member
 
 app = Flask(__name__)
 
@@ -37,6 +38,11 @@ def join():
   id   = request.args.get('id')   # 숫자
   pw   = request.args.get('pw')
   addr = request.args.get('addr')
+  try:
+    member = Member(name=name, id=id, pw=pw, addr=addr)
+  except Exception as e:
+    return render_template('error_page.html', error="잘못된 입력"), 500
+  return render_template('1_get/result.html', member=member)
 
 @app.errorhandler(404) # 404 예외 페이지 처리
 def errorhandler(error):

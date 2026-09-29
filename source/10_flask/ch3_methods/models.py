@@ -9,4 +9,5 @@ class Member(BaseModel):
   pw:str
   addr:str = Field(default="서울", description="주소")
 if __name__=='__main__':
-  member = Member(name='홍', id=123, pw='aa')
+  member = Member(name='홍길', id='123', pw='aa')
+  print(member)
