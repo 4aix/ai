@@ -21,7 +21,8 @@ def index():
 
 @app.route('/user', methods=['GET']) # /user?name=홍 (쿼리스트링)
 def user():
-  print(request.args)
+  name = request.args.get('name')
+  print(name)
   return 'TEST'
 
 if __name__=='__main__':
