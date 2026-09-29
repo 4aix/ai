@@ -22,8 +22,18 @@ def index():
 @app.route('/user', methods=['GET']) # /user?name=홍 (쿼리스트링)
 def user():
   name = request.args.get('name')
-  print(name)
-  return 'TEST'
+  if name:
+    return f'<h1>전달받은 파라미터는 {name}님</h1>'
+  else:
+    abort(404) # 강제 404 예외 발생
+
+@app.route('/join_form')
+def join_form():
+  return render_template('1_get/join.html')
+
+@app.errorhandler(404) # 404 예외 페이지 처리
+def errorhandler(error):
+  return render_template('error_page.html'), 404
 
 if __name__=='__main__':
   app.run(debug=True, port=80)
