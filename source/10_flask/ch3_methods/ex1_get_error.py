@@ -31,6 +31,13 @@ def user():
 def join_form():
   return render_template('1_get/join.html')
 
+@app.route('/join')
+def join():
+  name = request.args.get('name') # 2글자 이상 GET방식
+  id   = request.args.get('id')   # 숫자
+  pw   = request.args.get('pw')
+  addr = request.args.get('addr')
+
 @app.errorhandler(404) # 404 예외 페이지 처리
 def errorhandler(error):
   return render_template('error_page.html'), 404
