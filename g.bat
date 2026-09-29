@@ -1,3 +1,3 @@
 git add .
-git commit -m "부트스트랩,methods"
+git commit -m "GET,POST,PUT방식"
 git push origin main
