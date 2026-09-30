@@ -1,5 +1,6 @@
 # class Member:
 #   def __init__(self, name, id, pw, addr):
+#     name이 2글자이상인지 로직
 #     self.name = name
 from pydantic import BaseModel, Field
 class Member(BaseModel):

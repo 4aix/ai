@@ -15,6 +15,10 @@ from flask import (Flask,         # 앱 객체
 from models import Member
 
 app = Flask(__name__)
+# 필터링 추가
+@app.template_filter("mask_pw")
+def mask_password(pw):
+  return '*' * len(pw)
 
 @app.route('/')
 def index():
