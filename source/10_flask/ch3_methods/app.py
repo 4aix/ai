@@ -29,6 +29,7 @@ def join():
     print(request.form.to_dict()) # post로 받은 파라미터들을 딕셔너리 형태 
     try:
       member = Member(name=name, id=id, pw=pw, addr=addr)
+      print('가입한 회원 정보 :', member)
     except Exception as e:
       print('유효성 검사 실패 {e}')
   return 'TEST'
