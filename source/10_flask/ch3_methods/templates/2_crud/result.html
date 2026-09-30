@@ -33,6 +33,7 @@
     name = encodeURIComponent(name)
     addr = encodeURIComponent(addr)
     const url = `/update/${name}/${id}/${pw}/${addr}`;
+    alert(url);
     // url을 put방식으로 요청
     fetch(url, {method:'put'})
     .then(response => {
