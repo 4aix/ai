@@ -16,7 +16,7 @@ from models import Member
 
 app = Flask(__name__)
 # 필터링 추가
-@app.template_filter("mask_pw")
+@app.template_filter("mask_pw") # 문자 갯수만큼 *로 
 def mask_password(pw):
   return '*' * len(pw)
 
