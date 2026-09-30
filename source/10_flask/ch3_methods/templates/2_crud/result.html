@@ -30,7 +30,20 @@
     let pw   = document.getElementById('pw').value;
     let addr = document.getElementById('addr').value;
     //const url = '/update/'+name + '/' + id + '/' + pw + '/' + addr;
+    name = encodeURIComponent(name)
+    addr = encodeURIComponent(addr)
     const url = `/update/${name}/${id}/${pw}/${addr}`;
-    alert(url);
+    // url을 put방식으로 요청
+    fetch(url, {method:'put'})
+    .then(response => {
+      if(!response.ok){
+        alert('실패' + response.status);
+        return;
+      }
+      return response.text(); // 서버 응답내용을 텍스트로 처리하여 다음 then으로 전달
+    })
+    .then(data => {
+      document.getElementById('result').innerHTML = data;
+    });
   });
 </script>
