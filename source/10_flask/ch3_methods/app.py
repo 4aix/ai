@@ -18,15 +18,9 @@ def index():
 
 @app.route('/join', methods=['GET', 'POST'])
 def join():
-  print(request.method)
   if request.method == 'GET':
     return render_template('2_crud/join.html')
   elif request.method == 'POST':
-    # name = request.form.get('name')
-    # id = request.form['id']
-    # pw = request.form.get('pw')
-    # addr = request.form.get('addr')
-    # print(request.form.to_dict()) # post로 받은 파라미터들을 딕셔너리 형태 
     try:
       member = Member(**request.form.to_dict())
     except Exception as e:
@@ -34,4 +28,4 @@ def join():
       return render_template('2_crud/join.html',
                             msg = '유효한 데이터를 입력하지 않았습니다',
                             form_data = request.form)
-  return 'TEST'
+  return render_template('2_crud/result.html', member=member)
