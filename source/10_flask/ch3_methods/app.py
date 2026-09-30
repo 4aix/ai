@@ -29,3 +29,7 @@ def join():
                             msg = '유효한 데이터를 입력하지 않았습니다',
                             form_data = request.form)
   return render_template('2_crud/result.html', member=member)
+
+@app.route('/update/<name>/<id>/<pw>/<addr>', methods=['PUT'])
+def update(name, id, pw, addr):
+  return f'{name}님 정보가 수정되었습니다'
