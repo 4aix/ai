@@ -1,3 +1,3 @@
 git add .
-git commit -m "GET,POST,PUT방식"
+git commit -m "jinja2문법"
 git push origin main
