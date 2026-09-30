@@ -13,12 +13,15 @@ from flask import (Flask,         # 앱 객체
                   request,        # GET/POST방식으로 파라미터 받기
                   abort)          # 강제로 예외발생
 from models import Member
+from filters import mask_comma, mask_password
 
 app = Flask(__name__)
 # 필터링 추가
-@app.template_filter("mask_pw") # 문자 갯수만큼 *로 
-def mask_password(pw):
-  return '*' * len(pw)
+app.template_filter('mask_pw')(mask_password)
+app.template_filter('comma')(mask_comma)
+# @app.template_filter("mask_pw") # 문자 갯수만큼 *로 
+# def mask_password(pw):
+#   return '*' * len(pw)
 
 @app.route('/')
 def index():
