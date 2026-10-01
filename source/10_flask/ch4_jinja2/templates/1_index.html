@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Jinja2문법{% endblock %}
 {% block content %}
-  <div class="">
-    
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <h2 class="container-fluid py-5">
+      {% if name and cnt%2==0 %}
+        짝수명( {{cnt}}명 ) - 방금 {{name|upper}} ( {{name|length}}글자)님
+      {% elif name and cnt%2==1 %}
+        홀수명( {{cnt}}명 ) - 방금 {{name|upper}} ( {{name|length}}글자)님
+      {% else %}
+        총( {{cnt}}명 ) - 방금 넘어온 이름이 없습니다
+      {% endif %}
+    </h2>
   </div>
 {% endblock %}
