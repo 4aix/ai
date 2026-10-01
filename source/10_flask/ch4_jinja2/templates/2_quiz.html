@@ -5,11 +5,17 @@
     <h1 class="container-fluid py-5">
       구구단을 외자
     </h1>
-    <form action="{{url_for('index')}}" method="post">
-      <input type="number" 
+    <form method="post">
+      <input type="text" 
               name="no" 
-              placeholder="원하는 구구단 수를 입력">
-      <input type="submit" value="이름추가" class="btn btn-outline-primary">
+              placeholder="원하는 구구단 수를 입력"
+              value="{%if no%}{{no}}{%endif%}">
+      <input type="submit" value="구구단 출력" class="btn btn-outline-primary">
     </form>
+    {% if no %}
+      {% for i in range(1, 10) %}
+        {{no}} x {{i}} == {{no|int * i}}<br>
+      {% endfor %}
+    {% endif %}
   </div>
 {% endblock %}
