@@ -19,9 +19,12 @@ lst = []
 @app.route('/', methods=['GET', 'POST'])
 def index(name=""):
   if request.method == 'POST':
-    pass
+    name = request.form.get('name').strip() # get방식 : request.args.get('name')
+    lst.append(name)
   cnt = len(lst)
   return render_template('1_index.html',
                         name=name,
                         cnt=cnt,
                         names = lst)
+if __name__=="__main__":
+  app.run(debug=True, port=80)
