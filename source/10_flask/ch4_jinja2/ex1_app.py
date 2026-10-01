@@ -12,3 +12,16 @@
   # 3. 해더나 풋터 {% include "header.html" %} {% extends "base.html" %}
   # 4. 서브 블럭 {% block 블럭명 %}{%endblock%}
   # 5. 주석 {# 주석 #}
+from flask import Flask, render_template, request
+app = Flask(__name__, static_folder='static', template_folder='templates')
+lst = []
+
+@app.route('/', methods=['GET', 'POST'])
+def index(name=""):
+  if request.method == 'POST':
+    pass
+  cnt = len(lst)
+  return render_template('1_index.html',
+                        name=name,
+                        cnt=cnt,
+                        names = lst)
