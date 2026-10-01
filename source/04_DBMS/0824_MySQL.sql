@@ -177,3 +177,11 @@ select pname, format(sal, 0) sal from person;
 select pname || '는 ' || job || '다' from person; -- mySQL에서의 ||는 OR연산자
 select concat(pname, '는 ', job, '다') from person;
 
+DROP USER 'teamproject';
+CREATE USER 'teamproject'@'%' IDENTIFIED BY 'teamproject1119!';  -- @어디서 접속하는지/'%'접속허용위치아무ip나
+GRANT ALL PRIVILEGES ON *.* TO 'teamproject'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+show databases;
+use devdb;
+select database();
+show tables;
