@@ -13,6 +13,11 @@
         rel="stylesheet">
 </head>
 <body>
-  
+  <!-- bootstrap에서 jumbotron검색 -->
+  <div class="container py-4">
+    {% include "header.html" %}
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+  </div>
 </body>
 </html>
