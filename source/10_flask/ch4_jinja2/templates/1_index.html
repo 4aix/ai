@@ -11,5 +11,9 @@
         총( {{cnt}}명 ) - 방금 넘어온 이름이 없습니다
       {% endif %}
     </h2>
+    <form action="{{url_for('index')}}" method="post">
+      <input type="text" name="name" placeholder="이름을 입력하세요">
+      <input type="submit" value="이름추가" class="btn btn-outline-primary">
+    </form>
   </div>
 {% endblock %}
