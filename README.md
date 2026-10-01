@@ -64,8 +64,7 @@
       <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black">
       <img src="https://img.shields.io/badge/OpenAI-LLM-412991?style=for-the-badge&logo=openai&logoColor=white">
       <img src="https://img.shields.io/badge/RAG-FF0000?style=for-the-badge&logo=openai&logoColor=white">
-	<img src="https://img.shields.io/badge/FINE--TUNING-7B2FBE?style=for-the-badge&logo=huggingface&logoColor=white" alt="Fine-tuning"/>
-
+	    <img src="https://img.shields.io/badge/FINE--TUNING-7B2FBE?style=for-the-badge&logo=huggingface&logoColor=white">
     </td>
   </tr>
   
