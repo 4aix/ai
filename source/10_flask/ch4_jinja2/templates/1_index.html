@@ -17,6 +17,11 @@
     </form>
     {% if names %}
       {% for name in names %}
+        {% if loop.last %}
+          <p><b>{{loop.index}}/{{names|length}} . {{name|title}}</b></p>
+        {% else %}
+          <p>{{loop.index}}/{{names|length}} . {{name|title}}</p>
+        {% endif %}
       {% endfor %}
     {% endif %}
   </div>
