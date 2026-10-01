@@ -23,6 +23,8 @@
           <p>{{loop.index}}/{{names|length}} . {{name|title}}</p>
         {% endif %}
       {% endfor %}
+    {% else %}
+      <p class="text-danger">추가된 이름이 없습니다</p>
     {% endif %}
   </div>
 {% endblock %}
