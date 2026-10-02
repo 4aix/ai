@@ -63,8 +63,9 @@
       <img src="https://img.shields.io/badge/Transformers-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white">
       <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black">
       <img src="https://img.shields.io/badge/OpenAI-LLM-412991?style=for-the-badge&logo=openai&logoColor=white">
+      <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white">
       <img src="https://img.shields.io/badge/RAG-FF0000?style=for-the-badge&logo=openai&logoColor=white">
-	    <img src="https://img.shields.io/badge/FINE--TUNING-7B2FBE?style=for-the-badge&logo=huggingface&logoColor=white">
+      <img src="https://img.shields.io/badge/FINE--TUNING-LoRA%20%7C%20QLoRA-FF9D00?style=for-the-badge&logo=huggingface&logoColor=FFD21E&labelColor=1E1E1E">
     </td>
   </tr>
   
