@@ -1,4 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-  {{emp_list}}
+  {% for emp in emp_list %}
+    <span onclick="location.href='/emp/{{emp.empno}}'">
+      {{loop.index}} - {{emp['empno']}} : {{emp.ename}} : {{emp.job}}
+    </span><br>
+  {% endfor %}
 {% endblock %}

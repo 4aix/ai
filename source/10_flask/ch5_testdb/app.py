@@ -5,3 +5,8 @@ app = Flask(__name__)
 def index():
   emp_list = get_emp_list()
   return render_template("emp/index.html", emp_list=emp_list)
+
+@app.route('/emp/<int:empno>')
+def emp(empno):
+  emp = get_emp(empno)
+  return render_template("emp/emp.html", emp=emp)
