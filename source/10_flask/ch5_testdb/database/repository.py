@@ -15,3 +15,11 @@ def get_emp_list() -> List[dict]:
 
 def get_emp(empno:int) -> dict :
   '매개변수로 사번을 입력받아 해당 사번의 데이터를 dict로 return'
+  cursor = conn.cursor()
+  sql = "SELECT * FROM EMP WHERE EMPNO = :empno"
+  cursor.execute(sql, {'empno':empno})
+  emp = cursor.fetchone() # 튜플
+  keys = [desc[0].lower() for desc in cursor.description]
+  emp_dict = dict(zip(keys, emp))
+  cursor.close()
+  return emp_dict
