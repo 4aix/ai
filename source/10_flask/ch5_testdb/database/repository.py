@@ -23,3 +23,9 @@ def get_emp(empno:int) -> dict :
   emp_dict = dict(zip(keys, emp))
   cursor.close()
   return emp_dict
+# 파일 실행방법 : ctrl+j : python -m database.repository
+if __name__=="__main__":
+  emp_list = get_emp_list()
+  print(emp_list)
+  emp = get_emp(7876)
+  print(emp)
