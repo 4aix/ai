@@ -10,8 +10,11 @@ API Key 생성
 '''
 
 import requests
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-API_KEY = "AIzaSyCoHUFjVfB3pY6zEZqTXuPUkBDnLQNvsgw"
+API_KEY = os.getenv('GOOGLE_PLACE_API_KEY')
 place_id = "ChIJqyhEBr-ffDUR4h_3EsvTtlQ"
 
 url = f"https://places.googleapis.com/v1/places/{place_id}"
