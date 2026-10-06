@@ -1,3 +1,3 @@
 git add .
-git commit -m "플라스크DB연동"
+git commit -m "todo관리CRUD"
 git push origin main
