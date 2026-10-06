@@ -1,27 +1,27 @@
-# api_test.py : API 응답을 그대로 출력해서 원인 확인하기
+# https://developers.google.com/maps/documentation/places/web-service?utm_source=chatgpt.com&hl=ko
+
+'''
+Google Cloud Console로 들어가서 프로젝트 생성  
+그 프로젝트에 결제 계정(Billing) 연결  
+Places API (New) 활성화  
+API Key 생성  
+가게 이름으로 먼저 검색해서 place_id를 얻기  
+그 place_id로 https://places.googleapis.com/v1/places/{place_id}
+'''
+
 import requests
 
-SERVICE_KEY = "kWiLqR5an3qgHfkycjPmjxAie5mGGzW0LuPktrSNA3kqpsmWfsLSW9TxR9k0khrZgJLecVcO88n5LsStz845eg==".strip()
-URL = "https://apis.data.go.kr/B553077/api/open/sdsc2/storeListInDong"
+API_KEY = "AIzaSyCoHUFjVfB3pY6zEZqTXuPUkBDnLQNvsgw"
+place_id = "ChIJqyhEBr-ffDUR4h_3EsvTtlQ"
 
-params = {
-    "serviceKey": SERVICE_KEY,
-    "pageNo": 1,
-    "numOfRows": 10,
-    "divId": "adongCd",
-    "key": "1111051500",
-    "type": "json",
+url = f"https://places.googleapis.com/v1/places/{place_id}"
+
+headers = {
+    "X-Goog-Api-Key": API_KEY,
+    "X-Goog-FieldMask": "displayName,rating,userRatingCount,reviews"
 }
 
-res = requests.get(URL, params=params, timeout=10)
+data = requests.get(url, headers=headers).json()
 
-# 1) HTTP 상태 코드 (200이면 통신 자체는 성공)
-print("상태코드:", res.status_code)
-
-# 2) 실제로 요청된 주소 (키가 %253D 처럼 이중 인코딩됐는지 확인용)
-#    키 전체가 화면에 찍히지 않도록 앞부분만 출력
-print("요청 URL:", res.url[:150], "...")
-
-# 3) 서버가 보낸 응답 원문 앞부분 (여기에 오류 메시지가 들어 있음)
-print("응답 내용:")
-print(res.text[:800])
+for review in data.get("reviews", []):
+    print(review)

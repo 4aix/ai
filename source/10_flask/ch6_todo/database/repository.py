@@ -54,6 +54,7 @@ def update_todo(todo:Todo) -> str:
   '해당 todo의 정보를 수정하고 성공여부를 반환'
   cursor = conn.cursor()
   sql = "UPDATE TODO SET CONTENT = :content, IS_DONE = :is_done WHERE ID = :id"
+  print('★', todo.model_dump(), type(todo.is_done))
   cursor.execute(sql, todo.model_dump())
   rows = cursor.rowcount # update 한 행수
   conn.commit()
@@ -79,13 +80,13 @@ if __name__ == '__main__':
   print(create_todo(Todo(id=0, content="프로젝트 마무리")))
   print('전체 목록 :', get_todos())
   print('next id ',get_next_id())
-  todo_dict = get_todo(1)
+  todo_dict = get_todo(3)
   print(todo_dict)
   todo = Todo(**todo_dict)
   print(todo)
   todo.content = '수정함'
   print(update_todo(todo))
-  print(delete_todo(1))
+  print(delete_todo(3))
   print('전체 목록 :', get_todos())
   
 #실행방법 : python -m database.repository
