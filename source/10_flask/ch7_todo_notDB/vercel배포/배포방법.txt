@@ -1,4 +1,6 @@
-bash
+vercel.com 회원가입
+
+bash나 cmd, powershell
 # 1) Vercel CLI 설치 (Node.js 필요)
 npm i -g vercel
 
