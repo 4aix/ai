@@ -1,33 +1,3 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=AI%20모델링%20및%20LLM%20학습일지&fontSize=50)
-
-<div align="center">  
-
-**매일 1commit으로 성장하는 중** 🚀
-
-</div>
-
-## 📌 About This Repository
-
-본 저장소는 AI 모델링 및 LLM 학습 과정을  **체계적인 이론 정리와 재현 가능한 실습 코드 중심으로 관리**합니다.
-
-본 저장소는 학습 기록 중심 레포지토리이며,  실제 서비스 구현 프로젝트는 별도 프로젝트 레포에서 관리하고 있습니다.
-
-- 📁 note : 개념 정리, 이론 요약, 학습 노트
-- 📁 source : 실습 코드, 모델 구현, 실험 결과
-
-<details>
-<summary><H2>📋 CURRICULUM click!</h2></summary>
-<br>
-<img width="578" height="821" alt="Image" src="https://github.com/user-attachments/assets/552aa4e7-f6d6-4f5d-813f-a66dd60a2e2c" />
-</details>
-
-##  📚 SKILLS
-
-> 💡 **핵심 역량**
-> - Python 기반 데이터 분석 및 시각화
-> - 머신러닝 / 딥러닝 모델링 (scikit-learn, TensorFlow)  
-> - LLM 활용 서비스 구현 (RAG, OpenAI API, Ollama, Langchain, HuggingFace, Fine-Tuning)
-
 <table>
   <tr>
     <td width="150px" align="center"><b>구분</b></td>
@@ -119,20 +89,3 @@
     </td>
   </tr>
 </table>
-
-
-## 📊 GitHub Activity
-
-![Followers](https://img.shields.io/github/followers/4aix?style=social)
-![Stars](https://img.shields.io/github/stars/4aix?style=social)
-![Profile Views](https://komarev.com/ghpvc/?username=4aix&color=blueviolet&style=flat-square&label=Profile+Views)
-![Repos](https://img.shields.io/badge/dynamic/json?color=blue&label=Repositories&query=public_repos&url=https://api.github.com/users/4aix)
-![Commits](https://img.shields.io/github/commit-activity/m/4aix/ai)
-
----
-
-<div align="center">
-
-**⚠️ 본 레파지토리는 교육과정 종료 후(2026.11.20) 삭제될 수 있습니다 ⚠️**
-
-</div>
