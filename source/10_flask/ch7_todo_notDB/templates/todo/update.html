@@ -44,22 +44,27 @@
 <script>
   document.getElementsByClassName('update')[0].addEventListener('click', function(){
     var content = document.getElementById('content').value;
-    content = encodeURIComponent(content)
     var is_done = document.getElementById('is_done').value;
     let url = `/update/{{todo.id}}/${content}/${is_done}`;
     
-    fetch(url, {method: 'PUT'})
+    // 주소에는 id만, 데이터는 body에 JSON으로
+    fetch('/update/{{todo.id}}', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },   // "JSON을 보낸다"고 서버에 알려 줌
+      body: JSON.stringify({ content: content, is_done: is_done })   // 객체 → JSON 문자열
+    })
     .then(response => {
       if(!response.ok){
-        alert(`실패 : ${response.status} ${response.statusText}`);
-        return;
+        // 실패하면 에러를 던져서 아래 .then(성공 처리)을 건너뛰게 함
+        throw new Error(`${response.status} ${response.statusText}`);
       }
       return response.text();
     })
-    .then(data=>{
-      alert(data);
+    .then(data => {
+      alert(data);                              // "3번 장고 공부를 수정하였습니다."
       location.href = '/todos/{{todo.id}}';
-    });
+    })
+    .catch(err => alert(`실패 : ${err.message}`));   // 실패 시 한 번만 알림
   });
 </script>
 {% endblock %}

@@ -56,10 +56,21 @@ def update(id):
     return render_template("todo/update.html", todo=todo)
   return abort(404, description=f"{id}번은 존재하지 않는 할일") # 해당 id의 할일이 없으면 404 에러
 
-@app.route('/update/<int:id>/<string:content>/<string:is_done>', methods=["PUT"]) # 수정할 할일의 id, 수정할 내용, 완료여부
-def update_db(id, content, is_done):
-  "해당 id의 할일을 수정하고 성공여부를 반환" # 수정할 할일의 id, 수정할 내용, 완료여부
-  todo = {'id':id, 'content':content, 'is_done':is_done, 'is_done':True if is_done == 'True' else False}
+@app.route('/update/<int:id>', methods=["PUT"])  # 경로에는 수정할 할일의 id만
+def update_db(id):
+  "해당 id의 할일을 수정하고 성공여부를 반환"
+  # fetch가 body에 JSON으로 보낸 데이터를 딕셔너리로 꺼내기
+  # silent=True : JSON이 아니면 에러 대신 None → or {} 로 빈 딕셔너리 처리
+  data = request.get_json(silent=True) or {}
+
+  content = data.get("content", "")        # 수정할 내용 (한글 그대로 들어옴)
+  is_done = data.get("is_done", "False")   # 완료여부 문자열 "True" / "False"
+
+  todo = {
+    'id': id,
+    'content': content,
+    'is_done': is_done == 'True'   # "True"면 True, 그 외는 False (bool로 변환)
+  }
   return update_todo(todo)
 
 @app.route('/delete/<int:id>', methods=["DELETE"])
