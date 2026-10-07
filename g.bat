@@ -1,3 +1,3 @@
 git add .
-git commit -m "취업관련"
+git commit -m "git꾸미기"
 git push origin main
