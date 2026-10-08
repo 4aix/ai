@@ -34,7 +34,7 @@
     <td><b>기술</b></td>
   </tr>
 
-  <!-- Programming: 블루 → 인디고 계열 -->
+  <!-- Programming: Python/pandas 공식색 + 블루 계열 -->
   <tr>
     <td align="center"><b>Programming</b></td>
     <td>
@@ -56,23 +56,24 @@
     </td>
   </tr>
 
-  <!-- AI / ML: 퍼플 → 핑크 그라데이션 (핵심 역량이라 가장 눈에 띄게) -->
+  <!-- AI / ML: 퍼플 → 핑크 그라데이션 (ML 프레임워크 → NLP → LLM → LangChain → RAG → Fine-Tuning 순서) -->
   <tr>
     <td align="center"><b>AI / ML</b></td>
     <td>
       <img src="https://img.shields.io/badge/scikit--learn-6D28D9?style=for-the-badge&logo=scikitlearn&logoColor=white">
       <img src="https://img.shields.io/badge/TensorFlow-7C3AED?style=for-the-badge&logo=tensorflow&logoColor=white">
       <img src="https://img.shields.io/badge/PyTorch-8B5CF6?style=for-the-badge&logo=pytorch&logoColor=white">
-      <img src="https://img.shields.io/badge/NLP-9333EA?style=for-the-badge&logo=huggingface&logoColor=white">
-      <!-- Transformers는 HuggingFace 라이브러리라 로고를 huggingface로 바꿈 -->
+      <!-- NLP: 커스텀 말풍선 아이콘 -->
+      <img src="https://img.shields.io/badge/NLP-9333EA?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik00IDNoMTZhMiAyIDAgMCAxIDIgMnYxMWEyIDIgMCAwIDEtMiAySDlsLTUgNHYtNGEyIDIgMCAwIDEtMi0yVjVhMiAyIDAgMCAxIDItMnptMiA0djJoMTJWN3ptMCA0djJoOHYtMnoiLz48L3N2Zz4%3D">
       <img src="https://img.shields.io/badge/Transformers-A855F7?style=for-the-badge&logo=huggingface&logoColor=white">
       <img src="https://img.shields.io/badge/HuggingFace-C026D3?style=for-the-badge&logo=huggingface&logoColor=white">
-      <!-- 'OpenAI-LLM'은 하이픈 때문에 배지가 두 칸으로 쪼개졌던 거라 공백(%20)으로 바꿈 -->
       <img src="https://img.shields.io/badge/OpenAI%20LLM-D946EF?style=for-the-badge&logo=openai&logoColor=white">
       <img src="https://img.shields.io/badge/Ollama-DB2777?style=for-the-badge&logo=ollama&logoColor=white">
-      <img src="https://img.shields.io/badge/RAG-EC4899?style=for-the-badge&logo=openai&logoColor=white">
-      <!-- 혼자 튀던 labelColor를 빼고 한 칸짜리로 통일 -->
-      <img src="https://img.shields.io/badge/Fine--Tuning%20(LoRA%20%7C%20QLoRA)-F43F5E?style=for-the-badge&logo=huggingface&logoColor=white">
+      <img src="https://img.shields.io/badge/LangChain-E3368A?style=for-the-badge&logo=langchain&logoColor=white">
+      <!-- RAG: 커스텀 문서+돋보기 아이콘 -->
+      <img src="https://img.shields.io/badge/RAG-EC4899?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik01IDJoOWw1IDV2NS41YTYgNiAwIDAgMC04LjkgNy41SDVhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJ6bTggMS41VjhoNC41ek03IDEwdjEuNWg2VjEwem0wIDMuNVYxNWgzdi0xLjV6Ii8%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xNiAxM2E0IDQgMCAwIDEgMy40IDYuMWwyLjMgMi4zLTEuMyAxLjMtMi4zLTIuM0E0IDQgMCAxIDEgMTYgMTN6bTAgMS44YTIuMiAyLjIgMCAxIDAgMCA0LjQgMi4yIDIuMiAwIDAgMCAwLTQuNHoiLz48L3N2Zz4%3D">
+      <!-- Fine-Tuning: 커스텀 슬라이더 아이콘 -->
+      <img src="https://img.shields.io/badge/Fine--Tuning%20(LoRA%20%7C%20QLoRA)-F43F5E?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0zIDVoOXYySDN6bTE0IDBoNHYyaC00ek0xMiAzaDR2NmgtNHpNMyAxMWgzdjJIM3ptOCAwaDEwdjJIMTF6TTYgOWg0djZINnptLTMgOGgxMXYySDN6bTE2IDBoMnYyaC0yem0tNS0yaDR2NmgtNHoiLz48L3N2Zz4%3D">
     </td>
   </tr>
 

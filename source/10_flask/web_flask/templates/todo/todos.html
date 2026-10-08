@@ -8,7 +8,8 @@
         <input type="hidden" name="id" value="{{ next_id }}">
         <div class="input-group mb-3">
           <span class="input-group-text">{{ next_id }}</span>
-          <input type="text" class="form-control" placeholder="할일" name="content" required>
+          <input type="text" class="form-control" placeholder="할일" name="content"
+          autocomplete="off" required>
           <input type="submit" class="btn btn-secondary btn-lg" value="등록">
         </div>
       </form>
