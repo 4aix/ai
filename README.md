@@ -18,7 +18,7 @@
 <details>
 <summary><H2>📋 CURRICULUM click!</h2></summary>
 <br>
-<img width="578" height="821" alt="Image" src="https://github.com/user-attachments/assets/552aa4e7-f6d6-4f5d-813f-a66dd60a2e2c" />
+<img width="578" height="820" alt="Image" src="https://github.com/user-attachments/assets/16f74598-2057-49ec-bb1c-5c4f8edcf4fe" />
 </details>
 
 ##  📚 SKILLS
