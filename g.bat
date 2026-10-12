@@ -1,3 +1,3 @@
 git add .
-git commit -m "이력서에 기입할 flask와 ppt 배포"
+git commit -m "1stProject마무리"
 git push origin main
