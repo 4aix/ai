@@ -1,5 +1,6 @@
  학원에서 파일 공유 : \\ccc 이나 \\192.168.0.18
-수업시간의 화면공유 : https://meet.jit.si/aix824h
+수업시간의 화면공유 : https://calendar.app.google/K4q8cfKGZSUyhMgVA
+
 소스및 교안공유 : http://github.com/4aix/ai
 
 downloads파일 및 팀데이터 공유 : https://zrr.kr/spgiK8
