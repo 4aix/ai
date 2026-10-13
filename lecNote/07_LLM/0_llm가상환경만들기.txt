@@ -45,7 +45,9 @@ pip install langchain-anthropic # 1.7.1 claude 유료모델
 # pip install openai # langchain-openai 에서 설치 3.11.0
 pip install sounddevice scipy # (0.5.6, 1.15.3)마이크 녹음후 파일로 전송하기
 
-
+-----------------------------------------------------
+# RAG
+pip install langchain-upstage # (0.7.7)
 
 
 
