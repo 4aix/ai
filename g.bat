@@ -1,3 +1,3 @@
 git add .
-git commit -m "1stProject¸¶¹«¸®"
+git commit -m "LLM customization"
 git push origin main
