@@ -48,6 +48,7 @@ pip install sounddevice scipy # (0.5.6, 1.15.3)마이크 녹음후 파일로 전
 -----------------------------------------------------
 # RAG
 pip install langchain-upstage # (0.7.7)
+pip install langchain-community docx2txt python-docx # (0.4.2) (0.9)(1.2.0)
 
 
 
