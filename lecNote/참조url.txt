@@ -1,8 +1,8 @@
- 학원에서 파일 공유 : \\ccc 이나 \\192.168.0.18
-수업시간의 화면공유 : https://calendar.app.google/K4q8cfKGZSUyhMgVA
+2026년 10월 13일, 오전 9:00~2026년 11월 20일, 오후 6:00 · 
+화면공유 링크: https://meet.google.com/xkb-rngv-cwk
 
+학원에서 파일 공유 : \\ccc 이나 \\192.168.0.18
 소스및 교안공유 : http://github.com/4aix/ai
-
 downloads파일 및 팀데이터 공유 : https://zrr.kr/spgiK8
 
 기업체 특강 일정
