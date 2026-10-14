@@ -55,6 +55,8 @@ pip install langchain (1.4.5)
 pip install -q langchain-text-splitters (1.1.3)
 pip install -q pinecone langchain-pinecone (7.3.0) (0.2.13)
 
+pip install ipywidgets (8.1.9)
+
 
 
 
