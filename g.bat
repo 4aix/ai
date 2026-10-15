@@ -1,3 +1,3 @@
 git add .
-git commit -m "LLM customization"
+git commit -m "RAG성능향상"
 git push origin main
