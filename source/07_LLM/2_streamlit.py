@@ -15,5 +15,9 @@ message = st.text_area("요약할 내용을 입력하세요")
 if st.button("요약"):
   st.info('버튼을 클릭했네요'+message)
 
-if
+if prompt := st.chat_input("쳇 입력하기"):
+  st.chat_message("assistant").write(prompt)
+  st.chat_message("ai").write(prompt)
+  st.chat_message("user").write(prompt)
+  st.chat_message("홍길동").write(prompt)
   
