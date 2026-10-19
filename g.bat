@@ -1,3 +1,3 @@
 git add .
-git commit -m "RAG성능향상"
+git commit -m "RAG재배열(rerank)"
 git push origin main
