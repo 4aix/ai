@@ -12,3 +12,8 @@ st.caption("caption 함수를 이용한 텍스트 캡션입니다.")
 st.markdown("---")
 
 message = st.text_area("요약할 내용을 입력하세요")
+if st.button("요약"):
+  st.info('버튼을 클릭했네요'+message)
+
+if
+  
