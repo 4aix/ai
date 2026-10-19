@@ -19,3 +19,9 @@ def askGPT(message):
     ]
   )
   return response['choices'][0]['message']['content']
+
+if __name__ == '__main__':
+  message = input('요약할 내용을 입력하세요: ')
+  summary = askGPT(message)
+  print("요약은 다음과 같습니다\n")
+  print(summary)
