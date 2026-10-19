@@ -57,6 +57,8 @@ pip install -q pinecone langchain-pinecone (7.3.0) (0.2.13)
 
 pip install ipywidgets (8.1.9)
 pip install pandas (2.3.3)
+pip install cohere (7.2.0)
+pip install scikit-learn (1.7.2)
 
 
 
