@@ -18,7 +18,7 @@ def askGPT(message):
       }
     ]
   )
-  return response['choices'][0]['message']['content']
+  return response.choices[0].message.content
 
 if __name__ == '__main__':
   message = input('요약할 내용을 입력하세요: ')
