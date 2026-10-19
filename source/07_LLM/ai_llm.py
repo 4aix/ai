@@ -51,8 +51,7 @@ def get_retriever(normalized_query, model=UPSTAGE_EMBEDDING_MODEL, k=15):
   filter_condition = {"category": {"$in": categorize_content(normalized_query)}}
   retriever = vectorStore.as_retriever(
               search_type="similarity",
-              search_kwargs={"k": k},
-              search_kwargs={"filter": filter_condition},
+              search_kwargs={ "k": k, "filter": filter_condition },
     )
   return retriever
 
@@ -84,3 +83,37 @@ def rerank_by_title(query:str, documents:list, top_k:int=3) -> list:
     # print(idx)
     rerank_docs = [documents[r.index] for r in results.results]
     return rerank_docs
+
+# 답변 langchain 반환
+def rag_chain(llm):
+  # 5. 프롬프트 템플릿
+  template = f"""당신은 최고의 한국 소득세법 전문가입니다. 다음 문맥을 참고하여 질문에 답하세요. 답을 모르면 
+  모른다고 답하세요.
+  질문 : {{query}}
+  문맥 : {{context}}
+  답변 :"""
+  prompt = ChatPromptTemplate.from_template(template)
+  # RAG 체인 생성
+  prompt_chain = prompt | llm | StrOutputParser()
+  return prompt_chain
+
+# 재사용이 가능한 함수 만들기
+def ask_with_reference(query:str, k:int=10, top_k:int=3):
+  """
+  query의 수정된 query, 답변, 참고조항을 반환하는 함수
+  Args:
+  - query : 질문
+  - k : 검색할 문서의 수(기본값 : 10)
+  - top_k : 재배열된 이후 사용될 문서의 수 (기본값 : 3)
+  """
+  # 1. LLM 초기화
+  llm = get_llm()
+  # 2. 질문 표준화
+  keyword_chain = get_dictionary_chain(llm)
+  normalized_query = keyword_chain.invoke({"question":query})
+  # retriever 생성
+  print(normalized_query)
+
+if __name__ == '__main__':
+  query = "연봉 5천만원인 직장인의 소득세는 얼마예요?"
+  ask_with_reference(query, k=10, top_k=3)
