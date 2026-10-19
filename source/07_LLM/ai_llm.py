@@ -98,7 +98,7 @@ def rag_chain(llm):
   return prompt_chain
 
 # 재사용이 가능한 함수 만들기
-def ask_with_reference(query:str, k:int=10, top_k:int=3):
+def ask_with_reference(query:str, chat_history:list=None, k:int=10, top_k:int=3):
   """
   query의 수정된 query, 답변, 참고조항을 반환하는 함수
   Args:
@@ -108,12 +108,44 @@ def ask_with_reference(query:str, k:int=10, top_k:int=3):
   """
   # 1. LLM 초기화
   llm = get_llm()
+  # ★ ★ ★ 여기에 추가
+  # chat_history 에 질문이 있으면 query 재구성
+  if chat_history:
+      history_list = [f"{'사용자' if msg['role']=='user' else 'AI'}: {msg['content']}"  for msg in chat_history]
+      history_text = "\n".join(history_list)
+      # query 재구성
+      rewrite_prompt = ChatPromptTemplate.from_template(
+          """이전 대화를 참고하여 질문을 재구성해 주세요
+          이전 대화 : {history_text}
+          현재 질문 : {question}
+          재구성된 질문 : """
+      )
+      query = (rewrite_prompt | llm | StrOutputParser()).invoke({"history_text":history_text,
+                                                              "question": query})
+  # ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★
   # 2. 질문 표준화
   keyword_chain = get_dictionary_chain(llm)
   normalized_query = keyword_chain.invoke({"question":query})
   # retriever 생성
-  print(normalized_query)
+  retriever = get_retriever(normalized_query, k=10)
+  # 문서 검색
+  documents = retriever.invoke(normalized_query)
+  # 재배열
+  reranked_docs = rerank_by_title(query=normalized_query, documents=documents, top_k=3)
+  # 참고 조항 추출
+  referenced_articles = extract_articles_from_docs(reranked_docs)
+  # LLM 답변 생성
+  prompt_chain = rag_chain(llm)
+  # 답변, 참고조항, 주의사항
+  answer = prompt_chain.invoke({
+                'query':normalized_query,
+                'context':format_documents(reranked_docs)
+            })
+  result = [f"✅ 답변 : {answer}",
+            f"📌 참고조항:{referenced_articles}",
+            "⚠️ 위의 답변은 AI에 의해 작성된 답변이므로 약간의 차이가 날 수 있습니다"]
+  return "\n\n".join(result)
 
 if __name__ == '__main__':
   query = "연봉 5천만원인 직장인의 소득세는 얼마예요?"
-  ask_with_reference(query, k=10, top_k=3)
+  print(ask_with_reference(query, k=10, top_k=3))
