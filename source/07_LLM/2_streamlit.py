@@ -10,3 +10,5 @@ st.text("text함수를 이용한 텍스트입니다.")
 st.write("write 함수를 이용한 텍스트 표시입니다.")
 st.caption("caption 함수를 이용한 텍스트 캡션입니다.")
 st.markdown("---")
+
+message = st.text_area("요약할 내용을 입력하세요")
