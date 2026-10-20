@@ -1,3 +1,3 @@
 git add .
-git commit -m "bert¿ÍgptÆÄÀÎÆ©´×"
+git commit -m "Django½ÃÀÛ"
 git push origin main
