@@ -1,3 +1,3 @@
 git add .
-git commit -m "RAGÀç¹è¿­(rerank)"
+git commit -m "bert¿ÍgptÆÄÀÎÆ©´×"
 git push origin main
