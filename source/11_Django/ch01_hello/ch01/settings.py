@@ -20,7 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k476&7g_no_0_)4p^y^o02dful91d0#!w_u=aj8q&@k0vz5!4k"
+# from dotenv import load_dotenv # pip install python-dotenv
+# import os
+# load_dotenv()
+# SECRET_KEY = os.getenv('SECRET_KEY')
+from decouple import config # pip install python-decouple
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "home",
 ]
 
 MIDDLEWARE = [
