@@ -8,5 +8,8 @@
   <img src="{% static 'img/django.png'%}" alt="장고아이콘">
   <hr>
   <a href="/test">TEST</a>
-  <a href="{%%}">TEST</a>
+  <a href="{% url 'test' %}">TEST</a>
+  <button onclick="location.href='/test'">TEST</button>
+  <button onclick="location.href='{% url 'test' %}'">TEST</button>
+  <hr>
 {% endblock %}
