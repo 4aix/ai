@@ -1,3 +1,3 @@
 git add .
-git commit -m "DjangoΩ√¿€"
+git commit -m "Djangoæ€"
 git push origin main
