@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Welcome Page{% endblock %}
+{% block content %}
+  <h2>{{greeting}}</h2>
+  <h1 onclick="location.href='/wordcnt'">{{msg}}(글자수 세기)</h1>
+  <img src="static/img/django.png" alt="장고">
+  {% load static %}
+  <img src="{% static 'img/django.png'%}" alt="장고아이콘">
+  <hr>
+  <a href="/test">TEST</a>
+  <a href="{%%}">TEST</a>
+{% endblock %}
