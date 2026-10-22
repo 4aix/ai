@@ -22,3 +22,10 @@ def showIntId(request, id:int):
   return render(request,
                 "home/showId.html",
                 {"msg":msg, "type":id_type})
+
+def showStrId(request, id:str):
+  msg = f"문자 ID : {id}"
+  id_type = "문자입니다"
+  return render(request,
+                "home/showId.html",
+                {"msg":msg, "type":id_type})
