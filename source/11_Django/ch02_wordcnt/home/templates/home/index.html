@@ -12,4 +12,8 @@
   <button onclick="location.href='/test'">TEST</button>
   <button onclick="location.href='{% url 'test' %}'">TEST</button>
   <hr>
+  <a href="/showId/aaa">shoId/aaa</a>
+  <a href="{% url 'showIntId' 'aaa'%}">shoId/aaa</a>
+  <a href="/showId/111">shoId/111</a>
+  <a href="{% url 'showStrId' 111 %}">shoId/111</a>
 {% endblock %}
