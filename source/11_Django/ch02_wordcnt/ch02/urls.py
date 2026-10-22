@@ -21,4 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
     path("test/", views.test, name="test"),
+    path("showId/<int:id>/", views.showIntId, name="showIntId"),
+    path("showId/<str:id>/", views.showStrId, name="showStrId"),
 ]
