@@ -15,3 +15,10 @@ def test(request):
             <h1>테스트 페이지</h1>
             <button onclick="location.href='/'">뒤로가기</button>
           """)
+
+def showIntId(request, id:int):
+  msg = f"숫자 ID : {id}"
+  id_type = "int입니다"
+  return render(request,
+                "home/showId.html",
+                {"msg":msg, "type":id_type})
