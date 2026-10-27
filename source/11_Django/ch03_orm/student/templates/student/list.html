@@ -30,7 +30,7 @@
       </thead>
       <tbody>
         {% for s in students %}
-        <tr>
+        <tr onclick="location='/student/get/{{s.id}}'">
           <th scope="row">{{s.id}}</th>
           <td>{{s.name}}</td>
           <td>{{s.major}} ({{s.grade}})</td>
