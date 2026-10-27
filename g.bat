@@ -1,3 +1,3 @@
 git add .
-git commit -m "서비스별urls"
+git commit -m "장고 ORM"
 git push origin main
