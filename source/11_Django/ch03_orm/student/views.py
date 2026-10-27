@@ -5,7 +5,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def list(request):
-  pass
+  students = Student.objects.all()
+  return render(request, "student/list.html", {"students":students})
 
 def get(request, id:int):
   pass
