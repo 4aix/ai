@@ -25,3 +25,6 @@ def delete(request, id:int):
     student.delete()
     messages.success(request, f"{id}번 학생 삭제 완료")
     return redirect("student:list")  # redirect("/student")
+  else:
+    messages.error(request, f"{id}번 학생을 찾을 수 없어 삭제 불가")
+    return redirect("student:list")
