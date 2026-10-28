@@ -19,15 +19,17 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import os
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print("root 폴더명 :",BASE_DIR)
+print('기본 templates :',os.path.join(BASE_DIR, 'myproject', 'templates'))
+print('기본 static :', )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 from dotenv import load_dotenv
-import os
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "blog", # 앱 등록
 ]
 
 MIDDLEWARE = [
@@ -63,7 +66,9 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
