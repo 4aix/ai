@@ -20,4 +20,7 @@ def get(request, id:int):
     return redirect("/student")
 
 def delete(request, id:int):
-  student 
+  student = Student.objects.filter(id=id) # 해당 id데이터들을 list
+  if student:
+    student.delete()
+    messages.success(request, f"{id}번 학생 삭제 완료")
