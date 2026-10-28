@@ -21,9 +21,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import os
 BASE_DIR = Path(__file__).resolve().parent.parent
-print("root 폴더명 :",BASE_DIR)
-print('기본 templates :',os.path.join(BASE_DIR, 'myproject', 'templates'))
-print('기본 static :', )
+# print("root 폴더명 :",BASE_DIR)
+# print('기본 templates :', os.path.join(BASE_DIR, 'myproject', 'templates'))
+# print('기본 static :', os.path.join(BASE_DIR, 'myproject', 'static'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -67,7 +67,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            
+            os.path.join(BASE_DIR, 'myproject', 'templates'),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
