@@ -9,7 +9,14 @@ def list(request):
   return render(request, "student/list.html", {"students":students})
 
 def get(request, id:int):
-  pass
+  # student = Student.objects.get(id=id)
+  # student = get_object_or_404(Student, id=id) # 해당 id가 없어서 예외가 날 경우 404.html로(Debug=False)
+  # return render(request, "student/get.html", {"student":student})
+  try:
+    student = Student.objects.get(id=id)
+    return render(request, "student/get.html", {"student":student})
+  except:
+    messages.error(request, f"{id}번 학생을 찾을 수 없습니다")
 
 def delete(request, id:int):
   pass
