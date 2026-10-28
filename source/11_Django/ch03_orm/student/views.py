@@ -17,6 +17,7 @@ def get(request, id:int):
     return render(request, "student/get.html", {"student":student})
   except:
     messages.error(request, f"{id}번 학생을 찾을 수 없습니다")
+    return redirect("/student")
 
 def delete(request, id:int):
-  pass
+  student 
