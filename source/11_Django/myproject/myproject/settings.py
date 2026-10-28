@@ -116,10 +116,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+# LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ko-kr" # 장고 admin페이지 언어
 
-TIME_ZONE = "UTC"
-
+# TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"
 USE_I18N = True
 
 USE_TZ = True
@@ -128,7 +129,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+# 개발 환경 setting : global_settings.py -> settings.py
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myproject', 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
