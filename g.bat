@@ -1,3 +1,3 @@
 git add .
-git commit -m "장고 ORM"
+git commit -m "myproject환경설정"
 git push origin main
