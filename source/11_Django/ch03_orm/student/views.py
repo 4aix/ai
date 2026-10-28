@@ -24,3 +24,4 @@ def delete(request, id:int):
   if student:
     student.delete()
     messages.success(request, f"{id}번 학생 삭제 완료")
+    return redirect("student:list")  # redirect("/student")
