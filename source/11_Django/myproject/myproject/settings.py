@@ -119,8 +119,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # LANGUAGE_CODE = "en-us"
 LANGUAGE_CODE = "ko-kr" # 장고 admin페이지 언어
 
-# TIME_ZONE = "UTC"
-TIME_ZONE = "Asia/Seoul"
+TIME_ZONE = "UTC"
+# TIME_ZONE = "Asia/Seoul"
 USE_I18N = True
 
 USE_TZ = True
