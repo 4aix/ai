@@ -23,4 +23,5 @@ class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소�
   create_at = models.DateField(auto_now_add=True) # insert할 때 자동 저장
   update_at = models.DateTimeField(auto_now=True) # save()함수 수행될 때 자동 저장
   def __str__(self): # 한 레크도에 대해 작업 처리
-    return f"{self.id}.제목:{self.title} - {self.create_at}등록. {self.update_at}최종수정"
+    updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
+    return f"{self.id}.제목:{self.title} - {self.create_at}등록. {updated}최종수정"
