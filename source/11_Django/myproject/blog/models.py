@@ -12,7 +12,7 @@ REGION_CHOICE = (
 )
 def lnglat_validator(value):
   if not re.match(r'(\d+\.?\d*),(\d+\.?\d*)', value):
-    raise ValidationError('Invalid LngLat. ex:38, 128')
+    raise ValidationError('Invalid LngLat. ex:128,38')
   
 class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소문자) 2.form태그
   # id    = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
@@ -24,7 +24,13 @@ class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소�
                             max_length=100,
                             choices=REGION_CHOICE,
                             default="Asia")
-  
+  lnglat = models.CharField(verbose_name="경,위도",
+                          max_length=100,
+                          blank=True,
+                          null=True,
+                          help_text="경도,위도 포맷 ex128.21,37",
+                          validators=[lnglat_validator])
+  url    = models.URLField(blank=True, null=True)
 
   create_at = models.DateField(auto_now_add=True) # insert할 때 자동 저장
   update_at = models.DateTimeField(auto_now=True) # save()함수 수행될 때 자동 저장
