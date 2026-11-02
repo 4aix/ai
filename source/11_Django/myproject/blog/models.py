@@ -37,3 +37,22 @@ class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소�
   def __str__(self): # 한 레크도에 대해 작업 처리
     updated = timezone.localtime(self.update_at).strftime("%Y-%m-%d %H:%M")
     return f"{self.id}.제목:{self.title} - {self.create_at}등록. {updated}최종수정"
+  class Meta: # Post의 내부 클래스
+    ordering = ['-update_at'] # update_at기준으로 내림차순 정렬로 가져오기
+    unique_together = [('title', 'content')] # 같은 title과 content는 insert및 update 불가
+
+class Comment(models.Model): # 테이블명 blog_comment Post:Comment = 1:N 관계(1:다 관계)
+  # id = models.AutoField(primary_key=True)
+  post = models.ForeignKey(Post, # post테이블과 1:다 관계 (필드명:post_id)
+                        on_delete=models.CASCADE) # post의 한행을 delete할 경우 댓글도 자동 삭제
+  author = models.CharField(verbose_name="댓글쓴이", max_length=20, null=True, blank=True)
+  message = models.TextField(verbose_name="댓글")
+  create_at = models.DateField(auto_now_add=True) # insert한 날짜
+  update_at = models.DateTimeField(auto_now=True) # save() 실행 시점
+  def __str__(self):
+    return "{}번글의 댓글 {} (by {}, at {})".format(self.post.pk,
+                                              self.message,
+                                              self.author,
+                                              self.create_at)
+  class Meta:
+    ordering = ['-update_at']
