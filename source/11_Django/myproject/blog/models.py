@@ -20,6 +20,12 @@ class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소�
                           max_length=100,       # varchar(100) 필드로 생성
                           help_text="기사 제목입니다. 100자 내외로 입력하세요")
   content = models.TextField("본문") # CLOB타입(oracle), TEXT타입(sqlite, mysql)
+  region = models.CharField(verbose_name="지역",
+                            max_length=100,
+                            choices=REGION_CHOICE,
+                            default="Asia")
+  
+
   create_at = models.DateField(auto_now_add=True) # insert할 때 자동 저장
   update_at = models.DateTimeField(auto_now=True) # save()함수 수행될 때 자동 저장
   def __str__(self): # 한 레크도에 대해 작업 처리
