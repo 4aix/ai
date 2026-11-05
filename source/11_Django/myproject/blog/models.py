@@ -17,6 +17,8 @@ def lnglat_validator(value):
 class Tag(models.Model): # 테이블명 : blog_tag / post:tag = 다:다(M:N)관계
   # id    = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
   name = models.CharField(max_length=50, unique=True)
+  def __str__(self):
+    return "#" + self.name
 
 class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소문자) 2.form태그
   # id    = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
