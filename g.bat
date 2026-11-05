@@ -1,3 +1,3 @@
 git add .
-git commit -m "RDBMS테이블관계"
+git commit -m "장고 Form"
 git push origin main
