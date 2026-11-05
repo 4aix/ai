@@ -1,3 +1,3 @@
 git add .
-git commit -m "Æû°´Ã¼"
+git commit -m "RDBMSÅ×ÀÌºí°ü°è"
 git push origin main

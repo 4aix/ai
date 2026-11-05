@@ -1,7 +1,7 @@
 화면공유 링크: https://meet.google.com/wom-eytu-hmz
 학원에서 파일 공유 : \\ccc 이나 \\192.168.0.18
 소스및 교안공유 : http://github.com/4aix/ai
-downloads파일 및 팀데이터 공유 : https://zrr.kr/spgiK8
+downloads파일 공유 : https://zrr.kr/spgiK8
 
 * 일정
 11월17일(화) 10시 : 프로젝트 세미 발표
