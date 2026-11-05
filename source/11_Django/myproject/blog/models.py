@@ -13,7 +13,11 @@ REGION_CHOICE = (
 def lnglat_validator(value):
   if not re.match(r'(\d+\.?\d*),(\d+\.?\d*)', value):
     raise ValidationError('Invalid LngLat. ex:128,38')
-  
+
+class Tag(models.Model): # 테이블명 : blog_tag / post:tag = 다:다(M:N)관계
+  # id    = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
+  name = models.CharField(max_length=50, unique=True)
+
 class Post(models.Model): # 1. 테이블명 : blog_post(앱명_클래스명소문자) 2.form태그
   # id    = models.AutoField(primary_key=True) PK가 없을 경우 자동 생성
   title = models.CharField(verbose_name="제목", # form태그의 라벨
