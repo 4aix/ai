@@ -4,7 +4,7 @@
   {% if post %}
     <h2>{{post.id}}.{{post.title}}</h2>
     <p>
-      {{post.content}}<br>
+      {{post.content | linebreaks }}<br> {# linebreaks 필터 : \n이 2개는 p태그, \n이 1개는 br태그#}
       {{post.content | truncatechars:20 }}<br>
       <span>{{post.create_at | date:"Y-m-d"}}</span>
       <span>{{post.update_at | date:"y-m-d A h:i:s"}}</span>
