@@ -6,3 +6,6 @@ from .models import Book
 # 1. form없이 걍 2. form객체생성후(6장) 3. DjangoGenericView 이용 4. GenericView 상속(7장)
 def book_list(request):
   pass
+
+def book_new(request):
+  pass

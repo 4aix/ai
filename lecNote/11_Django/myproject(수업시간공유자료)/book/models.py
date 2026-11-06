@@ -5,9 +5,9 @@ from django.core.validators import MinValueValidator
 from django.core.validators import MaxValueValidator
 from django.urls import reverse
 # Create your models here.
-def min_length_3_validator(value):
-  if len(value)<3:
-    raise forms.ValidationError('3글자 이상 입력하세요')
+def min_length_2_validator(value):
+  if len(value)<2:
+    raise forms.ValidationError('2글자 이상 입력하세요')
   
 # Create your models here.
 class Book(models.Model):
@@ -15,8 +15,8 @@ class Book(models.Model):
                             max_length=50)
   author = models.CharField(verbose_name="책쓴이",
                     max_length=50,
-                    validators=[min_length_3_validator
-                                #MinLengthValidator(3) 
+                    validators=[min_length_2_validator
+                                #MinLengthValidator(2) 
                                 ])
   publisher = models.CharField(verbose_name="출판사",
                 max_length=50, blank=True, null=True)
