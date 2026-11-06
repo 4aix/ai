@@ -24,7 +24,7 @@ class Book(models.Model):
   sales     = models.IntegerField(verbose_name="판매가",
                                   default=1000,
                                   validators=[MinValueValidator(0),
-                                              MaxValueValidator(1000000)])
+                                              MaxValueValidator(100000)])
   ip        = models.GenericIPAddressField(blank=True, null=True)
 
   def __str__(self):
