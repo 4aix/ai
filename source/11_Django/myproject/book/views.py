@@ -9,7 +9,26 @@ from .models import Book
 #                   {"book_list": Book.objects.all(),
 #                   "object_list" : Book.objects.all()})
 # 제너릭view 사용
+book_list = ListView.as_view(model=Book)
+book_new1 = CreateView.as_view(model=Book,
+                              fields = ['title', 'author', 'publisher', 'sales']
+                              ) # book.ip에는 None
+class BookCreateView(CreateView): # 제너릭 뷰 상속
+  model = Book
+  fields = ['title', 'author', 'publisher', 'sales']
+  def form_valid(self, form):
+    book = form.save(commit=False)
+    book.ip = self.request.META.get('REMOTE_ADDR', 'localhost')
+    book.save()
+    return redirect(book)
 
+book_new = BookCreateView.as_view() # book.ip까지 저장
+
+book_edit = UpdateView.as_view(model=Book,
+                              fields = ['title', 'author', 'publisher', 'sales']
+                              ) # book.ip는 수정안 함
+book_delete = DeleteView.as_view(model=Book,
+                                success_url = "/book/") # delete 성공 후 url
 def book_new1(request):
   # GET : template페이지(book/book_form.html ; book을 입력받는 페이지)로 응답
   # POST : 파라미터변수 받아 유효성 체크
