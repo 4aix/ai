@@ -37,6 +37,7 @@ def book_new(request):
       return redirect(book) # get_absolute_url()
   elif request.method == 'GET':
     form = BookModelForm()
+    print(form.as_table())
   return render(request, "book/book_form.html", {"form":form})
 
 def book_edit(request, pk):
@@ -54,3 +55,15 @@ def book_edit(request, pk):
   elif request.method == 'GET':
     form = BookModelForm(instance=book)
   return render(request, "book/book_form.html", {"form":form})
+
+def book_delete(request, pk):
+  book = get_object_or_404(Book, pk=pk)
+  # book.delete()
+  # return redirect(book) # book.get_absolute_url() 호출
+  # GET : 삭제할지 한번 더 물어보는 template으로(book/book_confirm_delete.html)
+  # POST : db의 book을 delete
+  if request.method == 'POST':
+    book.delete()
+    return redirect(book)
+  elif request.method == 'GET':
+    return render(request, "book/book_confirm_delete.html", {"object":book})
