@@ -3,3 +3,6 @@
 3. myproject/settings.py(앱 설정)
   (1) 앱(article)등록
    (2) 파일(static & media) 경로 등록
+	- python manage.py collectstatic
+4. myproject/urls.py 경로 등록(article, media)
+5. aricle/models.py에 article테이블 등록

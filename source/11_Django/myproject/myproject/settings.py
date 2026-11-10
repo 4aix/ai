@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '_staticfiles')
 # 업로드한 파일의 url(/media/article/1.jpg)과 저장될 경로(_media/article/1.jpg)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
-# => url과 저장경로 연결
+# => url과 저장경로 연결 : myproject/urls.py에 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
