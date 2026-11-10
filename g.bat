@@ -1,3 +1,3 @@
 git add .
-git commit -m "파일첨부와 제너릭뷰"
+git commit -m "메인css업데이트"
 git push origin main
