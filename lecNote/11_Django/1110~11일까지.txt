@@ -1,0 +1,5 @@
+1. article앱 추가 : python manage.py startapp article
+2. article폴더에 lecNote내용(article)을 복사하기
+3. myproject/settings.py(앱 설정)
+  (1) 앱(article)등록
+   (2) 파일(static & media) 경로 등록
