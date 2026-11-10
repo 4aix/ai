@@ -5,4 +5,10 @@
    (2) 파일(static & media) 경로 등록
 	- python manage.py collectstatic
 4. myproject/urls.py 경로 등록(article, media)
-5. aricle/models.py에 article테이블 등록
+5. aricle/models.py에 article테이블 클래스
+     article/admin.py에 Article클래스 등록
+6. DB에 적용
+7. admin페이지에서 확인
+__________________________________
+
+8. urls.py -> views.py(함수X, 제너릭뷰)
