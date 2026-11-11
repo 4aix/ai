@@ -6,7 +6,10 @@ from django.urls import reverse_lazy
 from django.core.paginator import Paginator
 
 def article_list(request):
-	pass
+	article_list = Article.objects.all().order_by('-id')
+	return render(request,
+								"article/article_list.html",
+								{"article_list":article_list})
 def article_new(request):
 	pass
 def article_detail(request):
