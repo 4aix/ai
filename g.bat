@@ -1,3 +1,3 @@
 git add .
-git commit -m "파일첨부와 제너릭뷰"
+git commit -m "사용자인증"
 git push origin main
