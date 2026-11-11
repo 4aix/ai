@@ -4,17 +4,26 @@ from django.views.generic import DetailView, UpdateView,DeleteView
 from article.models import Article
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
-
+# /article/?q=구글 => page=1      /article/?page=2&q=구글
 def article_list(request):
 	article_list = Article.objects.all().order_by('-id')
+	# 검색 기능 추가
+	q = request.GET.get('q')
+	if q:
+		article_list = article_list.filter(title__icontains=q)
+	# 페이징 기능
+	paginator = Paginator(article_list, per_page=3)
+	page_number = request.GET.get("page", "1")
+	page_object = paginator.get_page(page_number)
 	return render(request,
 								"article/article_list.html",
-								{"article_list":article_list})
-def article_new(request):
-	pass
-def article_detail(request):
-	pass
-def article_edit(request):
-	pass
-def article_delete(request):
-	pass
+								{"article_list":page_object,
+								"page_obj":page_object,
+								"q":q})
+
+# article_list = ListView.as_view(model=Article, ordering=['-id'], paginate_by=3)
+article_new = CreateView.as_view(model=Article, fields="__all__")
+article_detail = DetailView.as_view(model=Article)
+article_edit   = UpdateView.as_view(model=Article, fields="__all__")
+article_delete = DeleteView.as_view(model=Article,
+                                    success_url="/article")

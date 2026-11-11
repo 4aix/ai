@@ -3,15 +3,20 @@
 {% block title %}article List{% endblock %}
 
 {% block content %}
-  <form>
+  <form action="" method="get">
     <div class="input-group mb-3">
       <input type="text" class="form-control" placeholder="검색할 제목" name="q" value="{{request.GET.q}}">
-      <input type="submit" class="btn btn-secondary btn-lg" value="등록">
+      <input type="submit" class="btn btn-secondary btn-lg" value="검색">
     </div>
   </form>
   {% for article in article_list %}
     <li>
         {{article.id}}.{{article.title}} / {{article.status}}
+        {% if article.photo %}
+          <!-- <img src="/static/article/fileup.jpg" style="width:15px"> -->
+          {% load static %}
+          <img src="{% static 'article/fileup.jpg' %}" style="width:15px">
+        {% endif %}
         <a href="{% url 'article:detail' article.id %}">[상세]</a>
         <a href="{% url 'article:edit' article.id %}">[수정]</a>
         <a href="{% url 'article:delete' article.id %}">[삭제]</a>
