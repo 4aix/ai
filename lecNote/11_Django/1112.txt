@@ -1,3 +1,10 @@
 - 회원가입, 로그인, 회원정보보기, 로그아웃 (accounts)
-1. myproject/settings.py 앱등록
-2. 
+   /accounts/signup
+   /accounts/login
+   /accounts/profile
+   /accounts/logout
+ django.conf.global_settings.py -> myproject.setting.py (설정정보)
+1. myproject/settings.py : 앱등록
+2. myproject/urls.py -> accounts/urls.py : url등록
+3. myproject/templates/header.html에서 회원관련 메뉴 주석 풀기
+4. accounts/views.py에 signup, login, logout 함수 등록
