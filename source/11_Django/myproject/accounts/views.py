@@ -29,7 +29,7 @@ class ArticleLoginView(LoginView):
   template_name="accounts/login_form.html"
   def get_initial(self):
     initial =  super().get_initial()
-    username = self.request.session.pop("username") # 회원가입 후 로그인 할 경우만 username
+    username = self.request.session.pop("username", None) # 회원가입 후 로그인 할 경우만 username
     if username:
       initial["username"] = username
     return initial  
