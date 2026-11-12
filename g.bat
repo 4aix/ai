@@ -1,3 +1,3 @@
 git add .
-git commit -m "사용자인증"
+git commit -m "장고emailBackend"
 git push origin main
