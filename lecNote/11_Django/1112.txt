@@ -8,3 +8,5 @@
 2. myproject/urls.py -> accounts/urls.py : url등록
 3. myproject/templates/header.html에서 회원관련 메뉴 주석 풀기
 4. accounts/views.py에 signup, login, logout 함수 등록
+5. myproject/templates/header.html에서 회원보기, 로그아웃 메뉴 주석 풀기
+6. accounts/views.py에 profile함수 등록
