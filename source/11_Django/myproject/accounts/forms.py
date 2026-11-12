@@ -17,3 +17,8 @@ class SignupForm(UserCreationForm):
     self.fields['password1'].help_text = '2자 이상의 안전한 비밀번호를 입력하세요'
   def save(self, commit = True):
     user = super().save() # auth_user테이블에 저장(username, email, password)
+    profile = Profile(user=user,
+                      phone_number=self.cleaned_data.get('phone_number'),
+                      address=self.cleaned_data.get('address'))
+    profile.save() # accounts_profile 테이블에 저장(user, phone_number, address)
+    return profile
