@@ -11,4 +11,4 @@
 5. myproject/templates/header.html에서 회원보기, 로그아웃 메뉴 주석 풀기
 6. accounts/views.py에 profile함수 등록
 7. LoginView상속받은 ArticleLoginView 사용(세션의 username 사용)
-8. 장고 5.x이상의 버전에서는 logout은 반드시 post요청
+8. 장고 5.x이상의 버전에서는 logout은 반드시 post요청 (header.html)
