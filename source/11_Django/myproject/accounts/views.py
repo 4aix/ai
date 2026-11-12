@@ -16,3 +16,5 @@ def signup(request):
   return render(request,
                 "accounts/signup_form.html",
                 {"form":form})
+login = LoginView.as_view(template_name="accounts/login_form.html")
+logout = LogoutView.as_view(next_page=settings.LOGIN_URL) # "/accounts/login/"
