@@ -12,3 +12,13 @@
 6. accounts/views.py에 profile함수 등록
 7. LoginView상속받은 ArticleLoginView 사용(세션의 username 사용)
 8. 장고 5.x이상의 버전에서는 logout은 반드시 post요청 (header.html)
+
+9. 회원가입시 감사메일 발송
+	- 메일 2단계 인증 및 앱 비밀번호 생성
+
+
+
+
+
+
+
