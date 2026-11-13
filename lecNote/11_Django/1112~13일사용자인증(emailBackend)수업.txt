@@ -15,7 +15,8 @@
 
 9. 회원가입시 감사메일 발송
 	- 메일 2단계 인증 및 앱 비밀번호 생성 -> .env등록
-	- settings.py SMTP메일 연동 정보(교안 27p)	
+	- settings.py SMTP메일 연동 정보(교안 27p)
+	- models.py에 시그널 등록(주석 제거)	
 
 
 

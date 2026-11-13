@@ -14,8 +14,8 @@ class Profile(models.Model):
   
 # 시그널(post_save) : 회원가입 완료(user.save()성공) 후 가입인사를 메일 전송
 from django.db.models.signals import post_save
-from django.conf.global_settings import AUTH_USER_MODEL
 from django.core.mail import send_mail
+from myproject.settings import EMAIL_HOST_USER
 def on_send_mail(sender, **kwargs):
   if kwargs['created']:
     user = kwargs['instance'].user
@@ -25,7 +25,7 @@ def on_send_mail(sender, **kwargs):
     # settings.py 에 stmp 설정이 셋팅
     send_mail(subject=title,
               message=body,
-              from_email= 'yisy0703@naver.com',
+              from_email= EMAIL_HOST_USER,
               recipient_list = [user.email],
               fail_silently=False, # 메일 전송이 안 되었을 경우 아무일도 하지 않음
               html_message=bodyhtml

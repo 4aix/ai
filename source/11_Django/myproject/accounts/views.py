@@ -11,7 +11,7 @@ from django.contrib.auth.forms import AuthenticationForm
 def signup(request):
   if request.method == 'POST':
     form = SignupForm(request.POST)
-    print('유효한지 아닌지 :',form.is_valid())
+    # print('유효한지 아닌지 :',form.is_valid())
     if form.is_valid():
       profile = form.save() # DB저장
       # 회원가입 후 로그인 페이지로 가기(로그인 페이지에서 가입한 username을 보이기)
