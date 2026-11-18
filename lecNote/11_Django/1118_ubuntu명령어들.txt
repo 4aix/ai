@@ -72,3 +72,7 @@ python manage.py runserver 0.0.0.0:8000
 # 4. Ctrl+A, D로 빠져나오기 (서버는 계속 실행) 
 # 5. 나중에 다시 접속하려면 
 screen -r django
+
+
+
+
