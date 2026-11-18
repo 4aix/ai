@@ -34,7 +34,8 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY", "secret_key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True # 개발 버전
+DEBUG = False # 배포 버전(static 이미지가 serving이 안 됨)
 
 #ALLOWED_HOSTS = ['*','0.0.0.0','127.0.0.1']
                 # "*,0.0.0.0,127.0.0.1" => ['*','0.0.0.0','127.0.0.1']
@@ -64,6 +65,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", # 배포시 static serving
 ]
 
 ROOT_URLCONF = "myproject.urls"

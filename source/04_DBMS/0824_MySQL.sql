@@ -31,7 +31,7 @@ show tables; -- 현재 데이터베이스 내의 테이블들
 drop table if exists friend;
 create table friend(
 	no   int         primary key auto_increment, -- auto_increment 필드타입은 int
-	name varchar(30) not null,
+	name varchar(100) unique,
     tel  varchar(30) unique,
     age  numeric(3) default 1 check (age>=0),
     last_modify datetime default now()

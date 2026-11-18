@@ -1,0 +1,74 @@
+①	Ubuntu 서버 초기 설정(시스템 업데이트)
+sudo apt upgrade -y
+②	Python 3.10 저장소 추가
+# 필요한 패키지 설치 - 추가 소프트웨어 저장소(PPA)를 쉽게 관리할 수 있는 도구 모음 설치
+sudo apt install software-properties-common -y
+# deadsnakes PPA 추가 (Python 3.10용)
+sudo add-apt-repository ppa:deadsnakes/ppa
+③	sudo apt update
+④	Python 3.10 및 필수 패키지 설치
+# Python 3.10과 관련 패키지들 설치 
+sudo apt install python3.10 python3.10-venv python3.10-dev
+python3.10 --version
+# pip 수동 설치
+python3.10 -m ensurepip --upgrade
+# python3 명령어가 3.10을 가리키도록 설정 
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 
+# 설치 확인 
+python3 --version # Python 3.10.x가 출력되어야 함
+python3.10 -m pip --version
+⑤	필수 소프트웨어 설치
+# 개발도구, 버전관리 시스템, 웹 서버 설치 (SQLite는 Django에 기본 포함) 
+sudo apt install build-essential git nginx 
+# 설치 확인
+git --version 
+nginx -v 
+gcc --version # 컴파일 도구 확인
+⑥	pwd프로젝트 디렉토리 생성
+pwd 결과가 /home/ubuntu가 아닐 경우 cd /home/ubuntu 
+mkdir myproject  # 폴더 생성 (反 rm -rf myproject는 폴더 삭제)
+ls # dir 역할
+cd myproject
+⑦	Git 에서 프로젝트 클론
+git clone 내깃주소  .
+⑧	가상환경 생성 및 활성화
+python3 -m venv .venv
+# 권한 문제로 source붙여야 함
+source .venv/bin/activate
+# 활성화 확인(프롬프트에 .venv가 시작되는지도 봄) .venv폴더가 숨긴폴더여서 ls -la
+which python
+python –V
+⑨	의존성 설치
+pip install --upgrade pip
+pip install -r requirements.txt
+⑩	.env파일 생성
+# nano .env 해서 파일을 아래와 같이 입력하고 저장(Ctrl+o), 엔터, 종료(ctrl+x)
+
+SECRET_KEY=
+EMAIL_HOST_PASSWORD=
+EMAIL_HOST_USER=
+ALLOWED_HOSTS= 
+# 확인
+cat .env
+⑪	settings.py 파일에 있어야 할 내용 확인
+⑫	Django 애플리케이션 DB가 없을 경우 초기화(우리는 pass)
+# db.sqlite3파일 확인 및 정적 파일 수집 확인, 관리자 계정 확인
+ls -la db.sqlite3
+없으면 python manage.py makemigrations와 migrate실행
+python manage.py collectstatic 
+python manage.py shell
+User.objects.first()
+⑬	개발 서버 테스트
+python manage.py runserver 0.0.0.0:8000
+# 브라우저에서 http://EC2_PUBLIC_IP:8000 접속 확인 # Ctrl+C로 서버 종료
+⑭	SSH를 닫아도 계속 서버 연결
+# screen 설치
+sudo apt install screen -y
+# 2. screen 세션 생성 
+screen -S django 
+# 3. 가상환경 활성화 후 서버 실행 
+source .venv/bin/activate 
+python manage.py runserver 0.0.0.0:8000 
+# 4. Ctrl+A, D로 빠져나오기 (서버는 계속 실행) 
+# 5. 나중에 다시 접속하려면 
+screen -r django
