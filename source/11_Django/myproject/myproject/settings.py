@@ -35,11 +35,18 @@ SECRET_KEY = os.getenv("SECRET_KEY", "secret_key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True # 개발 버전
-DEBUG = False # 배포 버전(static 이미지가 serving이 안 됨)
+DEBUG = False # 배포 버전(static 이미지가 serving이 안 됨, media도 serving이 안 됨)
 
 #ALLOWED_HOSTS = ['*','0.0.0.0','127.0.0.1']
                 # "*,0.0.0.0,127.0.0.1" => ['*','0.0.0.0','127.0.0.1']
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(",") # python manage.py runserver 0.0.0.0:80
+# 접속을 허용할 도메인 목록
+# .env의 ALLOWED_HOSTS 값을 쉼표(,) 기준으로 잘라서 리스트로 만듦 (없으면 기본값 사용)
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", ".pythonanywhere.com,*").split(",")
+
+# POST 요청(로그인, 회원가입, 글쓰기)을 허용할 출처
+# 반드시 https:// 를 포함해서 적어야 함 (없으면 기본값 사용)
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS",
+                                "https://*.pythonanywhere.com").split(",")
 
 # Application definition
 
